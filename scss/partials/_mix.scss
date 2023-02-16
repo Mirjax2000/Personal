@@ -1,0 +1,143 @@
+@use 'var' as *;
+// ---------------------
+// Mixins
+// ---------------------
+
+// vlastnost vyberu
+@mixin selection {
+    ::-moz-selection {
+        @content;
+    }
+
+    ::selection {
+        @content;
+    }
+}
+
+// $value= border-box, content-box, inherit
+@mixin box-sizing ($value) {
+    box-sizing: $value;
+    -webkit-box-sizing: $value;
+}
+
+@mixin H1-Normal {
+    @extend %weight-600;
+    font-size: var(--h1-fs);
+}
+
+@mixin H2-Normal {
+    @extend %weight-300;
+    font-size: var(--h2-fs);
+}
+
+@mixin H3-normal {
+    @extend %weight-300;
+    font-size: var(--h3-fs);
+}
+
+@mixin links {
+    @extend %weight-300;
+    font-size: var(--a-fs);
+}
+
+@mixin specialSmall {
+    @extend %weight-300;
+    font-size: var(--specialSmall-fs);
+}
+
+@mixin mobilniFont {
+    @extend %weight-300;
+    font-size: var(--mobilni-fs);
+}
+
+// --- placeholders ---
+%backGroundImg {
+    background-image: url(../img/bg01.png);
+}
+
+%weight-300 {
+    font-weight: 300;
+}
+
+%border-radius {
+    border-radius: 5px;
+}
+
+%weight-600 {
+    font-weight: 600;
+}
+
+%borderRadius {
+    border-radius: 5px;
+}
+
+%autoMargin {
+    margin: 0 auto;
+}
+
+%clr10 {
+    color: $clr10;
+}
+
+%clr11 {
+    color: $clr11;
+}
+
+%clr12 {
+    color: $clr12;
+}
+
+%clr13 {
+    color: $clr13;
+}
+
+%clr14 {
+    color: $clr14;
+}
+
+%clr15 {
+    color: $clr15;
+}
+
+%clr16 {
+    color: $clr16;
+}
+
+%clr17 {
+    color: $clr17;
+}
+
+%clr20 {
+    color: $clr20;
+}
+
+// --- mediaQueryies ---
+@mixin mQmax {
+    @media only screen and (max-width:$mQmax) {
+        @content;
+    }
+}
+
+@mixin mQmid {
+    @media only screen and (max-width:$mQmid) {
+        @content;
+    }
+}
+
+@mixin mQmin {
+    @media only screen and (max-width:$mQmin) {
+        @content;
+    }
+}
+
+@mixin mQmni {
+    @media only screen and (max-width:$mQmni) {
+        @content;
+    }
+}
+
+@mixin mQdefault($width) {
+    @media only screen and (max-width:$width) {
+        @content;
+    }
+}

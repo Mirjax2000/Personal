@@ -1,0 +1,129 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+
+%block-margin {
+    margin: 3rem 0;
+}
+
+%left-right {
+    background-color: $clr1;
+    padding: 2.3em 2em;
+    box-shadow: 2px 1px 10px rgba(188, 188, 188, 0.421);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    p,
+    a {
+        @include p-dark;
+    }
+
+    a {
+        text-decoration: underline;
+        color: $clr3;
+    }
+
+
+    .middle {
+        order: 2;
+        flex-basis: 50%;
+        @extend %left-right;
+        @extend %block-margin;
+        padding-bottom: 0;
+
+        h2 {
+            margin-bottom: .2em;
+        }
+
+        h3 {
+            @include h3-dark;
+        }
+
+        & .middle__paragraph {
+            margin: 2em 0;
+        }
+    }
+
+    .left {
+        order: 1;
+        flex-basis: 23%;
+        @extend %block-margin;
+
+        & .left__horni {
+            margin-bottom: 2rem;
+            @extend %left-right;
+        }
+
+        & .left__dolni {
+            @extend %left-right;
+        }
+
+        h2 {
+            margin-bottom: 1em;
+        }
+    }
+
+
+
+    .right {
+        order: 3;
+        flex-basis: 23%;
+        @extend %block-margin;
+
+        & .right__horni {
+            @extend %left-right;
+            margin-bottom: 2rem;
+        }
+
+        & .right__dolni {
+            @extend %left-right;
+        }
+
+        h2 {
+            margin-bottom: 1em;
+        }
+    }
+
+    h2 {
+        @include h2-dark;
+    }
+
+    .left .left__horni,
+    .right .right__dolni {
+        p {
+            margin-bottom: 2rem;
+        }
+
+
+        li {
+            border-bottom: 1px solid rgb(224, 224, 224);
+            margin-bottom: .3rem;
+            padding-bottom: .3rem;
+
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .left .left__dolni,
+    .right .right__horni {
+        li {
+            border-bottom: 1px solid rgb(224, 224, 224);
+            margin-bottom: .3rem;
+            padding-bottom: .3rem;
+
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

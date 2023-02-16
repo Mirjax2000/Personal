@@ -1,0 +1,63 @@
+// ---------------------
+// Variables
+// ---------------------
+
+$debug: false;
+
+// --- colors ---
+
+$clr10: #ffffff;
+$clr11: #6ed7fe;
+$clr12: #2f2f2f;
+$clr13: #242526;
+$clr14: #272727;
+$clr15: #2793F2;
+$clr16: #aeaeae;
+$clr17: #515151c7;
+$clr20: orange;
+
+// --- break points ---
+$mQmax: 1024px;
+$mQmid: 850px;
+$mQmin: 750px;
+$mQmni: 500px;
+
+// --- font-sizes ---\
+// --- logo ---
+$h1-max: 2.5rem;
+$h1-mid: 2rem;
+$h1-min: 2rem;
+$h1-mni: 1.5rem;
+
+// --- standart h2 ---
+$h2-max: 1.3rem;
+$h2-mid: 1.1rem;
+$h2-min: 1.1rem;
+$h2-mni: .9rem;
+
+// --- hlavni napis ---
+$h2-main-max: 12rem;
+$h2-main-mid: 10rem;
+$h2-main-min: 8rem;
+$h2-main-mni: 5.6rem;
+
+/// --- standart h3 ---
+$h3-max: 3.2rem;
+$h3-mid: 2.7rem;
+$h3-min: 2.1rem;
+$h3-mni: 1.45rem;
+
+// --- linky ---
+$a-max: $h2-max;
+$a-mid: $h2-mid;
+$a-min: $h2-min;
+$a-mni: $h2-mid;
+
+// --- maly pismo ---
+$specialSmall-max: 1rem;
+$specialSmall-mid: 1rem;
+$specialSmall-min: 1rem;
+$specialSmall-mni: 1rem;
+
+// --- mobilni menu ---
+$mobilni-font: 1.5rem;

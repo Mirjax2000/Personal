@@ -1,0 +1,367 @@
+@use 'var' as *;
+@use 'mix' as *;
+@use 'placeholders';
+
+
+main .banner {
+    @extend %clr2-back;
+    background-image: url(../../img/pic01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    padding: min(9.3rem, 10%) 0;
+
+    text-align: center;
+
+    div {
+        background-color: darken($clr3, 2%);
+        display: inline-block;
+        padding: 3rem 5.9rem;
+        @extend %border-radius;
+
+        h6 {
+            @extend %clr1;
+            @extend %weight-700;
+            font-size: $fs1max;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            color: $clr4;
+            @extend %weight-300;
+            font-size: $fs3max;
+        }
+    }
+}
+
+main .icons {
+    max-width: 84.75rem;
+    @extend %automargin;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 0 1rem;
+
+    div {
+        flex-basis: 27rem;
+        text-align: center;
+        position: relative;
+
+        i {
+            @extend %clr1;
+            font-size: 4.3rem;
+            width: 10.5rem;
+            padding: 2rem 0 1rem 0;
+            border-top-left-radius: .25rem;
+            border-top-right-radius: .25rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 7.3rem;
+                right: 0;
+
+                border-left: 5.3rem solid transparent;
+                border-right: 5.3rem solid transparent;
+            }
+        }
+
+        $colors : (1:$clr4, 2:$clr3, 3:$clr6);
+
+        @each $nth,
+        $clr in $colors {
+            &:nth-child(#{$nth}) i {
+                background-color: $clr;
+
+                &::after {
+                    border-top: 2.5rem solid $clr;
+                }
+            }
+        }
+    }
+
+    h2 {
+        @extend %clr3;
+        @extend %weight-700;
+        font-size: $fs2max;
+        margin: 5rem 0 2rem 0;
+    }
+
+    p {
+        @extend %p;
+        @extend %automargin;
+        max-width: 350px;
+    }
+
+    .gradient {
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+        }
+
+        &::after {
+            right: 0rem;
+            box-shadow: -32px 0 0 0 #fff,
+                0 -32px 0 0 #fff, 0 32px 0 0 #fff,
+                -32px 32px 0 0 #fff,
+                -32px -32px 0 0 #fff,
+                0 0 32px 0 rgb(0 0 0 / 15%);
+        }
+
+        &::before {
+            left: 0rem;
+            box-shadow: 32px 0 0 0 #fff,
+                0 -32px 0 0 #fff,
+                0 32px 0 0 #fff,
+                32px 32px 0 0 #fff,
+                32px -32px 0 0 #fff,
+                0 0 32px 0 rgb(0 0 0 / 15%);
+        }
+    }
+}
+
+main .bttns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 7.5rem;
+    margin-bottom: 8rem;
+
+    li {
+
+        a {
+            @extend %clr1;
+            @extend %weight-700;
+            @extend %transition;
+            padding: 1.1rem 6rem;
+            font-size: $fs3max;
+        }
+
+        &:first-child a {
+            @extend %clr4-back;
+            @extend %border-radius;
+
+            &:hover,
+            &:focus {
+
+                @extend %hover-effect-red;
+            }
+        }
+
+        &:last-child a {
+            @extend %clr3-back;
+            @extend %border-radius;
+
+            &:hover,
+            &:focus {
+
+                @extend %hover-effect-black;
+            }
+        }
+    }
+}
+
+main .port,
+main .blog {
+    @extend %clr6-back;
+    position: relative;
+
+    h3 {
+        @extend %clr3;
+        @extend %weight-700;
+        @extend %clr6-back;
+        padding: 0 2rem;
+        font-size: $fs3max;
+        display: inline-block;
+        position: absolute;
+        z-index: 10;
+        left: calc(50% - 7rem);
+        top: 5rem;
+    }
+}
+
+main .port {
+    border-top: 1px solid lighten($clr3, 70%);
+
+    .portflex {
+        max-width: 84.75rem;
+        @extend %automargin;
+
+        display: flex;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        text-align: left;
+
+        border-top: 1px solid lighten($clr3, 70%);
+        padding-top: 4.2rem;
+        margin-top: 6rem;
+
+        div {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 31.3%;
+
+            @extend %portblog-div;
+        }
+    }
+
+    .portflex div {
+
+        &>*:not(img) {
+            padding: 0 2rem;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h4 {
+            @extend %h4;
+            margin: 2rem 0 1.8rem 0;
+        }
+
+        p {
+            @extend %p;
+            margin-bottom: 3rem;
+        }
+
+        a {
+            @extend %clr1;
+            @extend %weight-700;
+            @extend %clr3-back;
+            @extend %border-radius;
+            @extend %transition;
+            padding: 1rem 2rem;
+            font-size: $fs5max;
+            margin-left: 2rem;
+
+            &:hover,
+            &:focus {
+
+                @extend %hover-effect-black;
+            }
+        }
+    }
+}
+
+main .blog {
+
+    h3 {
+        top: -1rem;
+        left: calc(50% - 5rem);
+    }
+
+    .blogflex {
+        max-width: 84.75rem;
+        @extend %automargin;
+
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        text-align: left;
+
+        border-top: 1px solid lighten($clr3, 70%);
+        padding-top: 4.2rem;
+
+        div {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 48.2%;
+
+            @extend %portblog-div;
+
+            div {
+                border: none;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .blogflex div {
+
+        &>*:not(img) {
+            padding: 0 2rem;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h4 {
+            @extend %h4;
+            margin: 2rem 0 .8rem 0;
+        }
+
+        p {
+            @extend %p;
+
+            span {
+                font-style: italic;
+            }
+
+            &:nth-child(3) {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        div {
+            margin-top: 2rem
+        }
+    }
+
+    .blogflex div div a {
+
+        @extend %clr1;
+        @extend %weight-700;
+        @extend %border-radius;
+        @extend %transition;
+        padding: 1rem 2rem;
+        font-size: $fs5max;
+        margin-left: 2rem;
+
+        &:first-child {
+            @extend %clr4-back;
+
+            &:hover,
+            &:focus {
+                @extend %hover-effect-red;
+            }
+
+            i {
+                color: lighten($clr4, 25%);
+            }
+        }
+
+        &:last-child {
+            @extend %clr3-back;
+
+            &:hover,
+            &:focus {
+                @extend %hover-effect-black;
+            }
+
+            i {
+                color: lighten($clr5, 25%);
+            }
+        }
+
+        i {
+            margin-right: 1rem;
+        }
+    }
+}

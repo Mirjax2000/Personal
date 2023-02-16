@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6P2786DPX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-G6P2786DPX');
+    </script>
+    <meta charset="UTF-8">
+    <title>2g2bt - Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="pages for personal portfolio">
+    <!-- zadej popis stranky -->
+    <meta name="keywords" content="responsive">
+    <!-- zadej klicova slova -->
+    <meta name="author" content="Miroslav Viktorin">
+    <!-- zadej jmeno autora -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+
+    <script src="js/jquery-3.6.2.min.js"></script>
+    <script src="js/js.js"></script>
+</head>
+
+<body>
+    <div class="central-wrapper">
+        <header>
+            <nav>
+                <ul class="horni-lista flex">
+                    <li class="horni-lista__right">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">Skills</a>
+                    </li>
+
+                    <li class="horni-lista__middle">
+                        <h1>2g2bt.eu</h1>
+                        <h2>Personal Portfolio</h2>
+                    </li>
+
+                    <li class="horni-lista__left">
+                        <a href="#" class="selected">- Portfolio -</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <div class="hamburger"></div>
+            <section class="mobile">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Skills</a></li>
+                    <li><a href="#" class="mobile-selected">Portfolio</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </section>
+        </header>
+
+        <main>
+            <section>
+                <h3>My Projects</h3>
+
+                <ul class="portfolio-list">
+                    <li class="dopetrope">
+                        <div class="border-cross"></div>
+                        <h2>Dopetrope Website</h2>
+                        <div class="row flex">
+                            <a href="Dopetrope/index.html" target="_blank"><img src="img/dopetrope-small.jpg"
+                                    alt="dopetrope web site" width="500" height="420"></a>
+                            <div class="relativ">
+                                <input type="checkbox">
+                                <p>Můj první projekt. Toto je verze 3.0. Ve verzi 3.0 jsem se snažil vyvarovat duplikaci
+                                    kódu. Snažil jsem se používat <strong>Sass</strong> proměnné k usnadnění práce.
+                                    Objevil
+                                    jsem spoustu
+                                    zajímavých metod <strong>CSS</strong>. Pracovat s flexboxem a nechat stránku co
+                                    nejvíc
+                                    responzivní a
+                                    zasáhnout teprve ve chvílích kdy se stránka začíná rozpadat.
+                                    Zde jsem také použil <strong>Sass</strong> list cyklus.
+                                    Výzva byla udělat mobilní menu i když ještě neovladám javascript. Udělal jsem to
+                                    přes
+                                    <code>input type="checkbox"</code>.
+                                    Nyní už vím jak to udělat i v javascriptu respektive v <strong>"Jquery"</strong>.
+                                    Použité technologie - <strong> HTML, CSS, SCSS</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="arcana">
+                        <div class="border-cross"></div>
+                        <h2>Arcana Website</h2>
+                        <div class="row flex">
+                            <a href="Arcana/index.html" target="_blank"><img src="img/arcana-small.jpg"
+                                    alt="arcana web site" width="500" height="420"></a>
+
+                            <div class="relativ">
+                                <input type="checkbox">
+                                <p>Můj druhý projekt. Zde jsem se zaměřil na používaní <strong>Sass</strong>
+                                    "placeholderů"
+                                    na eliminaci
+                                    duplicitního kódu. Zde se mi už pracovalo mnohem svižněji po znalostech z prvního
+                                    projektu. Na pozadí je aplikovaná jemná zrnitá textura, která se mi moc líbí a
+                                    rozhodně
+                                    tento detail budu používat i v následujících projektech.Na této websitě jsou
+                                    zajímavostí
+                                    barevné gradienty a pseudoelementy v navigaci. Stránka je také plně responzivní.
+                                    Prozatím není funkční kontaktní formulář.
+                                    Použité technologie - <strong> HTML, CSS,
+                                        SCSS</strong>.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="halcyonic">
+                        <div class="border-cross"></div>
+                        <h2>Halcyonic Website</h2>
+                        <div class="row flex">
+                            <a href="Halcyonic/index.html" target="_blank"><img src="img/Halcyonic-small.jpg"
+                                    alt="halcyonic web site" width="500" height="420"></a>
+                            <div class="relativ">
+                                <input type="checkbox">
+                                <p>V pořadí třetí projekt. Zde byl úkol udržet stránku responzivní.Zde jsem si vyhrál s
+                                    flexboxem a zároveň jsem si před editací kódu připravil "mixiny" pro všechny
+                                    důležité
+                                    prvky. Zejména nastavení fontu pro různé heading formáty a zjednodušil přepínání
+                                    velikosti fontu při určitém breakpointu. Zde jsem pracoval jak s proměnnými v Sassu
+                                    tak
+                                    jsem využíval proměnné přímo v ":root" <strong>CSS</strong>.
+                                    Začal jsem využívat funkci "use" v <strong>Sassu</strong> díky které můžu využívat
+                                    proměnné i mixiny v
+                                    celém projektu. Rozdělil jsem header a footer od hlavního main a následně jsem ho
+                                    spojil, takže ve výsledku stačí napsat jen 1x header a 1x footer a jednoduše ho
+                                    připojit
+                                    k
+                                    dalším podstránkám projektu. Po tomto projektu jsem upravil i svoje první dva
+                                    projekty
+                                    aby odpovídaly tomuto přístupu. Použité technologie -
+
+                                    <strong> HTML, CSS, SCSS</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+nav .triangl {
+
+    &:after {
+        left: 2rem;
+    }
+}
+
+body {
+    background-color: $clr10;
+}
+
+main .container {
+    margin: 7em auto;
+
+    h1 {
+        @include whiteHeading ($clr15);
+        margin-bottom: .3em;
+    }
+
+    h2 {
+        color: $clr13;
+        @extend %weight-300;
+        font-size: var(--ban-fs);
+        margin-bottom: 2em;
+    }
+
+    img {
+        border-radius: 5px;
+        margin-bottom: 2em;
+    }
+
+    h3 {
+        @include h3icon;
+        margin: 2rem 0;
+    }
+
+    p {
+        @include paragraph;
+    }
+}

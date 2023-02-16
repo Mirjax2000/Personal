@@ -1,0 +1,55 @@
+@use 'var' as *;
+@use 'mix' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
+
+:root {
+    --h1-fs: #{$h1max};
+    --nav-fs: #{$navmax};
+    --ban-fs:#{$banmax};
+    --h3-fs:#{$h3max};
+    --pglobal-fs:#{$pgmax};
+    --gh-fs:#{$ghmax};
+    --ghsub-fs:#{$ghsubmax};
+    --wh-fs:#{$whmax};
+    --foot-fs:#{$footmax};
+}
+
+/* border-box */
+html {
+    @include box-sizing (border-box);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* --- vyber --- */
+@include selection {
+    background-color: #1683ff;
+    color: #ffffff;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: $clr10;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.selected {
+    color: $clr10;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}

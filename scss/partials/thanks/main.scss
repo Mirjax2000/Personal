@@ -1,0 +1,15 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+h3 {
+    margin-top: 20vh;
+    text-align: center;
+    @include H3-normal;
+    @extend %clr10;
+}
+
+h2 {
+    margin-top: 2vh;
+    text-align: center;
+    color: gray;
+}

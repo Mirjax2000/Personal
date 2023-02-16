@@ -1,0 +1,189 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+
+main {
+    position: relative;
+    background-color: $clr10;
+
+    .background {
+        position: relative;
+        padding: 15em 0;
+        background-image: url(../img/banner.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .transparent-banner {
+        background-color: #1b1b1bbf;
+
+        padding: 2em 0;
+
+        position: absolute;
+        width: 100%;
+        top: 22.7em;
+        text-align: center;
+
+        &>* {
+            display: inline-block;
+        }
+
+        h2 {
+            @include banner;
+            margin-right: 2em;
+
+            a {
+                border-bottom: 1px dotted $clr13;
+                @extend %transition;
+
+                &:hover,
+                &:focus {
+                    color: $clr16;
+                    border-color: #1b1b1b00;
+                }
+            }
+        }
+
+        .bttn {
+            @include bttn ($clr10);
+            @extend %transition;
+
+            padding: .5em 2em;
+            border-radius: 5px;
+
+            background: url(../img/bg01.png), -webkit-gradient(linear, left top, left bottom, from(#37c0fb00), to(#0077aa));
+            background: url(../img/bg01.png), -o-linear-gradient(top, #37c0fb00 0%, #0077aa 100%);
+            background: url(../img/bg01.png), linear-gradient(180deg, #37c0fb00 0%, #0077aa 100%);
+            background-color: $clr16;
+
+            &:hover,
+            &:focus {
+
+                background-color: lighten($clr16, 10%);
+
+            }
+        }
+    }
+
+    .icons {
+        margin: 7em 0;
+
+        .icon__clms {
+            text-align: center;
+            max-width: 25rem;
+            padding: 0 2em;
+
+            i {
+                color: $clr10;
+                font-size: 2.25rem;
+                font-weight: 900;
+
+                background-image: -webkit-gradient(linear, left top, left bottom, from($clr16), to(#0082ba));
+                background-image: -o-linear-gradient(top, $clr16 0%, #0082ba 100%);
+                background-image: linear-gradient(180deg, $clr16 0%, #0082ba 100%);
+
+                @extend %backgroundImg;
+                padding: 1em;
+                border-radius: 50%;
+                border: 10px solid $clr10;
+                box-shadow: 0 0 2px $clr14;
+            }
+
+            h3 {
+                @include h3icon;
+                margin-top: 1.2em;
+                margin-bottom: 1.2em;
+            }
+
+            p {
+                @include paragraph;
+            }
+        }
+    }
+
+    .gigantic-heading {
+        @extend %backgroundImg;
+        background-color: $clr11;
+        padding: 7em 0;
+        text-align: center;
+
+        h2 {
+            @include giganticHeading;
+            width: min(80%, 78.75rem);
+            margin: 0 auto .5em auto;
+            padding-bottom: .5em;
+            border-bottom: 1px solid $clr12;
+        }
+
+        p {
+            @include giganticHeadingSub;
+
+        }
+    }
+
+    .main-flex {
+        padding-top: 5em;
+        padding-bottom: 5em;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &>section {
+            flex-basis: 47%;
+            display: flex;
+            justify-content: space-between;
+            gap: 2em;
+            margin-bottom: 2rem;
+
+            img {
+                max-width: 12.5rem;
+                background-color: $clr13;
+                align-self: flex-start;
+                border-radius: 5px
+            }
+
+            h3 {
+                @include h3icon;
+                margin-bottom: 1em;
+            }
+
+            p {
+                @include paragraph;
+            }
+        }
+    }
+
+    .blue-section {
+
+        background-color: $clr16;
+        background: url(../img/bg01.png), -webkit-gradient(linear, left top, left bottom, from(#37c0fb), to(#008fcd));
+        background: url(../img/bg01.png), -o-linear-gradient(top, #37c0fb 0%, #008fcd 100%);
+        background: url(../img/bg01.png), linear-gradient(180deg, #37c0fb 0%, #008fcd 100%);
+
+        text-align: center;
+        padding: 4em 0;
+
+        &>* {
+            display: inline-block;
+        }
+
+        h2 {
+            @include whiteHeading;
+            margin-right: 1em;
+        }
+
+        a {
+            @include bttn ($clr14);
+            @extend %transition;
+
+            padding: .5em 2em;
+            border-radius: 5px;
+            background-color: $clr10;
+
+            &:hover,
+            &:focus {
+                color: $clr16;
+            }
+        }
+    }
+}

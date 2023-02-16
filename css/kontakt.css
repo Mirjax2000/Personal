@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  MAX-width: 100%;
+  height: auto;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+body .central-wrapper {
+  background-image: url(../img/bg01.png);
+}
+
+main h3, main h2, main .form form, header .horni-lista h2, header .horni-lista a, header .mobile ul li a {
+  font-weight: 300;
+}
+
+header .horni-lista a {
+  border-radius: 5px;
+}
+
+main .form form .submit, header .horni-lista h1 {
+  font-weight: 600;
+}
+
+main .form form input, main .form form textarea, main .form form .submit {
+  border-radius: 5px;
+}
+
+main .kontakts, main .form form, main .form form textarea, body .central-wrapper {
+  margin: 0 auto;
+}
+
+main h2, main .form form, main .form form input, main .form form textarea, main .form form .submit:active, header .horni-lista h1, header .horni-lista a {
+  color: #ffffff;
+}
+
+header .horni-lista h2 {
+  color: #6ed7fe;
+}
+
+main .form form .submit {
+  color: #2f2f2f;
+}
+
+:root {
+  --h1-fs: 2.5rem;
+  --h2-main-fs:12rem;
+  --h2-fs: 1.3rem;
+  --h3-fs: 3.2rem;
+  --a-fs: 1.3rem;
+  --specialSmall-fs: 1rem;
+  --mobilni-fs:1.5rem;
+}
+
+/* border-box */
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* --- vyber --- */
+::-moz-selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  background-color: #6ed7fe;
+  background-image: url(../img/bg04.png);
+  font-family: "Source Sans Pro", sans-serif;
+}
+body .central-wrapper {
+  position: relative;
+  width: clamp(15.625rem, 95%, 90rem);
+  max-height: 100%;
+  min-height: 100.1vh;
+  background-color: #272727;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.922);
+}
+body .central-wrapper::after, body .central-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  top: 0rem;
+  bottom: 0rem;
+  z-index: -10;
+}
+body .central-wrapper::after {
+  right: 0rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.809);
+}
+body .central-wrapper::before {
+  left: 0rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.803);
+}
+
+header {
+  position: relative;
+}
+
+header .horni-lista {
+  text-align: center;
+  align-items: baseline;
+  justify-content: space-around;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2862745098);
+}
+header .horni-lista h1 {
+  font-size: var(--h1-fs);
+  letter-spacing: 2px;
+}
+header .horni-lista h2 {
+  font-size: var(--h2-fs);
+  letter-spacing: 1px;
+  line-height: 17px;
+}
+header .horni-lista a {
+  position: relative;
+  font-size: var(--a-fs);
+  margin: 0 0.5em;
+  padding: 0.2em 0.5em;
+  transition: background-color ease-in-out 0.25s;
+}
+header .horni-lista a::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  right: 60px;
+  height: 1px;
+  background-color: #6ed7fe;
+  transition: all ease-in-out 0.25s;
+}
+header .horni-lista a:hover, header .horni-lista a:focus {
+  background-color: #2f2f2f;
+  outline: none;
+}
+header .horni-lista a:hover::after, header .horni-lista a:focus::after {
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  background-color: #6ed7fe;
+}
+header .horni-lista .selected {
+  color: #6ed7fe;
+}
+header .horni-lista .selected::after {
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  background-color: #6ed7fe;
+}
+
+header .hamburger {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 20px;
+  background-image: url(../img/open.png);
+  opacity: 0.9;
+  filter: drop-shadow(1px 1px 1px #6ed7fe);
+}
+header .hamburger:hover, header .hamburger:active {
+  filter: drop-shadow(1px 1px 1px #ffffff);
+}
+
+header .mobile {
+  display: none;
+}
+header .mobile ul {
+  margin-top: 5px;
+  display: block;
+  background-color: #272727;
+  background-image: url(../img/bg01.png);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.277);
+  text-align: center;
+}
+header .mobile ul li {
+  display: inline-block;
+  padding: 1em 1vw;
+}
+header .mobile ul li a {
+  font-size: var(--mobilni-fs);
+  color: #fff;
+}
+header .mobile ul li a:hover, header .mobile ul li a:active {
+  color: orange;
+}
+header .mobile .mobile-selected {
+  color: orange;
+}
+
+main {
+  padding-bottom: 10vh;
+}
+main h3 {
+  font-size: var(--h3-fs);
+  color: #aeaeae;
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+main .kontakts {
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(81, 81, 81, 0.7803921569);
+  width: 80%;
+  padding-bottom: 1rem;
+}
+main .srovnej {
+  justify-content: flex-start;
+}
+main h2 {
+  font-size: var(--h2-fs);
+}
+main li {
+  margin-bottom: 1rem;
+}
+main li {
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+}
+main li a {
+  color: #ffffff;
+}
+main li i {
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+
+main .form form {
+  display: flow-root;
+  text-align: center;
+  font-size: var(--a-fs);
+  width: 50%;
+}
+main .form form input {
+  width: 46%;
+  background-color: #2f2f2f;
+  padding: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+main .form form input:nth-child(3) {
+  float: left;
+}
+main .form form input:nth-child(4) {
+  float: right;
+}
+main .form form textarea {
+  width: 100%;
+  border: none;
+  padding: 1em;
+  outline: none;
+  display: block;
+  margin-bottom: 1em;
+  background-color: #2f2f2f;
+  resize: none;
+}
+main .form form .submit {
+  width: 40%;
+  float: right;
+  display: block;
+  cursor: pointer;
+  padding: 0.8em 0;
+  min-width: 100px;
+  font-size: var(--a-fs);
+  background-color: #6ed7fe;
+  background-image: url(../img/bg04.png);
+  transition: background-color ease-in-out 0.25s;
+  border: none;
+  outline: none;
+}
+main .form form .submit:hover {
+  background-color: orange;
+}
+main .form form .submit:active {
+  transform: scale(0.97);
+}
+main .form form .reset {
+  float: left;
+  background-color: #272727;
+  border: none;
+  color: #aeaeae;
+  padding: 0.1em 1em 0.1em 0;
+  transition: transform ease-in-out 0.1s;
+  outline: none;
+}
+main .form form .reset:hover {
+  cursor: pointer;
+  color: orangered;
+}
+main .form form .reset:active {
+  transform: scale(0.95);
+}
+
+@media only screen and (max-width: 850px) {
+  :root {
+    --h1-fs: 2rem;
+    --h2-main-fs:10rem;
+    --h2-fs: 1.1rem;
+    --h3-fs: 2.7rem;
+    --a-fs: 1.1rem;
+    --specialSmall-fs: 1rem;
+  }
+}
+@media only screen and (max-width: 750px) {
+  :root {
+    --h1-fs: 2rem;
+    --h2-main-fs:8rem;
+    --h2-fs: 1.1rem;
+    --h3-fs: 2.1rem;
+    --a-fs: 1.1rem;
+    --specialSmall-fs: 1rem;
+  }
+  body {
+    padding: 1vh 0vw;
+  }
+  body .central-wrapper {
+    max-height: 100%;
+    min-height: 98vh;
+    border-radius: 25px;
+  }
+  body .central-wrapper .horni-lista .horni-lista__right,
+  body .central-wrapper .horni-lista .horni-lista__left {
+    display: none;
+  }
+  body .central-wrapper::after, body .central-wrapper::before {
+    bottom: 20px;
+    top: 20px;
+  }
+  body .central-wrapper::after {
+    right: 0rem;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.895);
+  }
+  body .central-wrapper::before {
+    left: 0rem;
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.889);
+  }
+  body header .hamburger {
+    display: inline-block;
+  }
+  main .kontakts {
+    flex-direction: column;
+  }
+  main .srovnej {
+    max-width: 330px;
+    min-width: 230px;
+    border-top: 1px solid rgba(81, 81, 81, 0.7803921569);
+    margin-top: 1rem;
+    padding-top: 2rem;
+  }
+  main .srovnej:last-child {
+    border-top: none;
+    margin-top: 0rem;
+    padding-top: 0rem;
+  }
+  main .form form {
+    width: 70%;
+  }
+  main .form input:nth-child(1) {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  main .form input:nth-child(2) {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+}
+@media only screen and (max-width: 500px) {
+  :root {
+    --h1-fs: 1.5rem;
+    --h2-main-fs:5.6rem;
+    --h2-fs: 0.9rem;
+    --h3-fs: 1.45rem;
+    --a-fs: 1.1rem;
+    --specialSmall-fs: 1rem;
+  }
+  body main .srovnej i {
+    font-size: 1.3rem;
+    padding: 0 1em 0 0;
+  }
+  body main .form form {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=kontakt.css.map */

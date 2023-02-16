@@ -1,0 +1,134 @@
+@use 'var' as *;
+@use 'mix' as *;
+
+header {
+    padding: 3em 0;
+    background-color: $clr10;
+    @extend %backgroundImg;
+
+    h1 {
+        @include h1;
+        text-align: center;
+
+        a {
+            @extend %transition;
+            text-shadow: 0 1px 1px $clr14;
+
+            &:hover,
+            &:focus {
+                color: $clr16;
+            }
+        }
+    }
+}
+
+nav {
+    background-color: $clr14 ;
+    @extend %backgroundImg;
+
+    background: #474747;
+    background: url(../img/bg01.png), -webkit-gradient(linear, left top, left bottom, from(#474747), to(#2d2d2d));
+    background: url(../img/bg01.png), -o-linear-gradient(top, #474747 0%, #2d2d2d 100%);
+    background: url(../img/bg01.png), linear-gradient(180deg, #474747 0%, #2d2d2d 100%);
+
+    padding: 1.8em 0;
+
+    ul li {
+        margin-left: 3em;
+
+        a {
+            @include nav;
+            @extend %transition;
+
+            &:hover,
+            &:focus {
+                color: $clr10;
+            }
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.blue-banner {
+    @extend %backgroundImg;
+    background-color: $clr16;
+    padding: .5em 0;
+}
+
+
+
+// --- dropdown ---
+nav .dropdown {
+    position: relative;
+    z-index: 10;
+
+    a {
+
+        &:focus+.dropdown__list,
+        &:hover+.dropdown__list {
+
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    .dropdown__list {
+        opacity: 0;
+
+        padding: 2rem 1rem 1rem 1rem;
+        position: absolute;
+        right: -3rem;
+        z-index: 100;
+        width: 200%;
+        @extend %backgroundImg;
+        @extend %transition;
+        border-radius: 5px;
+        background-color: #353535;
+        pointer-events: none;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.729);
+
+        &:hover,
+        &:focus {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        li {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-bottom: .5rem;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+nav .triangl {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "";
+        top: 2.95rem;
+        left: 1.1rem;
+        border-bottom: 10px solid $clr16;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+}
+
+.checkbox {
+    .checkbox-button {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}

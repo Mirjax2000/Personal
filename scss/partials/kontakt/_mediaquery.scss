@@ -1,0 +1,136 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+
+// --- defaultni mixina ---
+// @include mQdefault(hodnota v pixlech) {}
+
+
+// max-width: 850px
+@include mQmid {
+    :root {
+        --h1-fs: #{$h1-mid};
+        --h2-main-fs:#{$h2-main-mid};
+        --h2-fs: #{$h2-mid};
+        --h3-fs: #{$h3-mid};
+        --a-fs: #{$a-mid};
+        --specialSmall-fs: #{$specialSmall-mid};
+    }
+}
+
+// max-width: 750px
+@include mQmin {
+    :root {
+        --h1-fs: #{$h1-min};
+        --h2-main-fs:#{$h2-main-min};
+        --h2-fs: #{$h2-min};
+        --h3-fs: #{$h3-min};
+        --a-fs: #{$a-min};
+        --specialSmall-fs: #{$specialSmall-min};
+    }
+
+    body {
+        padding: 1vh 0vw;
+
+        .central-wrapper {
+            max-height: 100%;
+            min-height: 98vh;
+            border-radius: 25px;
+
+            .horni-lista .horni-lista__right,
+            .horni-lista .horni-lista__left {
+                display: none;
+            }
+
+            &::after,
+            &::before {
+                bottom: 20px;
+                top: 20px;
+            }
+
+            &::after {
+                right: 0rem;
+                box-shadow: 10px 0 20px rgba(0, 0, 0, 0.895);
+            }
+
+            &::before {
+                left: 0rem;
+                box-shadow: -10px 0 20px rgba(0, 0, 0, 0.889);
+            }
+        }
+
+        header .hamburger {
+            display: inline-block;
+        }
+    }
+
+    main .kontakts {
+        flex-direction: column;
+    }
+
+    main .srovnej {
+        max-width: 330px;
+        min-width: 230px;
+        border-top: 1px solid $clr17;
+        margin-top: 1rem;
+        padding-top: 2rem;
+
+        &:last-child {
+            border-top: none;
+            margin-top: 0rem;
+            padding-top: 0rem;
+        }
+    }
+
+    main .form {
+        form {
+            width: 70%;
+        }
+
+        input {
+            &:nth-child(1) {
+                float: none;
+                display: block;
+                width: 100%;
+                margin-bottom: 0;
+            }
+
+            &:nth-child(2) {
+                width: 100%;
+                float: none;
+                display: block;
+            }
+        }
+    }
+
+
+}
+
+// max-width: 500px
+@include mQmni {
+    :root {
+        --h1-fs: #{$h1-mni};
+        --h2-main-fs:#{$h2-main-mni};
+        --h2-fs: #{$h2-mni};
+        --h3-fs: #{$h3-mni};
+        --a-fs: #{$a-mni};
+        --specialSmall-fs: #{$specialSmall-mni};
+    }
+
+    body {
+
+        main .srovnej {
+            i {
+                font-size: 1.3rem;
+                padding: 0 1em 0 0;
+            }
+        }
+
+        main .form {
+            form {
+                width: 80%;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,63 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+
+:root {
+    --h1-fs: #{$h1max}; //header H1
+    --h2-light-fs: #{$h2-light-max}; //H2-light no LineHeight
+    --h2-dark-fs:#{$h2-dark-max}; //H2-dark no LineHeight
+    --h3-dark-fs:#{$h3-dark-max}; //H3-dark
+    --nav-a-fs: #{$nav-a-max}; //navigace
+    --header-p-fs:#{$header-p-max}; //header p
+    --bttn-a-fs:#{$bttn-a-max}; // bttn a
+    --light-p-fs:#{$light-p-max}; // dark p
+    --dark-p-fs:#{$dark-p-max}; // dark p
+    --li-dark-fs:#{$li-dark-max}; // li
+    --italic-p-fs:#{$italic-p-max}; // italic p
+    --span-fs:#{$span-max}; // span
+    --footer-h2-fs:#{$footer-h2-max}; // footer h2
+    --footer-p-fs:#{$footer-p-max}; // footer p+a
+    --footer-bottom-fs:#{$footer-bottom-max}; // footer bottom
+}
+
+
+/* border-box */
+html {
+    @include box-sizing (border-box);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* --- vyber --- */
+@include selection {
+    background-color: rgb(22, 131, 255);
+    color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 100%;
+    background-color: $clr7;
+}
+
+.container {
+    max-width: 79rem;
+    margin: 0 auto;
+    padding: 0 2rem
+}
+
+.img-sizzing {
+    @extend %img-sizzing;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox .mobile-nav {
+    display: none;
+}

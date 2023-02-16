@@ -1,0 +1,143 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+
+main {
+    padding-bottom: 10vh;
+
+    h3 {
+        @include H3-normal;
+        color: $clr16;
+        text-align: center;
+        margin: 1em 0 1em 0;
+    }
+
+    .kontakts {
+        justify-content: space-around;
+        border-bottom: 1px solid $clr17;
+        width: 80%;
+        @extend %autoMargin;
+        padding-bottom: 1rem;
+    }
+
+    .srovnej {
+        justify-content: flex-start;
+    }
+
+    h2 {
+        @include H2-Normal;
+        @extend %clr10;
+    }
+
+    li {
+        margin-bottom: 1rem;
+    }
+
+    li {
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: $clr10;
+        }
+
+        i {
+            color: $clr10;
+            font-size: 1.5rem;
+            padding-right: 1rem;
+        }
+    }
+}
+
+main .form {
+
+    form {
+        display: flow-root;
+        text-align: center;
+
+        @include links;
+        @extend %clr10;
+        width: 50%;
+
+        @extend %autoMargin;
+
+        input {
+            @extend %clr10;
+            @extend %borderRadius;
+            width: 46%;
+            background-color: $clr12;
+            padding: .8em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+
+            &:nth-child(3) {
+                float: left;
+            }
+
+            &:nth-child(4) {
+                float: right;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            border: none;
+            padding: 1em;
+            outline: none;
+            @extend %clr10;
+            display: block;
+            margin-bottom: 1em;
+            @extend %autoMargin;
+            @extend %borderRadius;
+            background-color: $clr12;
+            resize: none;
+        }
+
+        .submit {
+            width: 40%;
+            float: right;
+            display: block;
+            @extend %clr12;
+            cursor: pointer;
+            padding: .8em 0;
+            min-width: 100px;
+            @extend %weight-600;
+            @extend %borderRadius;
+            font-size: var(--a-fs);
+            background-color: $clr11;
+            background-image: url(../img/bg04.png);
+            transition: background-color ease-in-out .25s;
+            border: none;
+            outline: none;
+
+            &:hover {
+                background-color: $clr20;
+            }
+
+            &:active {
+                @extend %clr10;
+                transform: scale(.97);
+            }
+        }
+
+        .reset {
+            float: left;
+            background-color: $clr14;
+            border: none;
+            color: $clr16;
+            padding: .1em 1em .1em 0;
+            transition: transform ease-in-out .1s;
+            outline: none;
+
+            &:hover {
+                cursor: pointer;
+                color: orangered;
+            }
+
+            &:active {
+                transform: scale(.95);
+            }
+        }
+    }
+}

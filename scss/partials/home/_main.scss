@@ -1,0 +1,48 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+main .hero {
+    color: $clr10;
+    padding: 25vh 0;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+
+    .hero-heading {
+        font-size: var(--h2-main-fs);
+        @extend %weight-600;
+        letter-spacing: -4px;
+        line-height: .8em;
+    }
+
+    h3 {
+        @include H3-normal;
+        letter-spacing: 0px;
+        margin-bottom: .2em;
+    }
+
+    .cv-section {
+        margin-left: auto;
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+        @include links;
+        @extend %borderRadius;
+        margin-top: 2em;
+        padding: .4em .8em;
+        @extend %weight-600;
+        @extend %clr12;
+        background-color: $clr11;
+        background-image: url(../img/bg04.png);
+        transition: background-color ease-in-out .25s;
+
+        &:hover {
+            background-color: $clr20;
+        }
+
+        &:active {
+            @extend %clr10;
+            transform: scale(.95);
+        }
+    }
+}

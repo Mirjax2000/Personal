@@ -1,0 +1,100 @@
+@use 'var' as *;
+@use 'mix' as *;
+
+// --- placeholders ---
+
+%transition {
+    transition: background-color ease-in-out .25s;
+}
+
+%hover-effect-black {
+    background-color: lighten($clr3, 8%);
+}
+
+%hover-effect-red {
+    background-color: lighten($clr4, 8%);
+}
+
+%border-radius {
+    border-radius: .3125rem;
+}
+
+%automargin {
+    margin: 0 auto;
+}
+
+%clr1 {
+    color: $clr1;
+}
+
+%clr3 {
+    color: $clr3;
+}
+
+%clr5 {
+    color: $clr5;
+}
+
+%clr1-back {
+    background-color: $clr1;
+}
+
+%clr2-back {
+    background-color: $clr2;
+}
+
+%clr3-back {
+    background-color: $clr3;
+}
+
+%clr4-back {
+    background-color: $clr4;
+}
+
+%clr6-back {
+    background-color: darken($clr1, 3%);
+}
+
+%weight-300 {
+    font-weight: 300;
+}
+
+%weight-700 {
+    font-weight: 700;
+}
+
+%h4 {
+    @extend %clr3;
+    @extend %weight-700;
+    font-size: $fs4max;
+}
+
+%h5 {
+    @extend %clr1;
+    @extend %weight-700;
+    font-size: $fs5max;
+}
+
+%p {
+    color: $clr5;
+    @extend %weight-300;
+    font-size: $fs6max;
+}
+
+%portblog-div {
+    @extend %clr1-back;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid lighten($clr3, 70%);
+}
+
+%underline {
+    color: darken($clr1, 30%);
+    text-decoration: underline;
+    font-size: $fs6max;
+    @extend %weight-300;
+}
+
+%border-bottom {
+    border-bottom: 1px solid darken($clr1, 80%);
+}

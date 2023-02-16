@@ -1,0 +1,25 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+main {
+
+    .middle {
+        background-color: $clr1;
+        padding: 2rem;
+        margin: 3rem 0;
+
+        h2 {
+            @include h2-dark;
+            margin-bottom: .7rem
+        }
+
+        h3 {
+            @include h3-dark;
+        }
+
+        p {
+            @include p-dark;
+            margin: 2rem 0;
+        }
+    }
+}

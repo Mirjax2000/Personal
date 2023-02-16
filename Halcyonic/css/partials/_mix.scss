@@ -1,0 +1,157 @@
+@use 'var' as *;
+
+// ---------------------
+// --- placeholders ---
+// ---------------------
+
+%clr1 {
+    color: $clr1;
+}
+
+%clr2 {
+    color: $clr2;
+}
+
+%weight-200 {
+    font-weight: 200;
+}
+
+%weight-300 {
+    font-weight: 300;
+}
+
+%img-sizzing {
+    background-color: $clr1;
+    background-image: url(../../../img/bg04.png);
+    width: 100%;
+    height: auto;
+    padding: .5em;
+}
+
+// ---------------------
+// Mixins
+// ---------------------
+
+// vlastnost vyberu
+@mixin selection {
+    ::-moz-selection {
+        @content;
+    }
+
+    ::selection {
+        @content;
+    }
+}
+
+// $value= border-box, content-box, inherit
+@mixin box-sizing ($value) {
+    box-sizing: $value;
+    -webkit-box-sizing: $value;
+}
+
+// velikost fontu
+@mixin h1-face {
+    @extend %clr1;
+    @extend %weight-300;
+    font-size: var(--h1-fs);
+    line-height: 0.672em;
+}
+
+@mixin nav-a {
+    @extend %clr2;
+    @extend %weight-200;
+    font-size: var(--nav-a-fs);
+    line-height: 33.3px;
+}
+
+@mixin header-p {
+    @extend %clr1;
+    @extend %weight-200;
+    font-size: var(--header-p-fs);
+    line-height: 1.25em;
+}
+
+@mixin bttn {
+    @extend %clr1;
+    @extend %weight-300;
+    font-size: var(--bttn-a-fs);
+    line-height: 2.1em;
+}
+
+@mixin h2-light {
+    @extend %clr1;
+    @extend %weight-300;
+    font-size: var(--h2-light-fs);
+    line-height: 1.48em;
+}
+
+@mixin h2-dark {
+    color: $clr10;
+    @extend %weight-300;
+    font-size: var(--h2-dark-fs);
+    line-height: 33.3px;
+}
+
+@mixin p-light {
+    color: $clr9;
+    @extend %weight-300;
+    font-size: var(--light-p-fs);
+    line-height: 1.85em;
+}
+
+@mixin p-dark {
+    color: $clr13;
+    @extend %weight-300;
+    font-size: var(--dark-p-fs);
+    line-height: 1.85em;
+}
+
+@mixin h3-dark {
+    color: $clr12;
+    @extend %weight-300;
+    font-size: var(--h3-dark-fs);
+    line-height: 1.48em;
+}
+
+@mixin li-dark {
+    color: $clr12;
+    @extend %weight-300;
+    font-size: var(--li-dark-fs);
+    line-height: 33.3px;
+}
+
+@mixin italic-p {
+    color: $clr13;
+    @extend %weight-300;
+    font-size: var(--italic-p-fs);
+    font-style: italic;
+    line-height: 1.54em;
+}
+
+@mixin span {
+    color: $clr13;
+    font-weight: 400;
+    font-size: var(--span-fs);
+    line-height: 2em;
+}
+
+@mixin footer-h2 {
+    color: $clr14;
+    @extend %weight-300;
+    font-size: var(--footer-h2-fs);
+    line-height: 1.48em;
+}
+
+@mixin footer-p {
+    color: $clr15;
+    @extend %weight-300;
+    font-size: var(--footer-p-fs);
+    line-height: 1.85em;
+}
+
+@mixin footer-bottom {
+    color: $clr16;
+    @extend %weight-300;
+    font-size: var(--footer-bottom-fs);
+    line-height: 1.85em;
+}
