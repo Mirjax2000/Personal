@@ -1,169 +1,157 @@
 @use '../var' as *;
 @use '../mix' as *;
 
+// *{
+//     outline: 1px solid red;
+// }
 
 main {
-    padding-bottom: 3em;
+
+    .expand-bttn {
+        display: inline-block;
+        text-align: center;
+        width: 80px;
+        height: 20px;
+        padding-top: 1px;
+        margin-top: 1rem;
+        margin-right: 1.5em;
+        @extend %clr12;
+        @extend %borderRadius;
+        @extend %backClr11;
+        @extend %userSelection;
+        background-image: url(../img/bg04.png);
+        font-family: sans-serif;
+        font-weight: 500;
+        font-size: .9rem;
+
+        &:hover {
+            background-color: $clr20;
+        }
+
+        &:active {
+            transform: scale(.99);
+        }
+    }
+
+    // pruhlednej gradient
+    .gradient {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 3.2rem;
+        z-index: 100;
+        background: linear-gradient(0deg, #272727 0%, #27272700 100%);
+    }
+
+    .paragraph-container {
+        position: relative;
+        @include links;
+        @extend %clr16;
+        padding: 1em .5em;
+        line-height: 1.3em;
+        @extend %borderRadius;
+        overflow: hidden;
+        height: 5em;
+
+        strong {
+            font-weight: 600;
+            color: #c5c5c5;
+        }
+    }
+
+    .expand {
+        overflow: auto;
+        height: auto;
+        background-color: $clr12;
+        color: lighten($clr16, 10);
+    }
+}
+
+main {
+    padding: 0em 2em 2em 2em;
+    margin: 0 auto auto auto;
 
     h3 {
         @include H3-normal;
-        color: $clr16;
-        text-align: center;
-        margin: 1em 0 1em 0;
-        background-color: $clr14;
-        padding: 0 1em;
-        text-align: center;
+        @extend %clr16;
+        @extend %textCenter;
+        margin: 1em 0;
+        @extend %userSelection;
     }
 
     h2 {
         @include H2-Normal;
         @extend %clr10;
-        padding: 0 1em .2em 1em;
-    }
-
-    p {
-        position: relative;
-        @include links;
-        @extend %clr16;
-        opacity: .7;
-        height: 4.5em;
-        overflow: hidden;
-        padding: 1em;
-        @extend %borderRadius;
-        transition: all ease-in-out .25s;
-        animation: down 1s forwards;
-
-        &:after {
-            position: absolute;
-            content: "";
-            z-index: 100;
-            top: 73px;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background: -webkit-gradient(linear, left top, left bottom, from(#27272758), to(#272727));
-            background: -o-linear-gradient(top, #27272758 0%, #272727 100%);
-            background: linear-gradient(180deg, #27272758 0%, #272727 100%);
-        }
-
-        strong {
-            font-weight: 600;
-            color: rgb(197, 197, 197);
-        }
+        padding: 0 1em;
+        @extend %userSelection;
     }
 
     .content {
+        display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 1em;
         align-items: flex-start;
-        padding: 0 1vw;
+        gap: 3%;
 
-        li {
-            max-width: 38%;
-            flex-grow: 1;
+        .content-list {
+            // outline: 1px solid red;
+            flex-basis: 31.3333%;
             position: relative;
-            padding: 1em 1em;
+            padding: 1.5em 0em 0 0;
             text-align: left;
+            margin-bottom: 1rem;
+            text-align: right;
 
             &::after {
                 position: absolute;
                 content: "";
-                bottom: 0px;
-                left: 20px;
+                bottom: 10px;
+                left: .8em;
                 height: 1px;
                 width: 60%;
                 background-color: $clr17;
             }
 
-            input {
-                position: absolute;
-                z-index: 200;
-                bottom: -10px;
-                right: 30px;
-                padding: .7em 2.2em;
-                background-color: $clr11;
-                appearance: none;
-                background-image: url(../img/bg04.png);
-                @extend %borderRadius;
-                font-family: sans-serif;
-                font-weight: 300;
-                font-size: 1rem;
-
-                &:checked {
-                    background-color: $clr20;
-
-                    &::after {
-                        content: "close";
-                        right: 28%;
-                    }
-                }
-
-                &:checked~p {
-                    height: 100%;
-                    opacity: 1;
-                    background-color: rgba(0, 0, 0, 0.2);
-                    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.52);
-
-                    &::after {
-                        height: 0;
-                    }
-                }
-
-                &:checked+h2 {
-                    color: $clr11;
-                }
-
-                &::after {
-                    position: absolute;
-                    content: "expand";
-                    top: 2px;
-                    right: 15%;
-                }
+            .content-list-container {
+                @extend %positionRelative;
+                text-align: left;
             }
         }
     }
 
-    .others {
-        margin: 1em 0 .5em 0;
-    }
-
-    .others-list {
-        text-align: left;
-        width: 100%;
+    .aboutMe {
+        max-width: 70ch;
         @extend %autoMargin;
+        text-align: right;
+        position: relative;
+        isolation: isolate;
 
-        h2 {
-            margin-top: 1em;
+        .aboutMe-container {
+            position: relative;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 10px;
+            left: 1em;
+            height: 1px;
+            width: 60%;
+            background-color: $clr17;
+        }
+
+        .aboutMe-heading {
+            text-align: left;
+            margin: 1em 0 0 0;
+            padding-left: 1rem;
+            @extend %userSelection;
         }
 
         p {
-            height: 100%;
-
-            &::after {
-                height: 0;
-            }
+            text-align: left;
+            @include links;
+            @extend %clr16;
+            line-height: 1.8rem;
         }
-
-        li {
-            width: 70%;
-            padding: 0 1em;
-            @extend %autoMargin;
-            @extend %borderRadius;
-        }
-    }
-}
-
-@-webkit-keyframes down {
-
-    100% {
-        height: 4.5em;
-    }
-}
-
-@keyframes down {
-
-    100% {
-        height: 4.5em;
     }
 }

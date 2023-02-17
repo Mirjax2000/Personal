@@ -7,62 +7,10 @@
 
 
 // max-width: 850px
-@include mQmid {
-    :root {
-        --h1-fs: #{$h1-mid};
-        --h2-main-fs:#{$h2-main-mid};
-        --h2-fs: #{$h2-mid};
-        --h3-fs: #{$h3-mid};
-        --a-fs: #{$a-mid};
-        --specialSmall-fs: #{$specialSmall-mid};
-    }
-}
+@include mQmid {}
 
 // max-width: 750px
 @include mQmin {
-    :root {
-        --h1-fs: #{$h1-min};
-        --h2-main-fs:#{$h2-main-min};
-        --h2-fs: #{$h2-min};
-        --h3-fs: #{$h3-min};
-        --a-fs: #{$a-min};
-        --specialSmall-fs: #{$specialSmall-min};
-    }
-
-    body {
-        padding: 1vh 0vw;
-
-        .central-wrapper {
-            max-height: 100%;
-            min-height: 98vh;
-            border-radius: 25px;
-
-            .horni-lista .horni-lista__right,
-            .horni-lista .horni-lista__left {
-                display: none;
-            }
-
-            &::after,
-            &::before {
-                bottom: 20px;
-                top: 20px;
-            }
-
-            &::after {
-                right: 0rem;
-                box-shadow: 10px 0 20px rgba(0, 0, 0, 0.895);
-            }
-
-            &::before {
-                left: 0rem;
-                box-shadow: -10px 0 20px rgba(0, 0, 0, 0.889);
-            }
-        }
-
-        header .hamburger {
-            display: inline-block;
-        }
-    }
 
     main .kontakts {
         flex-direction: column;
@@ -108,14 +56,7 @@
 
 // max-width: 500px
 @include mQmni {
-    :root {
-        --h1-fs: #{$h1-mni};
-        --h2-main-fs:#{$h2-main-mni};
-        --h2-fs: #{$h2-mni};
-        --h3-fs: #{$h3-mni};
-        --a-fs: #{$a-mni};
-        --specialSmall-fs: #{$specialSmall-mni};
-    }
+
 
     body {
 
@@ -132,5 +73,11 @@
             }
         }
 
+    }
+}
+
+@include mQdefault(22rem) {
+    :root {
+        --mobilni-fs:#{$mobilni-font-min};
     }
 }

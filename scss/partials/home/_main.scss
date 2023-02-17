@@ -1,12 +1,18 @@
 @use '../var' as *;
 @use '../mix' as *;
 
+
+main {
+    margin: auto;
+}
+
 main .hero {
-    color: $clr10;
-    padding: 25vh 0;
+    user-select: none;
+    @extend %clr10;
+    @extend %textCenter;
     text-align: center;
     width: fit-content;
-    margin: 0 auto;
+    @extend %autoMargin;
 
     .hero-heading {
         font-size: var(--h2-main-fs);
@@ -32,7 +38,7 @@ main .hero {
         padding: .4em .8em;
         @extend %weight-600;
         @extend %clr12;
-        background-color: $clr11;
+        @extend %backClr11;
         background-image: url(../img/bg04.png);
         transition: background-color ease-in-out .25s;
 

@@ -1,20 +1,26 @@
 @use '../var' as *;
 @use '../mix' as *;
 
+// *{
+//     outline: 1px solid red;
+// }
+
 main {
+    margin: auto;
+
     strong {
         font-weight: 600;
     }
 
     h3 {
         @include H3-normal;
-        color: $clr16;
-        text-align: center;
-        margin: 1em 0 2em 0;
+        @extend %clr16;
+        @extend %textCenter;
+        margin: 2em 0;
     }
 
     .portfolio-list {
-        padding-bottom: 10em;
+        padding-bottom: 2em;
         width: 80%;
         @extend %autoMargin;
 
@@ -39,6 +45,7 @@ main {
         }
 
         .row {
+            display: flex;
             justify-content: center;
             gap: 5em;
             position: relative;
@@ -80,15 +87,15 @@ main {
                 position: absolute;
                 content: "";
                 z-index: 100;
-                bottom: 0px;
+                bottom: 6px;
                 left: 0;
                 width: 100%;
-                height: 1em;
+                height: 1.3em;
                 background: -webkit-gradient(linear, left top, left bottom, from(#27272758), to(#272727));
                 background: -o-linear-gradient(top, #27272758 0%, #272727 100%);
                 background: linear-gradient(180deg, #27272758 0%, #272727 100%);
             }
-           
+
         }
 
 
@@ -114,15 +121,15 @@ main .portfolio-list .relativ {
     position: relative;
 
     &:before {
-            position: absolute;
-            content: "";
-            height: 1px;
-            width: 60%;
-            left: 20px;
-            bottom: -20px;
-            z-index: 200;
-            background-color: $clr17;
-        }
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 60%;
+        left: 20px;
+        bottom: -20px;
+        z-index: 200;
+        background-color: $clr17;
+    }
 
     input {
         position: absolute;
@@ -156,7 +163,7 @@ main .portfolio-list .relativ {
             animation: up .5s forwards;
 
             &::after {
-                height: 0;
+                height: auto;
             }
         }
 

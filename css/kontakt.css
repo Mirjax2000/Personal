@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap");
+:root {
+  --h1-fs: 2.5rem;
+  --h2-main-fs:12rem;
+  --h2-fs: 1.3rem;
+  --h3-fs: 3.2rem;
+  --a-fs: 1.3rem;
+  --specialSmall-fs: 1rem;
+  --mobilni-fs:1.5rem;
+}
+
 h1,
 h2,
 h3,
@@ -30,95 +40,116 @@ input {
   outline: none;
 }
 
-body .central-wrapper {
-  background-image: url(../img/bg01.png);
+header nav, header .mobile {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header nav, header .horni-lista a, body .central-wrapper {
+  position: relative;
+}
+
+header .horni-lista a::after, header .hamburger, header .mobile, body .central-wrapper::after, body .central-wrapper::before {
+  position: absolute;
 }
 
 main h3, main h2, main .form form, header .horni-lista h2, header .horni-lista a, header .mobile ul li a {
   font-weight: 300;
 }
 
-header .horni-lista a {
-  border-radius: 5px;
-}
-
 main .form form .submit, header .horni-lista h1 {
   font-weight: 600;
 }
 
-main .form form input, main .form form textarea, main .form form .submit {
+main .form form input, main .form form textarea, main .form form .submit, header .horni-lista a {
   border-radius: 5px;
 }
 
 main .kontakts, main .form form, main .form form textarea, body .central-wrapper {
-  margin: 0 auto;
+  margin-inline: auto;
+}
+
+header .horni-lista, header .mobile ul {
+  text-align: center;
 }
 
 main h2, main .form form, main .form form input, main .form form textarea, main .form form .submit:active, header .horni-lista h1, header .horni-lista a {
   color: #ffffff;
 }
 
-header .horni-lista h2 {
+header .horni-lista h2, header .horni-lista .selected {
   color: #6ed7fe;
+}
+
+header .horni-lista a::after, header .horni-lista .selected::after, body {
+  background-color: #6ed7fe;
 }
 
 main .form form .submit {
   color: #2f2f2f;
 }
 
-:root {
-  --h1-fs: 2.5rem;
-  --h2-main-fs:12rem;
-  --h2-fs: 1.3rem;
-  --h3-fs: 3.2rem;
-  --a-fs: 1.3rem;
-  --specialSmall-fs: 1rem;
-  --mobilni-fs:1.5rem;
+header .horni-lista a:hover, header .horni-lista a:focus {
+  background-color: #2f2f2f;
+}
+
+header nav {
+  background-color: #242526;
+}
+
+header .mobile, body .central-wrapper {
+  background-color: #272727;
 }
 
 /* border-box */
 html {
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-}
-
-/* --- vyber --- */
-::-moz-selection {
-  background-color: #1683ff;
-  color: #ffffff;
-}
-
-::selection {
-  background-color: #1683ff;
-  color: #ffffff;
-}
-
-.flex {
-  display: flex;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
-  background-color: #6ed7fe;
   background-image: url(../img/bg04.png);
   font-family: "Source Sans Pro", sans-serif;
 }
+body ::-moz-selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+body ::selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
 body .central-wrapper {
-  position: relative;
+  outline: 2px solid #6ed7fe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: clamp(15.625rem, 95%, 90rem);
   max-height: 100%;
   min-height: 100.1vh;
-  background-color: #272727;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.922);
+  background-image: url(../img/bg01.png);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9215686275);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9215686275);
 }
 body .central-wrapper::after, body .central-wrapper::before {
   content: "";
-  position: absolute;
   width: 32px;
   top: 0rem;
   bottom: 0rem;
@@ -126,24 +157,38 @@ body .central-wrapper::after, body .central-wrapper::before {
 }
 body .central-wrapper::after {
   right: 0rem;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.809);
+  -webkit-box-shadow: 2px 0 10px rgba(0, 0, 0, 0.809);
+          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.809);
 }
 body .central-wrapper::before {
   left: 0rem;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.803);
+  -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.803);
+          box-shadow: -2px 0 10px rgba(0, 0, 0, 0.803);
 }
 
 header {
   position: relative;
+  isolation: isolate;
+}
+header nav {
+  z-index: 100;
+  border-top-right-radius: 3.125rem;
+  border-top-left-radius: 3.125rem;
 }
 
 header .horni-lista {
-  text-align: center;
-  align-items: baseline;
-  justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding-top: 1em;
   padding-bottom: 1em;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2862745098);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2862745098);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2862745098);
 }
 header .horni-lista h1 {
   font-size: var(--h1-fs);
@@ -155,24 +200,22 @@ header .horni-lista h2 {
   line-height: 17px;
 }
 header .horni-lista a {
-  position: relative;
   font-size: var(--a-fs);
   margin: 0 0.5em;
   padding: 0.2em 0.5em;
+  -webkit-transition: background-color ease-in-out 0.25s;
   transition: background-color ease-in-out 0.25s;
 }
 header .horni-lista a::after {
   content: "";
-  position: absolute;
   top: 40px;
   left: 60px;
   right: 60px;
   height: 1px;
-  background-color: #6ed7fe;
+  -webkit-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
 header .horni-lista a:hover, header .horni-lista a:focus {
-  background-color: #2f2f2f;
   outline: none;
 }
 header .horni-lista a:hover::after, header .horni-lista a:focus::after {
@@ -181,41 +224,55 @@ header .horni-lista a:hover::after, header .horni-lista a:focus::after {
   right: 0px;
   background-color: #6ed7fe;
 }
-header .horni-lista .selected {
-  color: #6ed7fe;
-}
 header .horni-lista .selected::after {
   height: 1px;
   left: 0px;
   right: 0px;
-  background-color: #6ed7fe;
 }
 
 header .hamburger {
   display: none;
-  position: absolute;
+  z-index: 999;
   width: 50px;
   height: 50px;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   background-image: url(../img/open.png);
   opacity: 0.9;
-  filter: drop-shadow(1px 1px 1px #6ed7fe);
+  -webkit-filter: drop-shadow(1px 1px 1px #6ed7fe);
+          filter: drop-shadow(1px 1px 1px #6ed7fe);
 }
 header .hamburger:hover, header .hamburger:active {
-  filter: drop-shadow(1px 1px 1px #ffffff);
+  -webkit-filter: drop-shadow(1px 1px 1px #ffffff);
+          filter: drop-shadow(1px 1px 1px #ffffff);
+}
+header .hamburger:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+header .down {
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
 }
 
 header .mobile {
   display: none;
+  width: 100%;
+  top: 17px;
+  z-index: 10;
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+  border-top-right-radius: 3.125rem;
+  border-top-left-radius: 3.125rem;
 }
 header .mobile ul {
-  margin-top: 5px;
   display: block;
-  background-color: #272727;
   background-image: url(../img/bg01.png);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.277);
-  text-align: center;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.277);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.277);
 }
 header .mobile ul li {
   display: inline-block;
@@ -233,7 +290,8 @@ header .mobile .mobile-selected {
 }
 
 main {
-  padding-bottom: 10vh;
+  margin: auto;
+  padding-bottom: 2rem;
 }
 main h3 {
   font-size: var(--h3-fs);
@@ -242,13 +300,22 @@ main h3 {
   margin: 1em 0 1em 0;
 }
 main .kontakts {
-  justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   border-bottom: 1px solid rgba(81, 81, 81, 0.7803921569);
   width: 80%;
   padding-bottom: 1rem;
 }
 main .srovnej {
-  justify-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 main h2 {
   font-size: var(--h2-fs);
@@ -258,8 +325,12 @@ main li {
 }
 main li {
   text-align: left;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main li a {
   color: #ffffff;
@@ -309,6 +380,7 @@ main .form form .submit {
   font-size: var(--a-fs);
   background-color: #6ed7fe;
   background-image: url(../img/bg04.png);
+  -webkit-transition: background-color ease-in-out 0.25s;
   transition: background-color ease-in-out 0.25s;
   border: none;
   outline: none;
@@ -317,7 +389,8 @@ main .form form .submit:hover {
   background-color: orange;
 }
 main .form form .submit:active {
-  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 main .form form .reset {
   float: left;
@@ -325,7 +398,10 @@ main .form form .reset {
   border: none;
   color: #aeaeae;
   padding: 0.1em 1em 0.1em 0;
+  -webkit-transition: -webkit-transform ease-in-out 0.1s;
+  transition: -webkit-transform ease-in-out 0.1s;
   transition: transform ease-in-out 0.1s;
+  transition: transform ease-in-out 0.1s, -webkit-transform ease-in-out 0.1s;
   outline: none;
 }
 main .form form .reset:hover {
@@ -333,7 +409,8 @@ main .form form .reset:hover {
   color: orangered;
 }
 main .form form .reset:active {
-  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 @media only screen and (max-width: 850px) {
@@ -344,6 +421,7 @@ main .form form .reset:active {
     --h3-fs: 2.7rem;
     --a-fs: 1.1rem;
     --specialSmall-fs: 1rem;
+    --mobilni-fs:1.5rem;
   }
 }
 @media only screen and (max-width: 750px) {
@@ -354,6 +432,7 @@ main .form form .reset:active {
     --h3-fs: 2.1rem;
     --a-fs: 1.1rem;
     --specialSmall-fs: 1rem;
+    --mobilni-fs:1.5rem;
   }
   body {
     padding: 1vh 0vw;
@@ -373,17 +452,25 @@ main .form form .reset:active {
   }
   body .central-wrapper::after {
     right: 0rem;
-    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.895);
+    -webkit-box-shadow: 10px 0 20px rgba(0, 0, 0, 0.8941176471);
+            box-shadow: 10px 0 20px rgba(0, 0, 0, 0.8941176471);
   }
   body .central-wrapper::before {
     left: 0rem;
-    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.889);
+    -webkit-box-shadow: -10px 0 20px rgba(0, 0, 0, 0.8901960784);
+            box-shadow: -10px 0 20px rgba(0, 0, 0, 0.8901960784);
   }
-  body header .hamburger {
+  header .hamburger {
     display: inline-block;
   }
+  header .mobile {
+    display: block;
+  }
   main .kontakts {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   main .srovnej {
     max-width: 330px;
@@ -420,6 +507,7 @@ main .form form .reset:active {
     --h3-fs: 1.45rem;
     --a-fs: 1.1rem;
     --specialSmall-fs: 1rem;
+    --mobilni-fs:1.5rem;
   }
   body main .srovnej i {
     font-size: 1.3rem;
@@ -429,5 +517,9 @@ main .form form .reset:active {
     width: 80%;
   }
 }
-
+@media only screen and (max-width: 22rem) {
+  :root {
+    --mobilni-fs:1.1rem;
+  }
+}
 /*# sourceMappingURL=kontakt.css.map */

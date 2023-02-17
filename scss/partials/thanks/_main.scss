@@ -1,6 +1,11 @@
 @use '../var' as *;
 @use '../mix' as *;
 
+main {
+    margin: auto;
+}
+
+
 h3 {
     margin-top: 20vh;
     text-align: center;

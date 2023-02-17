@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="cs">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -25,9 +25,6 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/about.css">
-
-    <script src="js/jquery-3.6.2.min.js"></script>
-    <script src="js/js.js"></script>
 </head>
 
 <body>
@@ -35,7 +32,7 @@
         <header>
             <nav>
 
-                <ul class="horni-lista flex">
+                <ul class="horni-lista">
                     <li class="horni-lista__right">
                         <a href="index.html">Home</a>
                         <a href="#" class="selected">Skills</a>
@@ -65,35 +62,48 @@
         </header>
 
         <main>
-            <section class="about">
-                <h3>Dovednosti</h3>
-                <ul class="flex content">
-                    <li>
-                        <input type="checkbox">
+            <h3>Dovednosti</h3>
+            <ul class="content">
+
+                <li class="content-list">
+                    <div class="content-list-container">
                         <h2>HTML 5</h2>
-                        <p>Snažím se dodržovat sémantiku struktury <strong>HTML</strong> tagů pro <strong>SEO</strong> a
+                        <p class="paragraph-container">Snažím se dodržovat sémantiku struktury
+                            <strong>HTML</strong>
+                            tagů pro
+                            <strong>SEO</strong> a
                             <strong>Google</strong> vyhledávač. Používám správný typ elementu pro daný typ obsahu.
-                            Vyvaruji se nadměrného používání <code>DIV</code> elementů. Pro classy se snažím vycházet z
+                            Vyvaruji se nadměrného používání <code>DIV</code> elementů. Pro classy se snažím
+                            vycházet z
                             <strong>BEM</strong> (Block element modifier) pojmenovávací konvence.
                             Naučil jsem se používat <strong>picture</strong> element, pro různé druhy rozlišení,
                             zařízení, druhů formátů a následných fallbacků.
                         </p>
-                    </li>
-                    <li>
-                        <input type="checkbox">
+                        <div class="gradient"></div>
+                    </div>
+                    <h5 class="expand-bttn">expand</h5>
+                </li>
+
+                <li class="content-list">
+                    <div class="content-list-container">
                         <h2>Css 3</h2>
-                        <p>Základní stylování dokumentu. Zaměřuji se na používání flexboxu a responzivního layoutu. Ve
+                        <p class="paragraph-container">
+                            Základní stylování dokumentu. Zaměřuji se na používání flexboxu a responzivního layoutu. Ve
                             spolupráci se <strong>Sass</strong> je celkem jednoduché vytvořit celkovou podobu stránky. V
-                            poslední době jsem se zaměřil na pokročilejší funkce jako
-                            "animate","transform","transition".
-
+                            poslední době jsem se zaměřil na pokročilejší funkce jako "animate", "transition",
+                            "transform"
                         </p>
-                    </li>
-
-                    <li>
-                        <input type="checkbox">
+                        <div class="gradient"></div>
+                    </div>
+                    <h5 class="expand-bttn">expand</h5>
+                </li>
+                <li class="content-list">
+                    <div class="content-list-container">
                         <h2>Sass</h2>
-                        <p><strong>Sass</strong> jako takový nepoužívám, ale používám z něho vycházející jazyk
+                        <p class="paragraph-container"><strong>Sass</strong> jako takový nepoužívám, ale
+                            používám
+                            z něho
+                            vycházející jazyk
                             <strong>SCSS</strong>. Neuvěřitelně efektivní věc. Nejen při psaní kódu, ale i při přípravě
                             celkové struktury a přípravě a údržbě assetů pro další projekty. Používám tyto jeho funkce.
                             <strong>
@@ -110,27 +120,54 @@
                             <strong>em</strong>. Díky tomu ušetřím čas když vytvářím breakpointy.
                             Nepoužívám VSCode extension, ale přímo Sass terminal s Dart Sassem.
                         </p>
-                    </li>
-                    <li>
-                        <input type="checkbox">
+                        <div class="gradient"></div>
+                    </div>
+                    <h5 class="expand-bttn">expand</h5>
+                </li>
+                <li class="content-list">
+                    <div class="content-list-container">
+                        <h2>Javascript</h2>
+                        <p class="paragraph-container">
+                            Práce s poly a proměnými. Targetování elementů v <strong>HTML DOM</strong> a přidávání nebo
+                            odebírání atributů. Získávání hodnot z formulářů a jejich vyhodnocení, uložení a použití na
+                            jiném místě. Používání podmíněných funkcí. Přidávání nových <strong>CSS</strong> vlastností.
+                        </p>
+                        <div class="gradient"></div>
+                    </div>
+                    <h5 class="expand-bttn">expand</h5>
+                </li>
+                <li class="content-list">
+                    <div class="content-list-container">
                         <h2>Jquery</h2>
-                        <p>Prozatím pro mne novinka se kterou se nyní zabývám. Objevuji možnosti jakým způsobem mohu
+                        <p class="paragraph-container">Prozatím pro mne novinka se kterou se nyní zabývám.
+                            Objevuji
+                            možnosti
+                            jakým způsobem mohu
                             kontrolovat elementy na stránce. Tvorba funkcí, traverzování po DOM na stránce.</p>
-                    </li>
-                    <li>
-                        <input type="checkbox">
+                        <div class="gradient"></div>
+                    </div>
+                    <h5 class="expand-bttn">expand</h5>
+                </li>
+                <li class="content-list">
+                    <div class="content-list-container">
                         <h2>Git</h2>
-                        <p>Umím inicializovat verzovací systém pro projekt. Následně commitovat a pushovat do úložistě.
+                        <p class="paragraph-container">Umím inicializovat verzovací systém pro projekt.
+                            Následně
+                            commitovat
+                            a pushovat do úložistě.
                             Vytvořil jsem si privátní úložiště na Githubu a zároveň jsem si zprovoznil Gitlab úložiště
                             na svém domácím <strong>Proxmox</strong> serveru. Na obě úložiště odesílám změny v projektu.
                             Zkouším vytvářet větve pro různé verze projektu. Ještě se potřebuji naučit jak používat
                             <strong>Git</strong> v týmu.
                         </p>
-                    </li>
-                    <li>
-                        <input type="checkbox">
+                        <div class="gradient"></div>
+                    </div>
+                    <h5 class="expand-bttn">expand</h5>
+                </li>
+                <li class="content-list">
+                    <div class="content-list-container">
                         <h2>IT Admin</h2>
-                        <p>
+                        <p class="paragraph-container">
                             Operační systémy: Windows a Linux<br>
                             Kancelářské systémy: <strong>Office</strong> a <strong>Libre Office</strong>.<br>
                             Virtualizační platformy: <Strong>Virtual Box</Strong> a <strong>Proxmox</strong>.<br>
@@ -141,29 +178,49 @@
                             Mám také základní znalosti CCNA certifikace a ovládání IT network periferií, switche a
                             routery.
                         </p>
-                    </li>
-                </ul>
-
-                <h3 class="others">O mně</h3>
-                <ul class="others-list">
-                    <li>
-                        <p>It technologií se zabývám již přes 20 let. Společně s kamarády jsme si pořídily první
-                            počítače. Od Didaktika přes Commodora a Amigu do dnešního stavu. Svoje první IT dovednosti
-                            jsem využil v IT firmě Libra electronics, kde jsem pracoval jako příjmový skladník, který
-                            měl za úkol přesnou identifikaci a klasifikaci hardware. Později jsem zkoušel proniknout i
-                            do vyšších míst v IT průmyslu, ale pro zaměstnavatele jsem neměl dostatečné vzdělání. Nyní
-                            jsem se rozhodl to zkusit znova, protože na trhu IT je nedostatek pracovní síly. Mám celkový
-                            přehled o IT, ale nemám konkrétní specializaci. Takže svůj okruh znalostí stále rozšiřuji a
-                            specializace pak závisí na konkrétní potřebě zaměstnavatele.<br>Angličtinu ovládám středně
-                            dobře.<br>Němčinu ovládám spíše na základní úrovni jelikož jsem neměl možnost ji použít.<br>
-                            Mám středoškolské vzdělání.
+                        <div class="gradient"></div>
+                    </div>
+                    <h5 class="expand-bttn">expand</h5>
+                </li>
+                <li class="content-list">
+                    <div class="content-list-container">
+                        <h2>Gulp a npm</h2>
+                        <p class="paragraph-container">
+                            Naučil jsem se používat <strong>npm</strong> . Společně s tím se mi do ruky dostal
+                            automatizovaný modulový system <strong>Gulp</strong>. Využívám moduly pro převod obrázků na
+                            webp formát, minifikaci a autoprefixaci css souborů. Vytvořil jsem si nějaké scripty, které
+                            mi pomáhají při zakládáni nových projektů a šetří mi tím čas.
                         </p>
-                    </li>
-                </ul>
+                        <div class="gradient"></div>
+                    </div>
+                    <h5 class="expand-bttn">expand</h5>
+                </li>
+            </ul>
 
+            <section class="aboutMe">
+                <div class="aboutMe-container">
+                    <h3 class="aboutMe-heading">O mně</h3>
+                    <p id="down" class="paragraph-container">It technologií se zabývám již přes 20 let. Společně s
+                        kamarády jsme
+                        si pořídily první
+                        počítače. Od Didaktika přes Commodora a Amigu do dnešního stavu. Svoje první IT dovednosti
+                        jsem využil v IT firmě Libra electronics, kde jsem pracoval jako příjmový skladník, který
+                        měl za úkol přesnou identifikaci a klasifikaci hardware. Později jsem zkoušel proniknout i
+                        do vyšších míst v IT průmyslu, ale pro zaměstnavatele jsem neměl dostatečné vzdělání. Nyní
+                        jsem se rozhodl to zkusit znova, protože na trhu IT je nedostatek pracovní síly. Mám celkový
+                        přehled o IT, ale nemám konkrétní specializaci. Takže svůj okruh znalostí stále rozšiřuji a
+                        specializace pak závisí na konkrétní potřebě zaměstnavatele.<br>Angličtinu ovládám středně
+                        dobře.<br>Němčinu ovládám spíše na základní úrovni jelikož jsem neměl možnost ji použít.<br>
+                        Mám středoškolské vzdělání.
+                    </p>
+                    <div class="gradient"></div>
+                </div>
+                <h5 class="expand-bttn scroll">expand</h5>
             </section>
+
         </main>
     </div>
+    <script src="js/js.js"></script>
 </body>
 
 </html>

@@ -3,10 +3,21 @@
 
 header {
     position: relative;
+    isolation: isolate;
+
+    nav {
+        @extend %positionRelative;
+        z-index: 100;
+        @extend %backClr13;
+        border-top-right-radius: 3.125rem;
+        border-top-left-radius: 3.125rem;
+        @extend %userSelection;
+    }
 }
 
 header .horni-lista {
-    text-align: center;
+    @extend %textCenter;
+    display: flex;
     align-items: baseline;
     justify-content: space-around;
     padding-top: 1em;
@@ -27,33 +38,30 @@ header .horni-lista {
     }
 
     a {
-        position: relative;
-
+        @extend %positionRelative;
         @include links;
         @extend %clr10;
 
         margin: 0 .5em;
         padding: .2em .5em;
 
-
-        @extend %border-radius;
+        @extend %borderRadius;
         transition: background-color ease-in-out .25s;
-
 
         &::after {
             content: "";
-            position: absolute;
+            @extend %positionAbsolute;
             top: 40px;
             left: 60px;
             right: 60px;
             height: 1px;
-            background-color: $clr11;
+            @extend %backClr11;
             transition: all ease-in-out .25s;
         }
 
         &:hover,
         &:focus {
-            background-color: $clr12;
+            @extend %backClr12;
             outline: none;
 
             &::after {
@@ -66,13 +74,13 @@ header .horni-lista {
     }
 
     .selected {
-        color: $clr11;
+        @extend %clr11;
 
         &::after {
             height: 1px;
             left: 0px;
             right: 0px;
-            background-color: $clr11;
+            @extend %backClr11;
         }
     }
 }
@@ -80,39 +88,53 @@ header .horni-lista {
 // --- mobilni menu ---
 header .hamburger {
     display: none;
-    position: absolute;
+    @extend %positionAbsolute;
+    z-index: 999;
     width: 50px;
     height: 50px;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     background-image: url(../img/open.png);
     opacity: .9;
     filter: drop-shadow(1px 1px 1px $clr11);
-
+    
     &:hover,
     &:active {
         filter: drop-shadow(1px 1px 1px $clr10);
     }
+    
+    &:active {
+        transform: scale(.95);
+    }
+}
+
+header .down {
+    transform: translateY(70px);
 }
 
 header .mobile {
-
+    @extend %userSelection;
     display: none;
+    @extend %backClr14;
+    @extend %positionAbsolute;
+    width: 100%;
+    top: 17px;
+    z-index: 10;
+    transition: transform ease-in-out .2s;
+    border-top-right-radius: 3.125rem;
+    border-top-left-radius: 3.125rem;
 
     ul {
-        margin-top: 5px;
         display: block;
-        background-color: $clr14;
         background-image: url(../img/bg01.png);
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.277);
-        text-align: center;
+        @extend %textCenter;
 
         li {
             display: inline-block;
             padding: 1em 1vw;
 
             a {
-
                 @include mobilniFont;
                 color: #fff;
 
