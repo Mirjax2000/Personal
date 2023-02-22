@@ -14,145 +14,339 @@
     <meta charset="UTF-8">
     <title>2g2bt - Portfolio</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="pages for personal portfolio">
+    <meta name="description" content="personal portfolio for html coder">
     <!-- zadej popis stranky -->
-    <meta name="keywords" content="responsive">
+    <meta name="keywords" content="responsive html coder">
     <!-- zadej klicova slova -->
     <meta name="author" content="Miroslav Viktorin">
     <!-- zadej jmeno autora -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <script src="./js/jquery-3.6.2.min.js"></script>
 </head>
 
 <body>
     <div class="central-wrapper">
-        <header>
-            <nav>
-                <ul class="horni-lista">
-                    <li class="horni-lista__right">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">Skills</a>
-                    </li>
-                    
-                    <li class="horni-lista__middle">
-                        <h1>2g2bt.eu</h1>
-                        <h2>Personal Portfolio</h2>
-                    </li>
-                    
-                    <li class="horni-lista__left">
-                        <a href="#" class="selected">- Portfolio -</a>
-                        <a href="kontakt.html">Kontakt</a>
-                    </li>
-                </ul>
-                
-            </nav>
-            <div class="hamburger"></div>
-            <section class="mobile">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Skills</a></li>
-                    <li><a href="#" class="mobile-selected">Portfolio</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </section>
-        </header>
-        
-        <main id="movedown">
-            <section>
-                <h3>My Projects</h3>
-                
-                <ul class="portfolio-list">
-                    <li class="dopetrope">
-                        <div class="border-cross"></div>
-                        <h2>Dopetrope Website</h2>
-                        <div class="row">
-                            <a href="Dopetrope/index.html" target="_blank"><img src="img/dopetrope-small.jpg"
-                                alt="dopetrope web site" width="500" height="420"></a>
-                                <div class="relativ">
-                                    <input type="checkbox">
-                                    <p>Můj první projekt. Toto je verze 3.0. Ve verzi 3.0 jsem se snažil vyvarovat duplikaci
-                                        kódu. Snažil jsem se používat <strong>Sass</strong> proměnné k usnadnění práce.
-                                        Objevil
-                                        jsem spoustu
-                                        zajímavých metod <strong>CSS</strong>. Pracovat s flexboxem a nechat stránku co
-                                        nejvíc
-                                        responzivní a
-                                        zasáhnout teprve ve chvílích kdy se stránka začíná rozpadat.
-                                        Zde jsem také použil <strong>Sass</strong> list cyklus.
-                                        Výzva byla udělat mobilní menu i když ještě neovladám javascript. Udělal jsem to
-                                        přes
-                                        <code>input type="checkbox"</code>.
-                                        Nyní už vím jak to udělat i v javascriptu respektive v <strong>"Jquery"</strong>.
-                                        Použité technologie - <strong> HTML, CSS, SCSS</strong>.
-                                    </p>
+        <div class="inner-container">
+            <header>
+                <nav>
+                    <ul class="horni-lista">
+                        <li class="horni-lista__right">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">Skills</a>
+                        </li>
+
+                        <li class="horni-lista__middle">
+                            <h1>2g2bt.eu</h1>
+                            <h2>Personal Portfolio</h2>
+                        </li>
+
+                        <li class="horni-lista__left">
+                            <a href="#" class="selected">- Portfolio -</a>
+                            <a href="kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="hamburger"></div>
+                <section class="mobile">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Skills</a></li>
+                        <li><a href="#" class="mobile-selected">Portfolio</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </section>
+            </header>
+
+            <main>
+                <h3>Portfolio</h3>
+                <h4 id="frontEnd">FrontEnd Challenges</h4>
+                <section id="frontEndSection">
+                    <ul class="content">
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>Rating - component</h5>
+                                </div>
+
+                                <div class="card-body interactive"></div>
+
+                                <div class="card-under">
+                                    <a href="./challenge/interactive-rating-ORIGIN/index.html" class="card-under-link"
+                                        target="_blank">visit site</a>
+                                    <a href="https://github.com/Mirjax2000/interactive-rating-ORIGIN"
+                                        class="card-under-link" target="_blank">view github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>CSS/Sass</p>
+                                    <p>Js</p>
+                                </div>
+
                             </div>
-                        </div>
-                    </li>
-                    
-                    <li class="arcana">
-                        <div class="border-cross"></div>
-                        <h2>Arcana Website</h2>
-                        <div class="row">
-                            <a href="Arcana/index.html" target="_blank"><img src="img/arcana-small.jpg"
-                                alt="arcana web site" width="500" height="420"></a>
-                                
-                                <div class="relativ">
-                                    <input type="checkbox">
-                                    <p>Můj druhý projekt. Zde jsem se zaměřil na používaní <strong>Sass</strong>
-                                        "placeholderů"
-                                        na eliminaci
-                                        duplicitního kódu. Zde se mi už pracovalo mnohem svižněji po znalostech z prvního
-                                        projektu. Na pozadí je aplikovaná jemná zrnitá textura, která se mi moc líbí a
-                                        rozhodně
-                                        tento detail budu používat i v následujících projektech.Na této websitě jsou
-                                        zajímavostí
-                                        barevné gradienty a pseudoelementy v navigaci. Stránka je také plně responzivní.
-                                        Prozatím není funkční kontaktní formulář.
-                                        Použité technologie - <strong> HTML, CSS,
-                                            SCSS</strong>.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li class="halcyonic">
-                                    <div class="border-cross"></div>
-                                    <h2>Halcyonic Website</h2>
-                        <div class="row">
-                            <a href="Halcyonic/index.html" target="_blank"><img src="img/Halcyonic-small.jpg"
-                                alt="halcyonic web site" width="500" height="420"></a>
-                                <div class="relativ">
-                                    <input type="checkbox">
-                                    <p>V pořadí třetí projekt. Zde byl úkol udržet stránku responzivní.Zde jsem si vyhrál s
-                                        flexboxem a zároveň jsem si před editací kódu připravil "mixiny" pro všechny
-                                        důležité
-                                        prvky. Zejména nastavení fontu pro různé heading formáty a zjednodušil přepínání
-                                        velikosti fontu při určitém breakpointu. Zde jsem pracoval jak s proměnnými v Sassu
-                                        tak
-                                        jsem využíval proměnné přímo v ":root" <strong>CSS</strong>.
-                                        Začal jsem využívat funkci "use" v <strong>Sassu</strong> díky které můžu využívat
-                                        proměnné i mixiny v
-                                        celém projektu. Rozdělil jsem header a footer od hlavního main a následně jsem ho
-                                        spojil, takže ve výsledku stačí napsat jen 1x header a 1x footer a jednoduše ho
-                                        připojit
-                                        k
-                                        dalším podstránkám projektu. Po tomto projektu jsem upravil i svoje první dva
-                                        projekty
-                                        aby odpovídaly tomuto přístupu. Použité technologie -
-                                        
-                                        <strong> HTML, CSS, SCSS</strong>.
-                                    </p>
+                        </li>
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>Landing page</h5>
+                                </div>
+
+                                <div class="card-body landing"></div>
+
+                                <div class="card-under">
+                                    <a href="./challenge/landing-page-ORIGIN/index.html" class="card-under-link"
+                                        target="_blank">visit site</a>
+                                    <a href="https://github.com/Mirjax2000/landing-page-ORIGIN" class="card-under-link"
+                                        target="_blank">view github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>CSS/Sass</p>
+                                    <p>Js</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>QR - componenta</h5>
+                                </div>
+
+                                <div class="card-body qr"></div>
+
+                                <div class="card-under">
+                                    <a href="./challenge/QRcode-component-ORIGIN/index.html" class="card-under-link"
+                                        target="_blank">visit site</a>
+                                    <a href="https://github.com/Mirjax2000/QRcode-component-ORIGIN"
+                                        class="card-under-link" target="_blank">view github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>CSS/Sass</p>
+                                    <p>Js</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>Stranka receptu</h5>
+                                </div>
+
+                                <div class="card-body recept"></div>
+
+                                <div class="card-under">
+                                    <a href="./challenge/recipe-page-ORIGIN/index.html" class="card-under-link"
+                                        target="_blank">visit site</a>
+                                    <a href="https://github.com/Mirjax2000/recipe-page-ORIGIN" class="card-under-link"
+                                        target="_blank">view github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>CSS/Sass</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>Gallery</h5>
+                                </div>
+
+                                <div class="card-body gallery"></div>
+
+                                <div class="card-under">
+                                    <a href="./challenge/my-gallery-ORIGIN/index.html" class="card-under-link"
+                                        target="_blank">visit site</a>
+                                    <a href="https://github.com/Mirjax2000/recipe-page-ORIGIN" class="card-under-link"
+                                        target="_blank">view github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>CSS/Sass</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>Result - component</h5>
+                                </div>
+
+                                <div class="card-body result"></div>
+
+                                <div class="card-under">
+                                    <a href="./challenge/results-summary-component-ORIGIN/index.html"
+                                        class="card-under-link" target="_blank">visit site</a>
+                                    <a href="https://github.com/Mirjax2000/results-summary-component-ORIGIN"
+                                        class="card-under-link" target="_blank">view github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>CSS/Sass</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <h4 id="websites">Websites</h4>
+                <section id="websitesSection">
+                    <ul class="content">
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>Arcana</h5>
+                                </div>
+
+                                <div class="card-body arcana"></div>
+
+                                <div class="card-under">
+                                    <a href="./websites/Arcana/index.html" class="card-under-link" target="_blank">visit
+                                        site</a>
+                                    <a href="https://github.com/Mirjax2000/Arcana" class="card-under-link"
+                                        target="_blank">view
+                                        github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p class="html">HTML</p>
+                                    <p class="css">CSS</p>
+                                    <!-- <p class="js">Js</p> -->
                                 </div>
                             </div>
                         </li>
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>Dopetrope</h5>
+                                </div>
+
+                                <div class="card-body dopetrope"></div>
+
+                                <div class="card-under">
+                                    <a href="./websites/Dopetrope/index.html" class="card-under-link"
+                                        target="_blank">visit site</a>
+                                    <a href="https://github.com/Mirjax2000/Dopetrope/tree/main" class="card-under-link"
+                                        target="_blank">view github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>CSS/Sass</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="card-container">
+
+                                <div class="card-header">
+                                    <h5>Halcyonic</h5>
+                                </div>
+
+                                <div class="card-body halcyonic"></div>
+
+                                <div class="card-under">
+                                    <a href="./websites/Halcyonic/index.html" class="card-under-link"
+                                        target="_blank">visit site</a>
+                                    <a href="https://github.com/Mirjax2000/Halcyonic/tree/main" class="card-under-link"
+                                        target="_blank">view github</a>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>CSS/Sass</p>
+                                </div>
+                            </div>
+                        </li>
+
                     </ul>
                 </section>
-        </main>
+
+                <h4 id="other">Other Projects</h4>
+                <section id="otherSection">
+                    <ul class="content">
+
+                        <li class="card">
+
+                            <div class="card-container">
+                                <div class="card-header">
+                                    <h5>Proxmox</h5>
+                                </div>
+
+                                <div class="card-body">
+                                    <h2>WIP</h2>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>Linux</p>
+                                    <p>Virtualizace</p>
+                                    <p>Network</p>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="card">
+
+                            <div class="card-container">
+                                <div class="card-header">
+                                    <h5>Tento Project</h5>
+                                </div>
+
+                                <div class="card-body">
+                                    <h2>WIP</h2>
+                                </div>
+
+                                <div class="card-footer">
+                                    <p>HTML</p>
+                                    <p>Css/Sass</p>
+                                    <p>Js</p>
+                                    <p>gulp</p>
+                                    <p>git</p>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </section>
+
+
+            </main>
+        </div>
     </div>
-    
-    <script src="js/js.js"></script>
+
+    <script src="js/portfolio.js"></script>
 </body>
 
 </html>

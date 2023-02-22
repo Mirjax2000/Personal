@@ -1,0 +1,27 @@
+@use '../var' as *;
+@use '../mix' as *;
+// @use '../placeholders';
+
+/* border-box */
+html {
+    @include box-sizing (border-box);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* --- vyber --- */
+@include selection {
+    background-color: rgb(22, 131, 255);
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: $clr1;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 32.6px;
+    font-size: 100%;
+}

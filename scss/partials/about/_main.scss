@@ -5,37 +5,13 @@
 //     outline: 1px solid red;
 // }
 
-main {
-
-    .expand-bttn {
-        display: inline-block;
-        text-align: center;
-        width: 80px;
-        height: 20px;
-        padding-top: 1px;
-        margin-top: 1rem;
-        margin-right: 1.5em;
-        @extend %clr12;
-        @extend %borderRadius;
-        @extend %backClr11;
-        @extend %userSelection;
-        background-image: url(../img/bg04.png);
-        font-family: sans-serif;
-        font-weight: 500;
-        font-size: .9rem;
-
-        &:hover {
-            background-color: $clr20;
-        }
-
-        &:active {
-            transform: scale(.99);
-        }
-    }
+main .content-list-container {
+    @extend %positionRelative;
+    text-align: left;
 
     // pruhlednej gradient
     .gradient {
-        position: absolute;
+        @extend %positionAbsolute;
         left: 0;
         bottom: 0px;
         width: 100%;
@@ -45,45 +21,156 @@ main {
     }
 
     .paragraph-container {
-        position: relative;
+        @extend %positionRelative;
         @include links;
-        @extend %clr16;
         padding: 1em .5em;
         line-height: 1.3em;
         @extend %borderRadius;
         overflow: hidden;
+        @extend %clr16;
         height: 5em;
+        background-color: $clr14;
+        text-align: left;
 
         strong {
-            font-weight: 600;
-            color: #c5c5c5;
+            @extend %weight-600;
+        }
+    }
+
+    .paragraph {
+        position: absolute;
+        @include links;
+        @extend %clr14;
+        padding: 1em .5em;
+        line-height: 1.3em;
+        background-color: #272727;
+        z-index: -1;
+        visibility: hidden;
+        overflow: hidden;
+        bottom: 0;
+        left: 0;
+        
+
+    }
+
+    .dexpand {
+        animation-name: dexpand;
+        animation-duration: 1s;
+        color: $clr16;
+        background-color: $clr14;
+
+        @keyframes dexpand {
+            from {
+                background-color: darken($clr14, 10);
+                color: lighten($clr16, 10);
+                height: var(--height);
+                outline: 1px solid #2793f297;
+            }
+
+            to {
+                color: $clr16;
+                height: 5em;
+                background-color: $clr14;
+                outline: 1px solid #2793f200;
+            }
         }
     }
 
     .expand {
-        overflow: auto;
+
         height: auto;
-        background-color: $clr12;
+        animation-name: expand;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
         color: lighten($clr16, 10);
+        background-color: darken($clr14, 10);
+        outline: 1px solid #2793f297;
+
+        strong {
+            color: #7fc3ff;
+            animation-name: expandStrong;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes expandStrong {
+            from {
+                color: rgb(255, 255, 255);
+            }
+
+            to {
+                color: #7fc3ff;
+            }
+        }
+
+        code {
+            color: #ff7676;
+        }
+
+        @keyframes expand {
+            from {
+                height: 5em;
+                color: $clr16;
+                background-color: $clr14;
+                outline: 1px solid #2793f200;
+
+            }
+
+            to {
+                outline: 1px solid #2793f297;
+                background-color: darken($clr14, 10);
+                color: lighten($clr16, 10);
+                height: var(--height);
+            }
+        }
     }
 }
 
+.expand-bttn {
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    height: 20px;
+    padding-top: 1px;
+    margin-top: 1rem;
+    margin-right: 1.5em;
+    @extend %clr12;
+    @extend %borderRadius;
+    @extend %backClr11;
+    @extend %userSelection;
+    background-image: url(../img/bg04.png);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: .9rem;
+    border: none;
+
+    &:hover {
+        background-color: $clr20;
+    }
+
+    &:active {
+        transform: scale(.99);
+    }
+}
+
+
 main {
     padding: 0em 2em 2em 2em;
-    margin: 0 auto auto auto;
+    margin: auto;
+    margin-top: 6rem;
 
     h3 {
         @include H3-normal;
         @extend %clr16;
-        @extend %textCenter;
         margin: 1em 0;
         @extend %userSelection;
+        text-align: center;
     }
 
     h2 {
         @include H2-Normal;
         @extend %clr10;
-        padding: 0 1em;
+        padding: 0 .5em;
         @extend %userSelection;
     }
 
@@ -94,7 +181,6 @@ main {
         gap: 3%;
 
         .content-list {
-            // outline: 1px solid red;
             flex-basis: 31.3333%;
             position: relative;
             padding: 1.5em 0em 0 0;
@@ -111,24 +197,15 @@ main {
                 width: 60%;
                 background-color: $clr17;
             }
-
-            .content-list-container {
-                @extend %positionRelative;
-                text-align: left;
-            }
         }
     }
+
 
     .aboutMe {
         max-width: 70ch;
         @extend %autoMargin;
         text-align: right;
         position: relative;
-        isolation: isolate;
-
-        .aboutMe-container {
-            position: relative;
-        }
 
         &::after {
             position: absolute;
@@ -146,12 +223,7 @@ main {
             padding-left: 1rem;
             @extend %userSelection;
         }
-
-        p {
-            text-align: left;
-            @include links;
-            @extend %clr16;
-            line-height: 1.8rem;
-        }
     }
 }
+
+// icons

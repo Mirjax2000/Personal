@@ -1,0 +1,176 @@
+// @use 'placeholder' as *;
+@use 'var' as *;
+@use 'mix' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* border-box */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// --- HTML settings: box sizing, selection
+html {
+    @include box-sizing (border-box);
+    @include selection;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    @extend %backClr14;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    max-width: 412px;
+    @extend %autoMargin;
+}
+
+p {
+    @extend %weight-400;
+    @extend %clr15;
+    font-size: var(--par-fs);
+    line-height: em(24, 15);
+}
+
+// --- keep it in the middle ---
+.mrFlex {
+    @include flex($direction: column, $justify: center, $align: center);
+}
+
+.content {
+    @extend %content;
+
+    .content-star {
+        @include flexCenter;
+        @extend %backClr13;
+        @extend %borderRadius50;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .content-heading {
+        @extend %heading
+    }
+
+    .h1--margin {
+        margin: 2.2rem 0 .3em 0
+    }
+
+    #form {
+        .content-radio {
+            border: none;
+            @include flex;
+            padding: 0;
+            margin-top: 24px;
+
+            .content-radio-label {
+                @include flexCenter;
+                @extend %clr15;
+                cursor: pointer;
+                @extend %borderRadius50;
+                @extend %backClr13;
+                @extend %weight-700;
+                font-size: var(--num-fs);
+                width: 51px;
+                height: 51px;
+                line-height: em(24px, 16px);
+                transition: background-color ease-in-out .2s, color ease-in-out .2s;
+
+                &:hover {
+                    @extend %clr10;
+                    @extend %backClr15;
+                }
+            }
+
+            .content-radio-items {
+                display: none;
+                appearance: none;
+                width: 0px;
+                height: 0px;
+
+                &:checked~.content-radio-label {
+                    @extend %backClr12;
+                    @extend %clr10;
+
+                }
+            }
+        }
+
+        .content-submit {
+            width: 100%;
+            border: none;
+            @extend %borderRadius30;
+            @extend %clr10;
+            @extend %weight-700;
+            @extend %backClr12;
+            font-size: var(--btn-fs);
+            line-height: em(19px, 15px);
+            letter-spacing: .125rem;
+            padding-block: .8rem;
+            margin-top: 32px;
+            cursor: pointer;
+            transition: background-color ease-in-out .2s;
+
+            &:disabled {
+                @extend %backClr13;
+                cursor: not-allowed;
+            }
+
+            &:disabled:is(:hover, :focus) {
+                @extend %backClr15;
+                outline: none;
+            }
+        }
+    }
+}
+
+// --- second display --- 
+.thanks {
+    text-align: center;
+    @extend %content;
+
+    .thanks-js {
+        @extend %output;
+        @extend %autoMargin;
+        @extend %backClr13;
+        @extend %borderRadius30;
+        display: inline-block;
+        padding: .5em 2em;
+        margin: 2rem 0;
+    }
+
+    .thanks-heading {
+        @extend %heading;
+    }
+
+    .h2--margin {
+        margin-bottom: .3em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    :root {
+        --h1-fs:#{$h1Min};
+        --par-fs:#{$parMin};
+        --btn-fs:#{$btnMin};
+        --num-fs:#{$numMin};
+    }
+
+    .container {
+        padding: 0 2rem;
+    }
+
+    .content,
+    .thanks {
+        padding: 1rem;
+        min-width: 15.125rem;
+    }
+}

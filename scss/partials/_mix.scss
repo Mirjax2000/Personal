@@ -177,14 +177,7 @@
             padding: 1vh 0vw;
 
             .central-wrapper {
-                max-height: 100%;
-                min-height: 98vh;
                 border-radius: 25px;
-
-                .horni-lista .horni-lista__right,
-                .horni-lista .horni-lista__left {
-                    display: none;
-                }
 
                 &::after,
                 &::before {
@@ -193,26 +186,46 @@
                 }
 
                 &::after {
-                    right: 0rem;
                     box-shadow: 10px 0 20px #000000e4;
                 }
 
                 &::before {
-                    left: 0rem;
                     box-shadow: -10px 0 20px #000000e3;
                 }
+
+                .inner-container {
+                    overflow: auto;
+                    min-height: 98vh;
+                    height: 98vh;
+                    border-radius: 25px;
+                }
             }
-        }
 
-        header {
+            header {
 
-            .hamburger {
-                display: inline-block;
+                border-top-right-radius: 25px;
+                border-top-left-radius: 25px;
 
-            }
 
-            .mobile {
-                display: block;
+                .horni-lista {
+                    border-top-right-radius: 25px;
+                    border-top-left-radius: 25px;
+
+                    .horni-lista__right,
+                    .horni-lista__left {
+                        display: none;
+                    }
+                }
+
+                .hamburger {
+                    display: inline-block;
+
+                }
+
+                .mobile {
+                    display: block;
+                    z-index: -1;
+                }
             }
         }
 
@@ -228,15 +241,32 @@
             --h2-fs: #{$h2-mni};
             --h3-fs: #{$h3-mni};
             --a-fs: #{$a-mni};
+            --port-h4:#{$port-h4-mni};
             --specialSmall-fs: #{$specialSmall-mni};
             --mobilni-fs:#{$mobilni-font-max};
         }
 
+        body header {
+            .mobile {
+                top: 20px;
+
+                li {
+                    padding: .8em 1vw;
+                }
+
+            }
+
+
+            .down {
+                transform: translateY(57px);
+            }
+        }
+
+
+
         @content;
     }
 }
-
-
 
 
 @mixin mQdefault($width) {

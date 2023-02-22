@@ -1,0 +1,259 @@
+@use 'var' as *;
+@use 'mix' as *;
+
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url(./../fonts/HankenGrotesk-VariableFont_wght.ttf);
+    font-style: normal;
+}
+
+/* border-box */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// --- HTML settings: box sizing, selection
+html {
+    @include box-sizing (border-box);
+    @include selection;
+}
+
+body {
+    font-family: 'HankenGrotesk';
+    background-color: $clr11;
+    text-align: center;
+    height: 100dvh;
+    @include flexCenter;
+}
+
+.container {
+    @include container(46rem);
+    @extend %borderRadius30;
+    background-color: $clr10;
+    box-shadow: 0px 30px 60px #3d6cec26;
+    margin-inline: 1rem;
+
+    @include flex;
+
+    &>* {
+        flex-basis: 100%;
+        height: 512px;
+    }
+
+    .left {
+        @include flexCenter($justify: space-between);
+        flex-direction: column;
+        @extend %borderRadius30;
+        background: $backroundGradient1;
+
+        h3 {
+            @extend %weight-700;
+            @extend %clr13;
+            font-size: var(--h3-fs);
+            line-height: em(31, 24);
+            margin: 1.875rem 0
+        }
+
+        .inner-circle {
+            @include flexCenter;
+            flex-direction: column;
+
+            width: 200px;
+            height: 200px;
+            background: $backroundGradient2;
+            border-radius: 50%;
+
+            h1 {
+                @extend %weight-800;
+                @extend %clr10;
+                font-size: var(--h1-fs);
+                line-height: em(72, 72);
+            }
+
+            p {
+                @extend %weight-700;
+                @extend %clr13;
+                font-size: var(--par-fs);
+                line-height: em(23, 18);
+            }
+        }
+
+        h2 {
+            @extend %weight-700;
+            @extend %clr10;
+            font-size: var(--h2-fs);
+            line-height: em(42, 32);
+            padding-top: 1rem
+        }
+
+        p {
+            @extend %weight-500;
+            @extend %clr13;
+            font-size: var(--par-fs);
+            line-height: em(23, 18);
+            width: 80%;
+            margin-bottom: 3.4375rem;
+        }
+
+        .percentage {
+            @extend %weight-800;
+            @extend %clr10;
+        }
+    }
+
+    .right {
+        @include flexCenter($justify: space-between);
+        flex-direction: column;
+        padding-inline: 2rem;
+
+        h3 {
+            @extend %weight-700;
+            @extend %clr12;
+            font-size: var(--h3-fs);
+            line-height: em(31, 24);
+            text-align: left;
+            width: 100%;
+            margin: 1.875rem 0;
+        }
+
+        .right-list {
+            width: 100%;
+            padding-block: 1rem;
+
+
+            & li:nth-child(1) {
+                background: $reactionBck;
+
+                p {
+                    color: $reaction;
+                }
+            }
+
+            & li:nth-child(2) {
+                background: $memoryBck;
+
+                p {
+                    color: $memory;
+                }
+            }
+
+            & li:nth-child(3) {
+                background: $verbalBck;
+
+                p {
+                    color: $verbal;
+                }
+            }
+
+            & li:nth-child(4) {
+                background: $visualBck;
+
+                p {
+                    color: $visual;
+                }
+            }
+
+
+            .right-list-item {
+                @include flex;
+                padding: 1rem;
+                margin-bottom: .5rem;
+                border-radius: 12px;
+
+
+                p {
+                    @extend %weight-500;
+                    font-size: var(--sum-fs);
+                    line-height: em(21, 16);
+                }
+
+                .right-list-item__left {
+                    margin-right: auto;
+                    padding-left: 1rem;
+                }
+
+                &:last-child {
+                    margin-bottom: 0
+                }
+            }
+
+
+            .gray,
+            .bold {
+                @extend %weight-700;
+                font-size: var(--sum-fs);
+                line-height: em(21, 16);
+                @extend %clr12;
+            }
+
+            .gray {
+                opacity: .5;
+            }
+        }
+
+        .bttn {
+            display: inline-block;
+            background-color: $clr12;
+            padding-block: 1rem;
+            width: 100%;
+            @extend %weight-700;
+            @extend %clr10;
+            font-size: var(--bttn-fs);
+            line-height: em(23, 18);
+            border-radius: 8rem;
+            margin-bottom: 3.4375rem;
+
+            &:hover {
+                background: $bttnGradient;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+    :root {
+        --h1-fs:#{$h1Min};
+        --h2-fs:#{$h2Min};
+        --h3-fs:#{$h3Min};
+        --bttn-fs:#{$bttnMin};
+        --sum-fs:#{$sumMin};
+        --par-fs:#{$parMin};
+    }
+
+    .container .right {
+        padding-inline: 1rem;
+    }
+
+
+}
+
+@media only screen and (max-width:500px) {
+    .container {
+        flex-direction: column;
+        margin-inline: 0;
+        border-radius: 0;
+
+
+        .left {
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .right {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (max-width:300px) {
+    .container {
+        .right {
+            width: 100%;
+        }
+    }
+}

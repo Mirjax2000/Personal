@@ -4,6 +4,13 @@
 
 main {
     margin: auto;
+    isolation: isolate;
+
+}
+
+
+.scroll {
+    display: none;
 }
 
 main .hero {
@@ -19,17 +26,35 @@ main .hero {
         @extend %weight-600;
         letter-spacing: -4px;
         line-height: .8em;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+
     }
 
     h3 {
         @include H3-normal;
         letter-spacing: 0px;
         margin-bottom: .2em;
+        animation: fadeIn 1s 3s ease-in-out forwards;
+        opacity: 0;
     }
 
+
     .cv-section {
-        margin-left: auto;
+        isolation: isolate;
+        @extend %positionRelative;
+        z-index: 10;
         text-decoration: none;
+        margin-left: auto;
         display: block;
         width: fit-content;
         @include links;
@@ -41,6 +66,23 @@ main .hero {
         @extend %backClr11;
         background-image: url(../img/bg04.png);
         transition: background-color ease-in-out .25s;
+        // animation: fadeIn 1s 6s ease-in-out forwards;
+        opacity: 1;
+
+        &::after {
+            @extend %positionAbsolute;
+            content: '';
+            z-index: 100;
+            inset: 0;
+            background-color: $clr14;
+            animation: slideLeft .5s 6s ease-in-out forwards;
+        }
+
+        @keyframes slideLeft {
+            to {
+                left: 100%;
+            }
+        }
 
         &:hover {
             background-color: $clr20;

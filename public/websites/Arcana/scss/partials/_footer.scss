@@ -1,0 +1,130 @@
+@use 'var' as *;
+@use 'mix' as *;
+
+footer {
+    background-color: $clr11;
+    @extend %backgroundImg;
+    padding: 4em 0 6rem 0;
+}
+
+footer .columns {
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 6em;
+
+    &>section:not(.form) {
+        flex-basis: 31%;
+        padding-right: 1em;
+    }
+
+    .form {
+        flex-basis: 43%;
+    }
+
+    h3 {
+        @include h3icon;
+        margin-bottom: 1em;
+    }
+
+    ul li {
+        margin-bottom: 1em;
+
+        a {
+            @include paragraph;
+            @extend %transition;
+            border-bottom: 1px dotted $clr13;
+
+            &:hover,
+            &:focus {
+                color: $clr16;
+                border-color: $clr11;
+            }
+        }
+    }
+}
+
+footer .post-footer {
+    text-align: center;
+
+    .icons {
+        margin: 3em 0 1em 0;
+
+        a {
+            font-size: 2.5rem;
+            margin-right: 2rem;
+            color: $clr13;
+            @extend %transition;
+
+            &:hover,
+            &:focus {
+                color: $clr14;
+            }
+        }
+    }
+}
+
+footer .form {
+
+    input,
+    textarea {
+        border: none;
+        border-radius: 5px;
+        border: 1px solid $clr12;
+        outline: none;
+    }
+
+    .form__width {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+        margin-bottom: 1em;
+
+        input {
+            padding: 1rem;
+            width: 50%;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    button {
+        margin-top: 1rem;
+        border: none;
+        @include bttn($clr10);
+        @extend %transition;
+
+        border-radius: 5px;
+
+        padding: .5em 2em;
+
+        background: linear-gradient(180deg, #55555500 0%, #383838 100%);
+        background-color: $clr15;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($clr15, 10%);
+        }
+    }
+}
+
+footer .untitled {
+
+    p {
+        @include footer;
+
+        a {
+            color: $clr14 ;
+            border-bottom: 1px dotted $clr14;
+            @extend %transition;
+
+            &:hover,
+            &:focus {
+                color: $clr16;
+                border-bottom: 1px dotted $clr11;
+            }
+        }
+    }
+}

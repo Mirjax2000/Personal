@@ -1,0 +1,465 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+@media only screen and (max-width:1270px) {
+
+    body {
+
+        main .banner {
+            div h6 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        header {
+
+            padding-top: 4.2rem;
+
+            h1 {
+                font-size: $fs1mid;
+            }
+
+            a {
+                font-size: $fs6mid;
+            }
+        }
+
+        main .banner div {
+
+            h6 {
+                font-size: $fs1mid;
+            }
+
+            p {
+                font-size: $fs3mid;
+            }
+        }
+
+        main .icons {
+
+            h2 {
+                font-size: $fs2mid;
+            }
+
+            p {
+                font-size: $fs6mid;
+            }
+        }
+
+        main .bttns li {
+
+            a {
+                font-size: $fs3mid;
+            }
+        }
+
+        main .port,
+        main .blog {
+            h3 {
+                font-size: $fs3mid;
+            }
+        }
+
+        main .port .portflex div {
+            h4 {
+                font-size: $fs4mid ;
+            }
+
+            p {
+                font-size: $fs6mid;
+            }
+
+            a {
+                font-size: $fs5mid;
+            }
+        }
+
+        main .blog .blogflex div div a {
+            font-size: $fs5mid;
+        }
+
+        main .blog .blogflex div {
+            h4 {
+                font-size: $fs4mid;
+            }
+
+            p {
+                font-size: $fs6mid;
+            }
+        }
+
+        main .port h3 {
+            top: 3rem;
+            left: calc(50% - 5.5rem);
+        }
+
+        main .port .portflex {
+            margin-top: 4rem;
+        }
+
+        main .blog h3 {
+            left: calc(50% - 4.5rem);
+        }
+
+        footer {
+            h2 {
+                font-size: $fs2mid;
+            }
+
+            p {
+                font-size: $fs6mid;
+            }
+
+            h5 a {
+                font-size: $fs5mid;
+            }
+
+            .top-footer .left li div:first-child & p:first-child {
+                font-size: $fs6mid;
+            }
+
+            .top-footer .left li div:first-child & p:last-child {
+                font-size: $fs2mid;
+            }
+        }
+
+        footer .top-footer .right {
+            p strong {
+                font-size: $fs6mid;
+            }
+
+            &>a:last-child {
+                font-size: $fs5mid;
+            }
+        }
+
+        footer .bottom-footer {
+            ul li {
+                font-size: $fs6mid;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1110px) {
+    body {
+
+
+
+        main .blogflex div div a {
+            display: block;
+            text-align: center;
+
+            &:first-child {
+                margin-bottom: 1rem;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width:980px) {
+    body {
+
+        header {
+            padding-top: 3rem;
+            margin-bottom: 2rem;
+
+            h1 {
+                margin-bottom: 2rem;
+                font-size: $fs1min;
+            }
+
+            ul {
+                gap: 0;
+            }
+
+            a {
+                padding: 8px 18px;
+            }
+        }
+
+        main .banner {
+
+            padding: 6.3rem 0;
+
+            div {
+                padding: 1rem 5rem;
+
+                h6 {
+                    font-size: $fs1min;
+                    margin-bottom: .7rem;
+                }
+
+                p {
+                    font-size: $fs3min;
+                }
+            }
+        }
+
+        main .icons {
+            gap: 0;
+            flex-wrap: wrap;
+
+            div {
+                flex-basis: 100%;
+                border-bottom: 1px solid darken($clr1, 10%);
+                margin-bottom: 2rem;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            div i {
+                font-size: 4rem;
+                width: 8rem;
+                padding: 1.5rem 0 .5rem 0;
+
+                &::after {
+                    top: 5.94rem;
+
+                    border-left: 4rem solid transparent;
+                    border-right: 4rem solid transparent;
+                }
+            }
+
+            .gradient {
+
+                &::after,
+                &::before {
+
+                    display: none;
+                }
+            }
+
+            h2 {
+                margin: 4rem 0 1rem 0;
+            }
+
+            P {
+                max-width: 80%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        main .icons div {
+            $colors : (1:$clr4, 2:$clr3, 3:$clr6);
+
+            @each $nth,
+            $clr in $colors {
+                &:nth-child(#{$nth}) i {
+                    background-color: $clr;
+
+                    &::after {
+                        border-top: 1.5rem solid $clr;
+                    }
+                }
+            }
+        }
+
+        main .bttns {
+            margin: 0 0 4rem 0;
+
+        }
+
+        main .port .portflex div {
+            flex-basis: 47%;
+        }
+
+
+
+        footer .top-footer {
+            flex-wrap: wrap;
+
+            .left {
+                flex-basis: 100%;
+                flex-grow: 0;
+                padding: 0 2rem;
+            }
+
+            .right {
+                flex-basis: 100%;
+                padding: 0 2rem;
+
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .mid-footer {
+            margin-top: 5rem;
+            flex-wrap: wrap;
+            gap: 0;
+
+            aside {
+                flex-basis: 48%;
+            }
+
+            aside a {
+                font-size: $fs6min;
+            }
+        }
+
+        footer h2 {
+            margin-bottom: 2rem;
+            font-size: $fs2min;
+        }
+
+
+        footer .bottom-footer {
+            margin-top: 4rem;
+            padding: 0 0 3rem 0;
+
+            ul {
+                max-width: 75%;
+            }
+
+            li {
+
+                a {
+                    font-size: $fs6min;
+                }
+            }
+        }
+
+        footer .kontakt {
+            margin-top: 4rem;
+        }
+
+        footer .kontakt div {
+            h5 {
+                font-size: $fs5mid;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:700px) {
+    body {
+
+        .checkbox {
+            input {
+                display: inline-block;
+            }
+
+            .left__menu {
+                display: inline-block;
+            }
+        }
+
+        header nav {
+            display: none;
+
+        }
+
+        main .banner {
+            div {
+                display: block;
+                padding: 1rem 0;
+
+            }
+        }
+
+        main .bttns {
+            flex-direction: column;
+            gap: 1rem;
+
+            li {
+                margin: 0rem auto;
+                text-align: center;
+                width: 80%;
+
+                a {
+                    display: block;
+                    padding: .5rem 0;
+                    font-size: $fs3min;
+                }
+            }
+        }
+
+        main .port,
+        main .blog h3 {
+            font-size: $fs3min;
+        }
+
+        main .port .portflex {
+            justify-content: center;
+
+            div {
+                flex-basis: 95%;
+                padding-bottom: 2rem;
+
+                h4 {
+                    font-size: $fs4min;
+                    margin: 1rem 0;
+                }
+
+                p {
+                    font-size: $fs6min;
+                    margin-bottom: 2rem;
+                }
+
+                a {
+                    display: block;
+                    text-align: center;
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: .5rem 0;
+
+                }
+            }
+        }
+
+        main .blog {
+            h3 {
+                left: calc(50% - 4rem);
+            }
+
+            .blogflex {
+                justify-content: center;
+
+                div {
+                    flex-basis: 95%;
+
+                    h4 {
+                        font-size: $fs4min;
+                        margin: 1rem 0 0rem 0;
+                    }
+
+                    p {
+
+                        font-size: $fs6min;
+
+                        &:nth-child(3) {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+
+                div div a {
+                    padding: .5rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:501px) {
+
+    body {
+       
+
+        main .icons div i {
+
+            &::after {
+                top: 5.94rem;
+            }
+        }
+
+        footer .bottom-footer li {
+            border-right: none;
+        }
+    }
+}

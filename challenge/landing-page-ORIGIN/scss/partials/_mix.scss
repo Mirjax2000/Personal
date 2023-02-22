@@ -1,0 +1,149 @@
+@use 'var' as *;
+
+// --- function ---
+// --- funkce na line height prepocet na em
+@function em($height, $size) {
+    @return calc(($height / $size) *1em)
+}
+
+;
+
+// ---------------------
+// Mixins
+// ---------------------
+
+// vlastnost vyberu
+@mixin selection {
+    ::-moz-selection {
+        @content;
+    }
+
+    ::selection {
+        @content;
+    }
+}
+
+
+// $value= border-box, content-box, inherit
+@mixin box-sizing ($value) {
+    box-sizing: $value;
+    -webkit-box-sizing: $value;
+}
+
+@mixin flex($justify: space-between, $align: flex-start, $gap: 1rem) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin container($width: 90rem) {
+    max-width: $width;
+    margin: 0 auto;
+    padding: 0 0rem;
+}
+
+
+// --- placeholders ---
+%autoWidth {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+%weight-300 {
+    font-weight: 300;
+}
+
+%weight-400 {
+    font-weight: 400;
+}
+
+%weight-500 {
+    font-weight: 500;
+}
+
+%weight-700 {
+    font-weight: 700;
+}
+
+%weight-800 {
+    font-weight: 800;
+}
+
+%clr10 {
+    color: $clr10;
+}
+
+%backClr10 {
+    background-color: $clr10;
+}
+
+%clr11 {
+    color: $clr11;
+}
+
+%backClr11 {
+    background-color: $clr11;
+}
+
+%clr12 {
+    color: $clr12;
+}
+
+%backClr12 {
+    background-color: $clr12;
+}
+
+%clr13 {
+    color: $clr13;
+}
+
+%clr14 {
+    color: $clr14;
+}
+
+%paragraph {
+    @extend %weight-500;
+    @extend %clr13;
+    font-size: var(--par-fs);
+    line-height: em(28px, 18px);
+}
+
+%btn {
+    @extend %clr10;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 1.75rem;
+    font-size: var(--btn-fs);
+    line-height: em(28px, 18px);
+    transition: background ease-in-out .2s
+}
+
+%btn1Idle {
+    @extend %btn;
+    @extend %backClr12;
+}
+
+%btn2Idle {
+    @extend %btn;
+    background: linear-gradient(180deg, #ff704800 20%, #F02AA6 100%);
+    background-color: #FF6F48;
+}
+
+%btn3Idle {
+    @extend %btn;
+    background: linear-gradient(180deg, #4851ff00 -54.32%, #F02AA6 100%);
+    background-color: #4851FF;
+}
+
+%btn1Hover {
+    @extend %backClr11;
+}
+
+%btn2Hover {
+    background-color: #FFA7C3;
+}
+
+%btn3Hover {
+    background-color: lighten(#4851FF, 35%);
+}

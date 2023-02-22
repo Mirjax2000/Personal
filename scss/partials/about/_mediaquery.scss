@@ -34,6 +34,8 @@
 
 // max-width: 750px
 @include mQmin {
+
+    
     body main .aboutMe {
         max-width: 80%;
     }
@@ -47,9 +49,14 @@
 
             .content-list {
                 flex-basis: 100%;
+
+                &::after {
+                    width: 50%;
+                }
             }
         }
-        .aboutMe{
+
+        .aboutMe {
             max-width: 100%;
         }
     }
@@ -59,4 +66,9 @@
     :root {
         --mobilni-fs:#{$mobilni-font-min};
     }
+
+    body main .content .content-list::after {
+        width: 35%;
+    }
+
 }

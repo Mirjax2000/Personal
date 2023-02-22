@@ -1,0 +1,87 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+
+%common-block {
+    margin: 3rem 0;
+    background-color: $clr1;
+    padding: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+        @include h2-dark;
+    }
+
+    h3 {
+        @include h3-dark;
+    }
+
+    p,
+    a {
+        @include p-dark;
+    }
+
+    a {
+        color: $clr3;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+main .left {
+    @extend %common-block;
+    flex-basis: 73%;
+    padding: 2rem;
+    background-color: $clr1;
+
+    h2 {
+        margin-bottom: .6rem;
+    }
+
+    p {
+        margin: 2rem 0;
+    }
+}
+
+main .right {
+
+    flex-basis: 23%;
+
+    & .right__horni {
+        @extend %common-block;
+    }
+
+    & .right__dolni {
+        @extend %common-block;
+
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    & .right__dolni,
+    & .right__horni {
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        li {
+            border-bottom: 1px solid rgba(207, 207, 207, 0.733);
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

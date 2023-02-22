@@ -1,0 +1,10 @@
+@use 'partials/reset';
+@use 'partials/home/general';
+@use 'partials/home/header';
+@use 'partials/home/main';
+@use 'partials/home/footer';
+@use 'partials/home/mediaquery';
+@use 'partials/debug';
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400&display=swap');
+// --- font-family: 'Yanone Kaffeesatz',sans-serif; --- 

@@ -1,0 +1,47 @@
+@use 'var' as *;
+@use 'mix' as *;
+@use 'placeholders';
+
+
+.selected {
+    @extend %clr1;
+    @extend %clr4-back;
+    @extend %weight-700;
+
+}
+
+header {
+    text-align: center;
+    margin-top: 6.2rem;
+    margin-bottom: 4.8rem;
+
+    h1 {
+        @extend %clr3;
+        font-size: $fs1max;
+        font-weight: 900;
+        letter-spacing: -1.633px;
+        margin-bottom: 3.5rem;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    a {
+        @extend %clr5;
+        font-size: $fs6max;
+        font-style: italic;
+        @extend %weight-300;
+        @extend %transition;
+        @extend %border-radius;
+
+        padding: 11px 22px;
+
+        &:hover:not(.selected),
+        &:focus:not(.selected) {
+            background-color: lighten($clr5, 60%);
+        }
+    }
+}

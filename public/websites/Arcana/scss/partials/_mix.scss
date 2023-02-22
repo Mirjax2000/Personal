@@ -1,0 +1,146 @@
+@use 'var' as *;
+// ---------------------
+// Mixins
+// ---------------------
+
+// vlastnost vyberu
+@mixin selection {
+    ::-moz-selection {
+        @content;
+    }
+
+    ::selection {
+        @content;
+    }
+}
+
+// $value= border-box, content-box, inherit
+@mixin box-sizing ($value) {
+    box-sizing: $value;
+    -webkit-box-sizing: $value;
+}
+
+// --- placeholders ---
+%clr10 {
+    color: $clr10;
+}
+
+%clr13 {
+    color: $clr13;
+}
+
+%clr14 {
+    color: $clr14;
+}
+
+%weight-300 {
+    font-weight: 300;
+}
+
+%weight-600 {
+    font-weight: 600;
+}
+
+%backgroundImg {
+    background-image: url(../img/bg01.png);
+    background-repeat: repeat;
+}
+
+%transition {
+    transition: all ease-in-out .25s;
+}
+
+
+@mixin h1 {
+    a {
+        @extend %clr14;
+        @extend %weight-600;
+        font-size: var(--h1-fs);
+        line-height: 1.1em;
+        letter-spacing: -0.8px;
+        text-align: center;
+
+        em {
+            @extend %weight-300;
+            font-style: normal;
+        }
+    }
+}
+
+@mixin nav {
+    color: $clr12;
+    @extend %weight-300;
+    font-size: var(--nav-fs);
+    line-height: 1.4em;
+}
+
+@mixin banner {
+    @extend %clr10;
+    @extend %weight-600;
+    font-size: var(--ban-fs);
+    line-height: 1.7em;
+    letter-spacing: -0.66px;
+
+    em {
+        @extend %weight-300;
+        font-style: normal;
+        opacity: .75;
+
+        a {
+            @extend %clr10;
+        }
+    }
+}
+
+@mixin bttn($color) {
+    color: $color;
+    font-weight: 600;
+    font-size: var(--pglobal-fs);
+    line-height: 1.5em;
+}
+
+@mixin h3icon {
+    @extend %clr14;
+    @extend %weight-600;
+    font-size: var(--h3-fs);
+    line-height: 1.5em;
+    letter-spacing: -0.64px;
+}
+
+@mixin paragraph {
+    @extend %clr14;
+    @extend %weight-300;
+    font-size: var(--pglobal-fs);
+    line-height: 1.5em;
+}
+
+@mixin giganticHeading {
+    @extend %clr14;
+    @extend %weight-600;
+    font-size: var(--gh-fs);
+    line-height: 1.75em;
+    letter-spacing: -1.05px;
+}
+
+@mixin giganticHeadingSub {
+    @extend %clr13;
+    @extend %weight-300;
+    font-size: var(--ghsub-fs);
+    line-height: 1.1em;
+    letter-spacing: -0.8px;
+}
+
+@mixin whiteHeading ($clr:$clr10) {
+    color:  $clr;
+    @extend %weight-600;
+    font-size: var(--wh-fs);
+    line-height: 1.7em;
+    letter-spacing: -0.8px;
+}
+
+@mixin footer {
+    @extend %clr14;
+    @extend %weight-300;
+    font-size: var(--foot-fs);
+    line-height: 1.8em;
+}

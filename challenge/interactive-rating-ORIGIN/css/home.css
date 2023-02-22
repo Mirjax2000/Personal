@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:root {
+  --h1-fs:1.75rem;
+  --par-fs:0.9375rem;
+  --btn-fs:0.9375rem;
+  --num-fs:1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container, .thanks .thanks-js {
+  margin-inline: auto;
+}
+
+.content .content-star, .content #form .content-radio .content-radio-label {
+  border-radius: 50%;
+}
+
+.content #form .content-submit, .thanks .thanks-js, .content, .thanks {
+  border-radius: 1.875rem;
+}
+
+p, .thanks .thanks-js {
+  font-weight: 400;
+}
+
+.content #form .content-radio .content-radio-label, .content #form .content-submit, .content .content-heading, .thanks .thanks-heading {
+  font-weight: 700;
+}
+
+.content #form .content-radio .content-radio-label:hover, .content #form .content-radio .content-radio-items:checked ~ .content-radio-label, .content #form .content-submit, .content .content-heading, .thanks .thanks-heading {
+  color: #ffffff;
+}
+
+.thanks .thanks-js {
+  color: #FC7614;
+}
+
+.content #form .content-radio .content-radio-items:checked ~ .content-radio-label, .content #form .content-submit {
+  background-color: #FC7614;
+}
+
+.content .content-star, .content #form .content-radio .content-radio-label, .content #form .content-submit:disabled, .thanks .thanks-js {
+  background-color: #262E38;
+}
+
+body {
+  background-color: #131518;
+}
+
+p, .content #form .content-radio .content-radio-label {
+  color: #7C8798;
+}
+
+.content #form .content-radio .content-radio-label:hover, .content #form .content-submit:disabled:is(:hover, :focus) {
+  background-color: #7C8798;
+}
+
+.content .content-heading, .thanks .thanks-heading {
+  font-size: var(--h1-fs);
+  line-height: 1.25em;
+}
+
+.thanks .thanks-js {
+  font-size: var(--par-fs);
+  line-height: 1.6em;
+}
+
+.content, .thanks {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  min-height: 26rem;
+  padding: 2rem;
+}
+
+.content .content-heading, .thanks .thanks-heading {
+  font-size: var(--h1-fs);
+  line-height: 1.25em;
+}
+
+/* border-box */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html ::-moz-selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+html ::selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  max-width: 412px;
+}
+
+p {
+  font-size: var(--par-fs);
+  line-height: 1.6em;
+}
+
+.mrFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0rem;
+}
+
+.content .content-star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+.content .h1--margin {
+  margin: 2.2rem 0 0.3em 0;
+}
+.content #form .content-radio {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0rem;
+  padding: 0;
+  margin-top: 24px;
+}
+.content #form .content-radio .content-radio-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: var(--num-fs);
+  width: 51px;
+  height: 51px;
+  line-height: 1.5em;
+  -webkit-transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+.content #form .content-radio .content-radio-items {
+  display: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 0px;
+  height: 0px;
+}
+.content #form .content-submit {
+  width: 100%;
+  border: none;
+  font-size: var(--btn-fs);
+  line-height: 1.2666666667em;
+  letter-spacing: 0.125rem;
+  padding-block: 0.8rem;
+  margin-top: 32px;
+  cursor: pointer;
+  -webkit-transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
+}
+.content #form .content-submit:disabled {
+  cursor: not-allowed;
+}
+.content #form .content-submit:disabled:is(:hover, :focus) {
+  outline: none;
+}
+
+.thanks {
+  text-align: center;
+}
+.thanks .thanks-js {
+  display: inline-block;
+  padding: 0.5em 2em;
+  margin: 2rem 0;
+}
+.thanks .h2--margin {
+  margin-bottom: 0.3em;
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    --h1-fs:1.5rem;
+    --par-fs:0.875rem;
+    --btn-fs:0.875rem;
+    --num-fs:0.875rem;
+  }
+  .container {
+    padding: 0 2rem;
+  }
+  .content,
+  .thanks {
+    padding: 1rem;
+    min-width: 15.125rem;
+  }
+}

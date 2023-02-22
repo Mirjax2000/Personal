@@ -1,0 +1,353 @@
+@use 'var' as *;
+@use 'mix' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Playfair Display', serif;
+
+/* border-box */
+html {
+    @include box-sizing (border-box);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+// * {
+//     outline: 1px solid red;
+// }
+
+/* --- vyber --- */
+@include selection {
+    background-color: #1683ff;
+    color: #ffffff;
+}
+
+.flex {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
+
+body {
+    @include container(62rem);
+    background-color: #ffffff;
+    padding: 0 1rem;
+}
+
+
+header {
+    margin-bottom: 3.125rem;
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        margin-top: 3.125rem;
+        margin-bottom: 1rem;
+    }
+
+    & img:first-child {
+        padding-top: 5px;
+    }
+
+    p {
+        display: inline-block;
+        max-width: 37.5rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-style: italic;
+        font-size: .875rem;
+        line-height: 17px;
+        margin-bottom: 3rem;
+    }
+
+    & img:last-child {
+        width: 100%;
+        height: auto;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.879);
+        border-radius: 15px;
+    }
+}
+
+.flexi {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main ul {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+main .list {
+    font-family: 'Playfair Display', serif;
+    flex-basis: 65%;
+
+    h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #333333;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-top: 1.8rem;
+    }
+
+    ul li:not(.instructions li) {
+        margin-bottom: 1rem;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 22px;
+            height: 22px;
+            border: 1px solid black;
+            border-radius: 4px;
+            top: 0;
+            left: 0px;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0rem;
+
+        }
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5625rem;
+            margin-left: 2.5rem;
+
+            strong {
+                font-weight: 700;
+            }
+
+            span {
+                font-weight: 500;
+                font-style: italic;
+            }
+        }
+    }
+
+    .instructions {
+        li {
+            margin-bottom: 2rem;
+            color: black;
+
+            h5 {
+                flex-shrink: 0;
+                font-family: 'Playfair Display', serif;
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 32px;
+                color: #ffffff;
+                background-color: #F2994A;
+                border-radius: 6px;
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                margin-right: 1rem;
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 20px;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+main h6 {
+    color: #BDBDBD;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 4rem;
+
+    a {
+        color: #BDBDBD;
+    }
+}
+
+main {
+
+    .timing {
+        // flex-basis: 30%;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #0000002c;
+
+
+        .timming-box {
+
+            li {
+                font-family: 'Montserrat', sans-serif;
+                margin-bottom: 3rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                img {
+                    width: 40px;
+                    height: auto;
+                }
+
+
+                .special {
+                    color: #F2994A;
+                }
+
+                h4 {
+                    font-weight: 700;
+                    font-size: .625rem;
+                    line-height: 12px;
+                    color: #BDBDBD;
+                    text-transform: uppercase;
+                    margin-bottom: .5rem;
+                }
+
+                h5 {
+                    font-weight: 500;
+                    font-size: .875rem;
+                    line-height: 1.0625rem;
+                    color: #333333;
+                }
+            }
+        }
+    }
+
+
+}
+
+footer {
+    padding: 6rem 0 2rem 0;
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: .875rem;
+        line-height: 1.0625rem;
+        text-align: center;
+        color: #828282;
+    }
+}
+
+
+@media only screen and (max-width:700px) {
+    header {
+        margin-bottom: 0rem;
+
+        h1 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            font-size: .75rem;
+            line-height: .9375rem;
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    main .list {
+        flex-basis: 100%;
+        order: 2;
+
+        h2 {
+            font-size: 1.125rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        h4 {
+            font-size: .875rem;
+        }
+    }
+
+    .flexi {
+        flex-direction: column;
+    }
+
+    main .instructions {
+        h5 {
+            font-size: 1rem;
+        }
+    }
+
+    main .timing {
+        order: 1;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        padding: 0;
+
+        .timming-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+
+            .timming-boxList {
+                width: 100%;
+                padding-bottom: 1rem;
+            }
+
+            &>*:not(.timming-boxList) {
+                padding-right: 2rem;
+            }
+
+            .flex {
+                display: flex;
+                margin-bottom: 0;
+                flex-direction: row;
+
+
+
+
+
+                h4 {
+                    font-size: .5rem;
+                    margin-bottom: 0rem;
+                }
+
+                h5 {
+                    font-size: .625rem;
+                }
+            }
+        }
+    }
+
+
+
+
+}

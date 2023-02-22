@@ -1,0 +1,11 @@
+@use 'partials/reset';
+@use 'partials/home/general';
+@use 'partials/home/header';
+@use 'partials/no-sidebar/main';
+@use 'partials/home/footer';
+@use 'partials/no-sidebar/mediaquery';
+@use 'partials/debug';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+// font-family: 'Source Sans Pro', sans-serif;

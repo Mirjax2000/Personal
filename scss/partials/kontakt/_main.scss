@@ -1,10 +1,14 @@
 @use '../var' as *;
 @use '../mix' as *;
 
+.scroll {
+    display: none;
+}
 
 main {
     margin: auto;
     padding-bottom: 2rem;
+    margin-top: 5rem;
 
     h3 {
         @include H3-normal;

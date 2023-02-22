@@ -1,0 +1,71 @@
+// ---------------------
+// Variables
+// ---------------------
+
+$debug: false;
+
+// --- colors ---
+$clr10: #ffffff;
+$clr11: #f7f7f7;
+$clr12: #C0C0C0;
+$clr13: #999999;
+$clr14: #474747;
+$clr15: #555555;
+$clr16: #37C0FB;
+$clr17: #1f1f1f;
+
+// --- font-sizes ---
+
+// --- break points ---
+//  max<->1260 = max
+//  1260<->850 = mid
+//  850<->750 = min
+//  750<->0 = mni   
+
+
+
+// header
+$h1max: 2.00rem; //32px
+$h1mid: 1.75rem; //28px
+$h1min: 1.62rem; //26px
+$h1mni: 1.37rem; //22px
+// navigace
+$navmax: 1.331rem; //21.3px
+$navmid: 1.166rem; //18.6px
+$navmin: 1.083rem; //17.3px
+$navmni: .9125rem; //14.6px
+// pruhlednej banner
+$banmax: 1.6663rem; //26.6px
+$banmid: 1.4581rem; //23.3px
+$banmin: 1.3538rem; //21.6px
+$banmni: 1.1438rem; //18.3px
+// heading pod iconama
+$h3max: 1.60rem; //25.6px
+$h3mid: 1.40rem; //22.4px
+$h3min: 1.30rem; //20.8
+$h3mni: .912rem; //14.6px
+// paragraph
+$pgmax: $navmax; //21.3px
+$pgmid: $navmid; //18.6px
+$pgmin: $navmin; //17.3px
+$pgmni: $navmni; //14.6px
+// gigantic heading
+$ghmax: 3.000rem; //48px
+$ghmid: 2.625rem; //42px
+$ghmin: 1.875rem; //30px
+$ghmni: 1.143rem; //18.3px
+// giginatic subheding
+$ghsubmax: 2.00rem; //32px
+$ghsubmid: 1.75rem; //28px
+$ghsubmin: 1.50rem; //24px
+$ghsubmni: .912rem; //14.6px
+// whiteHeading
+$whmax: 2.333rem; //37.3px
+$whmid: 2.037rem; //32.6px
+$whmin: 1.750rem; //28px
+$whmni: 1.143rem; //18.3px
+//footer
+$footmax: 1.20rem; //19.2px
+$footmid: 1.05rem; //16.8px
+$footmin: .975rem; //15.6px
+$footmni: .825rem; //13.2px

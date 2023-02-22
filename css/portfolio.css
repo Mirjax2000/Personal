@@ -5,8 +5,357 @@
   --h2-fs: 1.3rem;
   --h3-fs: 3.2rem;
   --a-fs: 1.3rem;
+  --port-h4:2rem;
   --specialSmall-fs: 1rem;
   --mobilni-fs:1.5rem;
+  --height: 0;
+}
+
+/**
+ * ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+ *
+ * @format
+ */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
 }
 
 h1,
@@ -40,14 +389,14 @@ input {
   outline: none;
 }
 
-header nav, header .mobile {
+main, header, header .mobile {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-header nav, header .horni-lista a, body .central-wrapper {
+header .horni-lista a {
   position: relative;
 }
 
@@ -55,27 +404,27 @@ header .horni-lista a::after, header .hamburger, header .mobile, body .central-w
   position: absolute;
 }
 
-main h3, main .portfolio-list p, header .horni-lista h2, header .horni-lista a, header .mobile ul li a {
+h3, header .horni-lista h2, header .horni-lista a, header .mobile ul li a {
   font-weight: 300;
 }
 
-main .portfolio-list h2, header .horni-lista h1 {
+header .horni-lista h1 {
   font-weight: 600;
 }
 
-main .portfolio-list p, main .portfolio-list a img, main .portfolio-list .relativ input, header .horni-lista a {
+header .horni-lista a {
   border-radius: 5px;
 }
 
-main .portfolio-list, body .central-wrapper {
+.content .card .card-under a, body .central-wrapper {
   margin-inline: auto;
 }
 
-main h3, header .horni-lista, header .mobile ul {
+header .horni-lista, header .mobile ul {
   text-align: center;
 }
 
-main .portfolio-list h2, header .horni-lista h1, header .horni-lista a {
+header .horni-lista h1, header .horni-lista a {
   color: #ffffff;
 }
 
@@ -87,19 +436,11 @@ header .horni-lista a::after, header .horni-lista .selected::after, body {
   background-color: #6ed7fe;
 }
 
-header .horni-lista a:hover, header .horni-lista a:focus {
-  background-color: #2f2f2f;
-}
-
-header nav {
-  background-color: #242526;
-}
-
-header .mobile, body .central-wrapper {
+header .mobile {
   background-color: #272727;
 }
 
-main h3, main .portfolio-list p {
+h3 {
   color: #aeaeae;
 }
 
@@ -120,6 +461,7 @@ html {
 body {
   background-image: url(../img/bg04.png);
   font-family: "Source Sans Pro", sans-serif;
+  scroll-behavior: smooth;
 }
 body ::-moz-selection {
   background-color: #1683ff;
@@ -130,7 +472,30 @@ body ::selection {
   color: #ffffff;
 }
 body .central-wrapper {
+  width: clamp(15.625rem, 95%, 90rem);
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9215686275);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9215686275);
   outline: 2px solid #6ed7fe;
+}
+body .central-wrapper::after, body .central-wrapper::before {
+  content: "";
+  width: 32px;
+  top: 0rem;
+  bottom: 0rem;
+  z-index: -1;
+}
+body .central-wrapper::after {
+  right: 0rem;
+  -webkit-box-shadow: 2px 0 10px rgba(0, 0, 0, 0.809);
+          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.809);
+}
+body .central-wrapper::before {
+  left: 0rem;
+  -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.809);
+          box-shadow: -2px 0 10px rgba(0, 0, 0, 0.809);
+}
+body .central-wrapper .inner-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,42 +506,23 @@ body .central-wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: clamp(15.625rem, 95%, 90rem);
-  max-height: 100%;
   min-height: 100.1vh;
+  background: #272727;
   background-image: url(../img/bg01.png);
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9215686275);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9215686275);
-}
-body .central-wrapper::after, body .central-wrapper::before {
-  content: "";
-  width: 32px;
-  top: 0rem;
-  bottom: 0rem;
-  z-index: -10;
-}
-body .central-wrapper::after {
-  right: 0rem;
-  -webkit-box-shadow: 2px 0 10px rgba(0, 0, 0, 0.809);
-          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.809);
-}
-body .central-wrapper::before {
-  left: 0rem;
-  -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.803);
-          box-shadow: -2px 0 10px rgba(0, 0, 0, 0.803);
 }
 
 header {
-  position: relative;
-  isolation: isolate;
-}
-header nav {
-  z-index: 100;
-  border-top-right-radius: 3.125rem;
-  border-top-left-radius: 3.125rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 500;
 }
 
 header .horni-lista {
+  background: linear-gradient(-45deg, rgb(0, 45, 87) 0%, #272727 100%);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,6 +536,10 @@ header .horni-lista {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2862745098);
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2862745098);
 }
+header .horni-lista > * {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
 header .horni-lista h1 {
   font-size: var(--h1-fs);
   letter-spacing: 2px;
@@ -201,10 +551,13 @@ header .horni-lista h2 {
 }
 header .horni-lista a {
   font-size: var(--a-fs);
+  display: inline-block;
   margin: 0 0.5em;
   padding: 0.2em 0.5em;
-  -webkit-transition: background-color ease-in-out 0.25s;
-  transition: background-color ease-in-out 0.25s;
+  -webkit-transition: background-color ease-in-out 0.25s, -webkit-transform ease-in-out 0.25s;
+  transition: background-color ease-in-out 0.25s, -webkit-transform ease-in-out 0.25s;
+  transition: background-color ease-in-out 0.25s, transform ease-in-out 0.25s;
+  transition: background-color ease-in-out 0.25s, transform ease-in-out 0.25s, -webkit-transform ease-in-out 0.25s;
 }
 header .horni-lista a::after {
   content: "";
@@ -214,9 +567,6 @@ header .horni-lista a::after {
   height: 1px;
   -webkit-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
-}
-header .horni-lista a:hover, header .horni-lista a:focus {
-  outline: none;
 }
 header .horni-lista a:hover::after, header .horni-lista a:focus::after {
   height: 1px;
@@ -232,7 +582,7 @@ header .horni-lista .selected::after {
 
 header .hamburger {
   display: none;
-  z-index: 999;
+  z-index: 20;
   width: 50px;
   height: 50px;
   top: 15px;
@@ -252,21 +602,19 @@ header .hamburger:active {
 }
 
 header .down {
-  -webkit-transform: translateY(70px);
-          transform: translateY(70px);
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
 }
 
 header .mobile {
   display: none;
-  width: 100%;
-  top: 17px;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 25px;
   -webkit-transition: -webkit-transform ease-in-out 0.2s;
   transition: -webkit-transform ease-in-out 0.2s;
   transition: transform ease-in-out 0.2s;
   transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
-  border-top-right-radius: 3.125rem;
-  border-top-left-radius: 3.125rem;
 }
 header .mobile ul {
   display: block;
@@ -289,175 +637,212 @@ header .mobile .mobile-selected {
   color: orange;
 }
 
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 main {
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 6rem;
+  padding: 2rem;
 }
-main strong {
-  font-weight: 600;
-}
-main h3 {
+
+h3 {
   font-size: var(--h3-fs);
-  margin: 2em 0;
-}
-main .portfolio-list {
-  padding-bottom: 2em;
-  width: 80%;
-}
-main .portfolio-list li {
-  position: relative;
-  margin-bottom: 2em;
-  padding-bottom: 2em;
+  margin: 1em 0;
   text-align: center;
 }
-main .portfolio-list li:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
+
+h4 {
+  text-align: left;
+  color: white;
+  background-color: rgb(47, 47, 47);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(39, 147, 242, 0.4196078431);
+  font-size: var(--port-h4);
+  cursor: default;
 }
-main .portfolio-list .border-cross {
-  position: absolute;
-  top: 25px;
-  width: 100%;
-  border-bottom: 1px solid rgba(81, 81, 81, 0.7803921569);
-  z-index: 1;
-}
-main .portfolio-list .row {
+
+.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 5em;
-  position: relative;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
-main .portfolio-list .row > * {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+.content .card {
+  width: clamp(200px, 30%, 250px);
+  padding: 0.5rem;
+  aspect-ratio: 3/4;
+  background-color: rgba(18, 18, 18, 0.762);
+  border-radius: 5px;
+  border: 1px solid rgba(39, 147, 242, 0.7098039216);
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
+  cursor: pointer;
+  -webkit-transition: border ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow ease-in-out 0.3s;
+  transition: border ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out, border ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out, border ease-in-out 0.3s, box-shadow ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow ease-in-out 0.3s;
 }
-main .portfolio-list h2 {
-  margin: 0 auto;
-  position: relative;
-  display: inline-block;
-  z-index: 20;
-  background-color: #272727;
-  font-size: var(--h1-fs);
-  padding: 0 1em;
-  margin-bottom: 1em;
-}
-main .portfolio-list p {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  position: relative;
-  font-size: var(--a-fs);
-  line-height: 1.4em;
-  text-align: left;
-  padding: 1em;
-  height: 6.8em;
-  overflow: hidden;
-  opacity: 0.8;
-  -webkit-transition: all ease-in-out 0.25s;
-  transition: all ease-in-out 0.25s;
-  -webkit-animation: down 0.5s forwards;
-          animation: down 0.5s forwards;
-}
-main .portfolio-list p::after {
-  position: absolute;
-  content: "";
-  z-index: 100;
-  bottom: 6px;
-  left: 0;
-  width: 100%;
-  height: 1.3em;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(39, 39, 39, 0.3450980392)), to(#272727));
-  background: linear-gradient(180deg, rgba(39, 39, 39, 0.3450980392) 0%, #272727 100%);
-}
-main .portfolio-list a {
-  max-width: 300px;
-}
-main .portfolio-list a img {
-  -webkit-transition: -webkit-transform ease-in-out 0.25s;
-  transition: -webkit-transform ease-in-out 0.25s;
-  transition: transform ease-in-out 0.25s;
-  transition: transform ease-in-out 0.25s, -webkit-transform ease-in-out 0.25s;
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.591);
-          box-shadow: 0 0 2px rgba(0, 0, 0, 0.591);
-  margin-top: 2em;
-}
-main .portfolio-list a img:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
-
-main .portfolio-list .relativ {
-  position: relative;
-}
-main .portfolio-list .relativ:before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 60%;
-  left: 20px;
-  bottom: -20px;
-  z-index: 200;
-  background-color: rgba(81, 81, 81, 0.7803921569);
-}
-main .portfolio-list .relativ input {
-  position: absolute;
-  z-index: 200;
-  bottom: -30px;
-  right: 20px;
-  padding: 0.7em 2.5em;
-  background-color: #6ed7fe;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-image: url(../img/bg04.png);
-  font-family: sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-}
-main .portfolio-list .relativ input:checked {
-  background-color: orange;
-}
-main .portfolio-list .relativ input:checked::after {
-  content: "close";
-  right: 28%;
-}
-main .portfolio-list .relativ input:checked ~ p {
-  height: 100%;
+.content .card:hover, .content .card:focus {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.52);
-          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.52);
-  -webkit-animation: up 0.5s forwards;
-          animation: up 0.5s forwards;
+  -webkit-box-shadow: 0px 0px 15px rgb(0, 123, 255);
+          box-shadow: 0px 0px 15px rgb(0, 123, 255);
+  border: 1px solid #2793f2;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
-main .portfolio-list .relativ input:checked ~ p::after {
-  height: auto;
+.content .card:hover .card-container .card-footer, .content .card:focus .card-container .card-footer {
+  opacity: 1;
 }
-main .portfolio-list .relativ input:checked + h2 {
-  color: #6ed7fe;
+.content .card:hover .card-container .card-body, .content .card:focus .card-container .card-body {
+  opacity: 1;
 }
-main .portfolio-list .relativ input::after {
-  position: absolute;
-  content: "expand";
-  top: 2px;
-  right: 15%;
+.content .card:hover .card-under, .content .card:focus .card-under {
+  opacity: 1;
+}
+.content .card .card-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.content .card .card-container .card-body {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  opacity: 0.7;
+  -webkit-transition: opacity ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.3s;
+}
+.content .card .card-container .card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.1rem;
+  opacity: 0.5;
+  -webkit-transition: opacity ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.3s;
+  font-weight: 600;
+}
+.content .card .card-container .card-footer p {
+  border-radius: 5px;
+  font-size: 0.8rem;
+  background-color: #003a6c;
+}
+.content .card .card-container .card-footer > * {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+.content .card .card-container .arcana {
+  background-image: url(./../img/arcana-small.webp);
+}
+.content .card .card-container .dopetrope {
+  background-image: url(./../img/dopetrope-small.webp);
+}
+.content .card .card-container .halcyonic {
+  background-image: url(./../img/Halcyonic-small.webp);
+}
+.content .card .card-container .interactive {
+  background-image: url(./../img/rating.webp);
+}
+.content .card .card-container .landing {
+  background-image: url(./../img/landing-small.webp);
+}
+.content .card .card-container .qr {
+  background-image: url(./../img/QR-small.webp);
+}
+.content .card .card-container .recept {
+  background-image: url(./../img/chesecake-small.webp);
+}
+.content .card .card-container .gallery {
+  background-image: url(./../img/gallery-small.webp);
+}
+.content .card .card-container .result {
+  background-image: url(./../img/result.webp);
+}
+.content .card .card-under {
+  padding: 0.2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.3s;
+}
+.content .card .card-under a {
+  display: block;
+  color: red;
+  border: red dotted 2px;
+  border-radius: 5px;
+  padding: 0.3rem;
+  width: 80%;
+  -webkit-transition: color ease-in-out 0.3s, -webkit-transform ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s, -webkit-transform ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s, transform ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s, transform ease-in-out 0.3s, -webkit-transform ease-in-out 0.3s;
+}
+.content .card .card-under a:hover {
+  color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.content .card .card-under a:first-child {
+  margin-bottom: 5px;
 }
 
-@keyframes down {
-  100% {
-    height: 6.8em;
-  }
+#websitesSection,
+#otherSection,
+#frontEndSection {
+  display: none;
 }
-@-webkit-keyframes down {
-  100% {
-    height: 6.8em;
-  }
-}
+
 @media only screen and (max-width: 850px) {
   :root {
     --h1-fs: 2rem;
@@ -467,13 +852,6 @@ main .portfolio-list .relativ input::after {
     --a-fs: 1.1rem;
     --specialSmall-fs: 1rem;
     --mobilni-fs:1.5rem;
-  }
-  body main .portfolio-list .row {
-    gap: 1em;
-  }
-  body main .portfolio-list .relativ::before {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
   }
 }
 @media only screen and (max-width: 750px) {
@@ -490,70 +868,79 @@ main .portfolio-list .relativ input::after {
     padding: 1vh 0vw;
   }
   body .central-wrapper {
-    max-height: 100%;
-    min-height: 98vh;
     border-radius: 25px;
-  }
-  body .central-wrapper .horni-lista .horni-lista__right,
-  body .central-wrapper .horni-lista .horni-lista__left {
-    display: none;
   }
   body .central-wrapper::after, body .central-wrapper::before {
     bottom: 20px;
     top: 20px;
   }
   body .central-wrapper::after {
-    right: 0rem;
     -webkit-box-shadow: 10px 0 20px rgba(0, 0, 0, 0.8941176471);
             box-shadow: 10px 0 20px rgba(0, 0, 0, 0.8941176471);
   }
   body .central-wrapper::before {
-    left: 0rem;
     -webkit-box-shadow: -10px 0 20px rgba(0, 0, 0, 0.8901960784);
             box-shadow: -10px 0 20px rgba(0, 0, 0, 0.8901960784);
   }
-  header .hamburger {
+  body .central-wrapper .inner-container {
+    overflow: auto;
+    min-height: 98vh;
+    height: 98vh;
+    border-radius: 25px;
+  }
+  body header {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+  body header .horni-lista {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+  body header .horni-lista .horni-lista__right,
+  body header .horni-lista .horni-lista__left {
+    display: none;
+  }
+  body header .hamburger {
     display: inline-block;
   }
-  header .mobile {
+  body header .mobile {
     display: block;
+    z-index: -1;
   }
-  :root {
-    --h1-fs: 2rem;
-    --h2-main-fs:8rem;
-    --h2-fs: 1.1rem;
-    --h3-fs: 2.1rem;
-    --a-fs: 1.1rem;
-    --specialSmall-fs: 1rem;
+  main .content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  body main .portfolio-list .row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 0;
+  main .content .card .card-under {
+    opacity: 0.8;
+    padding: 0.1rem;
   }
-  body main .portfolio-list .row > * {
-    -ms-flex-preferred-size: 90%;
-        flex-basis: 90%;
-  }
-  body main .portfolio-list .row p {
-    margin-top: 2em;
-  }
-  body main .portfolio-list .relativ::before {
-    width: 60%;
+  main .content .card .card-under a {
+    width: 100%;
+    color: white;
   }
 }
-@media only screen and (max-width: 750px) and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   :root {
     --h1-fs: 1.5rem;
     --h2-main-fs:5.6rem;
     --h2-fs: 0.9rem;
     --h3-fs: 1.45rem;
     --a-fs: 1.1rem;
+    --port-h4:1.3rem;
     --specialSmall-fs: 1rem;
     --mobilni-fs:1.5rem;
   }
-  body main .portfolio-list .relativ::before {
-    width: 40%;
+  body header .mobile {
+    top: 20px;
+  }
+  body header .mobile li {
+    padding: 0.8em 1vw;
+  }
+  body header .down {
+    -webkit-transform: translateY(57px);
+            transform: translateY(57px);
   }
 }
 @media only screen and (max-width: 22rem) {

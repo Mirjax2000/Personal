@@ -1,0 +1,88 @@
+// ---------------------
+// Variables
+// ---------------------
+
+$debug: false;
+
+// --- colors ---
+$clr1: #ffffff;
+$clr2: #c6c8c8;
+$clr3: #ed391b;
+$clr4: #3b4346; //background 1
+$clr5: #222628; //background 2
+$clr6: #353d40; //background 3
+$clr7: #f7f7f7; //background 4
+$clr8: #d4d9dd; //background 5
+$clr9: #a0a8ab; // p 1
+$clr10: #373f42; // h2 dark
+$clr12: #96a9b5; // h3 dark
+$clr13: #474f51; // p dark
+$clr14: #212f35; // footer h2
+$clr15: #546b76; // footer p+a
+$clr16: #8d9ca3; // bottom footer
+$clr17: #3e484a; // box-shadow
+
+
+// --- font-sizes ---
+// header
+$h1max: 3.093rem; // 49.5px
+$h1mid: 2.531rem; // 40.5px
+$h1min: 2.437rem; // 39.0px
+
+$nav-a-max: 1.575rem; // 25.2px
+$nav-a-mid: 1.237rem; // 19.8px
+$nav-a-min: 1.187rem; // 19.0px
+
+$header-p-max: 2.25rem; // 36.0px
+$header-p-mid: 1.968rem; // 31.5px
+$header-p-min: 1.350rem; // 21.6px
+
+$bttn-a-max: 1.968rem; // 31.5px
+$bttn-a-mid: 1.687rem; // 27.0px
+$bttn-a-min: 1.625rem; // 26.0px
+
+// main
+$h2-light-max: 1.406rem; //22.5px
+$h2-light-mid: 1.406rem; //22.5px
+$h2-light-min: 1.406rem; //22.5px
+
+$h2-dark-max: 2.025rem; //32.4px
+$h2-dark-mid: 1.575rem; //25.2px
+$h2-dark-min: 1.350rem; //21.6px
+
+$light-p-max: 1.125rem; // 18.0px
+$light-p-mid: 1.125rem; // 18.0px
+$light-p-min: 1.081rem; // 17.3px
+
+$dark-p-max: 1.125rem; // 18.0px
+$dark-p-mid: 1.125rem; // 18.0px
+$dark-p-min: 1.081rem; // 17.3px
+
+$h3-dark-max: 1.4063rem; //22.5px
+$h3-dark-mid: 1.2375rem; //19.8px
+$h3-dark-min: 1.0831rem; //17.3px
+
+$li-dark-max: 1.350rem; //21.6px
+$li-dark-mid: 1.125rem; //18.0px
+$li-dark-min: 1.081rem; //17.3px
+
+$italic-p-max: 1.350rem; //21.6px
+$italic-p-mid: 1.125rem; //18.0px
+$italic-p-min: 1.081rem; //17.3px
+
+$span-max: 1.0125rem; //16.2px
+$span-mid: .9rem; //14.4px
+$span-min: .8625rem; //13.8px
+
+// footer
+$footer-h2-max: 1.406rem; //22.5px
+$footer-h2-mid: 1.406rem; //22.5px
+$footer-h2-min: 1.350rem; //21.6px
+
+$footer-p-max: 1.125rem; //18px
+$footer-p-mid: 1.125rem; //18px 
+$footer-p-min: 1.0813rem; //17.3px
+
+$footer-bottom-max: $footer-p-max;
+$footer-bottom-mid: $footer-p-mid;
+$footer-bottom-min: $footer-p-min;

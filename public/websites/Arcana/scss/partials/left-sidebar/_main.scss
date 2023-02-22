@@ -1,0 +1,99 @@
+@use '../var' as *;
+@use '../mix' as *;
+
+nav .triangl {
+
+    &:after {
+        left: 2.6rem;
+    }
+}
+
+.container {
+    padding: 0 2em;
+}
+
+main.flex {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    justify-content: space-between;
+
+    h3 {
+        @include h3icon;
+        margin-bottom: 1em;
+    }
+
+    p {
+        @include paragraph;
+        margin-bottom: 1.5em;
+    }
+
+    img {
+        margin: 2em 0;
+        border-radius: 5px;
+    }
+}
+
+main .left {
+    flex-shrink: 1;
+    flex-basis: 32%;
+
+    ul {
+        margin-bottom: 2em;
+
+        li {
+            padding-bottom: 1em;
+
+            a {
+                @include paragraph;
+                @extend %transition;
+                color: $clr16;
+                border-bottom: 1px dotted $clr16;
+
+                &:hover,
+                &:focus {
+                    border-bottom: 1px dotted $clr10;
+                }
+            }
+        }
+    }
+
+    .left__bttn {
+
+        @extend %transition;
+        @extend %backgroundImg;
+        @extend %weight-600;
+        display: inline-block;
+        margin: 1em 0 4em 0;
+        color: $clr10;
+        font-size: var(--pglobal-fs);
+        border-radius: 5px;
+        padding: .5em 1.5em;
+
+        background: url(../img/bg01.png), -webkit-gradient(linear, left top, left bottom, from(#47474700), to(#00b3ff));
+        background: url(../img/bg01.png), -o-linear-gradient(top, #47474700 0%, #00b3ff 100%);
+        background: url(../img/bg01.png), linear-gradient(180deg, #47474700 0%, #00b3ff 100%);
+
+        background-color: $clr16;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($clr16, 8%);
+        }
+    }
+}
+
+main .right {
+    flex-basis: 60%;
+
+    h1 {
+        @include whiteHeading ($clr14);
+        margin-bottom: .3em;
+    }
+
+    h4 {
+        color: $clr13;
+        @extend %weight-300;
+        font-size: var(--ban-fs);
+        margin-bottom: .5em;
+    }
+}

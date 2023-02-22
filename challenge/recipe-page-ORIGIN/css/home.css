@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* border-box */
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* --- vyber --- */
+::-moz-selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+body {
+  max-width: 62rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0 1rem;
+}
+
+header {
+  margin-bottom: 3.125rem;
+}
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  margin-top: 3.125rem;
+  margin-bottom: 1rem;
+}
+header img:first-child {
+  padding-top: 5px;
+}
+header p {
+  display: inline-block;
+  max-width: 37.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: 17px;
+  margin-bottom: 3rem;
+}
+header img:last-child {
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.879);
+  border-radius: 15px;
+}
+
+.flexi {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main ul {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+main .list {
+  font-family: "Playfair Display", serif;
+  flex-basis: 65%;
+}
+main .list h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
+}
+main .list h3 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-top: 1.8rem;
+}
+main .list ul li:not(.instructions li) {
+  margin-bottom: 1rem;
+  position: relative;
+}
+main .list ul li:not(.instructions li)::before {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: 1px solid black;
+  border-radius: 4px;
+  top: 0;
+  left: 0px;
+}
+main .list ul li:not(.instructions li):last-child {
+  margin-bottom: 0rem;
+}
+main .list ul li:not(.instructions li) h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5625rem;
+  margin-left: 2.5rem;
+}
+main .list ul li:not(.instructions li) h4 strong {
+  font-weight: 700;
+}
+main .list ul li:not(.instructions li) h4 span {
+  font-weight: 500;
+  font-style: italic;
+}
+main .list .instructions li {
+  margin-bottom: 2rem;
+  color: black;
+}
+main .list .instructions li h5 {
+  flex-shrink: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 32px;
+  color: #ffffff;
+  background-color: #F2994A;
+  border-radius: 6px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  margin-right: 1rem;
+}
+main .list .instructions li p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+}
+main .list .instructions li strong {
+  font-weight: 700;
+}
+
+main h6 {
+  color: #BDBDBD;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 150%;
+  margin-top: 4rem;
+}
+main h6 a {
+  color: #BDBDBD;
+}
+
+main .timing {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1725490196);
+}
+main .timing .timming-box li {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 3rem;
+}
+main .timing .timming-box li:last-child {
+  margin-bottom: 0;
+}
+main .timing .timming-box li img {
+  width: 40px;
+  height: auto;
+}
+main .timing .timming-box li .special {
+  color: #F2994A;
+}
+main .timing .timming-box li h4 {
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 12px;
+  color: #BDBDBD;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+main .timing .timming-box li h5 {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: #333333;
+}
+
+footer {
+  padding: 6rem 0 2rem 0;
+}
+footer p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  text-align: center;
+  color: #828282;
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    margin-bottom: 0rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  header p {
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    margin-bottom: 1rem;
+  }
+  main .list {
+    flex-basis: 100%;
+    order: 2;
+  }
+  main .list h2 {
+    font-size: 1.125rem;
+  }
+  main .list h3 {
+    font-size: 1rem;
+  }
+  main .list h4 {
+    font-size: 0.875rem;
+  }
+  .flexi {
+    flex-direction: column;
+  }
+  main .instructions h5 {
+    font-size: 1rem;
+  }
+  main .timing {
+    order: 1;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  main .timing .timming-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  main .timing .timming-box .timming-boxList {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  main .timing .timming-box > *:not(.timming-boxList) {
+    padding-right: 2rem;
+  }
+  main .timing .timming-box .flex {
+    display: flex;
+    margin-bottom: 0;
+    flex-direction: row;
+  }
+  main .timing .timming-box .flex h4 {
+    font-size: 0.5rem;
+    margin-bottom: 0rem;
+  }
+  main .timing .timming-box .flex h5 {
+    font-size: 0.625rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
