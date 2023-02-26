@@ -30,7 +30,18 @@
 }
 
 // max-width: 500px
-@include mQmni {}
+@include mQmni {
+    main .content {
+        .card {
+            width: 60%;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
 
 @include mQdefault(22rem) {
     :root {

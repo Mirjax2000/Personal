@@ -1,0 +1,609 @@
+:root {
+  --h1-fs:5.5rem;
+  --h2-fs:2.5rem;
+  --par-fs:1.25rem;
+  --btn-fs:1.125rem;
+  --spec-fs:4.0625rem;
+  --foot-fs:1rem;
+}
+
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container .wrapper .hero p, .container .middle .card--container p, .container .middle .card--container--price h4, .container footer p {
+  font-weight: 400;
+}
+
+.container header h2, .container .wrapper .hero h1, .container .middle .card--container h2, .container .middle .card--container--price h3, .container .middle .card--container--bttn, .container footer h2, .container footer p a {
+  font-weight: 700;
+}
+
+.container .middle .card--container .__IOS {
+  color: #FCFAF9;
+}
+
+.container .wrapper, .container .middle .card--container .__android, .container footer, .container footer p a {
+  color: #191826;
+}
+
+@font-face {
+  font-family: "IBM Plex";
+  src: url(./../fonts/IBMPlexSans-Bold.ttf);
+  src: url(./../fonts/IBMPlexSans-Bold.woff2);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "IBM Plex";
+  src: url(./../fonts/IBMPlexSans-Regular.ttf);
+  src: url(./../fonts/IBMPlexSans-Regular.woff2);
+  font-style: normal;
+  font-weight: 400;
+}
+/* border-box */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html ::-moz-selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+html ::selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+
+body {
+  font-family: "IBM plex", sans-serif;
+  background-color: #FCFAF9;
+}
+
+.container {
+  max-width: 90rem;
+  margin-inline: auto;
+  padding: 0 0rem;
+  padding: 0 clamp(1rem, 20% - 10rem, 10rem);
+  background-image: url(./../img/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.container::after {
+  position: absolute;
+  content: "";
+  width: 312px;
+  height: 468px;
+  background-image: url(./../img/bg-pattern-1.svg);
+  top: -50px;
+  right: 0;
+}
+.container header {
+  margin-top: 3.75rem;
+}
+.container header h2 {
+  font-size: var(--h2-fs);
+  line-height: 1.3em;
+}
+.container .wrapper .hero {
+  width: 78%;
+}
+.container .wrapper .hero h1 {
+  font-size: var(--h1-fs);
+  line-height: 1em;
+  letter-spacing: -1px;
+  margin-top: 7.5rem;
+  margin-bottom: 2.5rem;
+}
+.container .wrapper .hero p {
+  font-size: var(--par-fs);
+  line-height: 1.7em;
+}
+.container .middle {
+  background-color: #191826;
+  margin-top: 20rem;
+  margin-bottom: 12.5rem;
+  border-radius: 12px;
+  position: relative;
+  isolation: isolate;
+  max-width: 74rem;
+  margin-inline: auto;
+  padding: 0 0rem;
+  min-height: 600px;
+  background-image: url(./../img/bg-pattern-2.svg);
+  background-repeat: no-repeat;
+  background-position: 40% -50px;
+}
+.container .middle::after {
+  position: absolute;
+  content: "";
+  top: -213px;
+  left: 10%;
+  width: 19.5rem;
+  height: 40.125rem;
+  background-image: url(./../img/illustration-app.png);
+  background-position: center;
+  background-size: cover;
+}
+.container .middle .card {
+  background-color: #FA7453;
+  border-radius: 12px;
+  max-width: 27.875rem;
+  min-height: 39.0625rem;
+  padding: 3.125rem;
+  position: absolute;
+  top: 90px;
+  right: 10%;
+  z-index: 100;
+}
+.container .middle .card--container {
+  color: #FCFAF9;
+}
+.container .middle .card--container h2 {
+  font-size: var(--h2-fs);
+  line-height: 1.3em;
+}
+.container .middle .card--container p {
+  font-size: var(--par-fs);
+  line-height: 1.7em;
+  margin: 40px 0 20px 0;
+}
+.container .middle .card--container--price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.container .middle .card--container--price h3 {
+  font-size: var(--spec-fs);
+  line-height: 0.8em;
+}
+.container .middle .card--container--price h4 {
+  font-size: var(--par-fs);
+  line-height: 1.7em;
+}
+.container .middle .card--container--bttn {
+  display: block;
+  padding-block: 1rem;
+  border-radius: 12px;
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+  font-size: var(--btn-fs);
+  line-height: 1.7777777778em;
+  -webkit-transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
+}
+.container .middle .card--container .__IOS {
+  margin-bottom: 1rem;
+  background-color: #191826;
+}
+.container .middle .card--container .__IOS:hover {
+  background-color: #66E2DC;
+}
+.container .middle .card--container .__IOS .IOS {
+  top: 1px;
+  left: -2px;
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  background-image: url(./../img/icon-apple.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 17px;
+  height: 1.25rem;
+}
+.container .middle .card--container .__android {
+  background-color: #FCFAF9;
+}
+.container .middle .card--container .__android:hover {
+  background-color: #FFB964;
+}
+.container .middle .card--container .__android .android {
+  top: 3px;
+  left: -2px;
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  background-image: url(./../img/icon-android.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 17px;
+  height: 1.25rem;
+}
+.container footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5.6875rem;
+  gap: 2rem;
+}
+.container footer h2 {
+  font-size: var(--h2-fs);
+  line-height: 1.3em;
+}
+.container footer p {
+  font-size: var(--foot-fs);
+  line-height: 1.625em;
+  max-width: 20.625rem;
+  margin-right: 10rem;
+}
+.container footer .footer--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.container footer .footer--social li a {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: background-image ease-in-out 0.2s;
+  transition: background-image ease-in-out 0.2s;
+}
+.container footer .footer--social li:nth-child(1) a {
+  background-image: url(./../img/icon-facebook-black.svg);
+}
+.container footer .footer--social li:nth-child(1) a:hover {
+  background-image: url(./../img/icon-facebook-orange.svg);
+}
+.container footer .footer--social li:nth-child(2) a {
+  background-image: url(./../img/icon-instagram.svg);
+}
+.container footer .footer--social li:nth-child(3) a {
+  background-image: url(./../img/icon-twitter.svg);
+}
+
+@media only screen and (max-width: 930px) {
+  :root {
+    --h1-fs:4rem;
+    --h2-fs:2.5rem;
+    --par-fs:1.125rem;
+    --btn-fs:1.125rem;
+    --spec-fs:4.0625rem;
+  }
+  .container::after {
+    right: -50px;
+  }
+  .container .wrapper .hero {
+    width: 70%;
+  }
+  .container .wrapper .hero h1 {
+    margin-top: 90px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  :root {
+    --h1-fs:2.5rem;
+    --h2-fs:2.5rem;
+    --par-fs:1rem;
+    --btn-fs:1.125rem;
+    --spec-fs:4.0625rem;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+  .container::after {
+    display: none;
+  }
+  .container header {
+    margin-top: 2.5rem;
+  }
+  .container .wrapper .hero {
+    width: auto;
+    margin-inline: auto;
+  }
+  .container .wrapper .hero h1 {
+    margin-top: 4rem;
+  }
+  .container .middle {
+    margin-top: 10rem;
+    margin-bottom: 28rem;
+  }
+  .container .middle::after {
+    width: 13.0625rem;
+    height: 26.875rem;
+    top: -98px;
+    left: 50%;
+    -webkit-transform: translateX(-6.5rem);
+            transform: translateX(-6.5rem);
+  }
+  .container .middle .card {
+    left: 0;
+    right: 0;
+    top: 380px;
+    max-width: 100%;
+  }
+  .container footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3rem;
+  }
+  .container footer p {
+    margin-right: 0;
+  }
+  .container footer .footer--social {
+    -ms-flex-item-align: auto;
+        align-self: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0;
+  }
+  .container header {
+    padding: 0 1rem;
+  }
+  .container .wrapper .hero {
+    padding: 0 1rem;
+  }
+  .container footer {
+    padding: 0 1rem;
+  }
+}
+/*# sourceMappingURL=home.css.map */

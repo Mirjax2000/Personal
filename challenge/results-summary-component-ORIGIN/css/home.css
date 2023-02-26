@@ -344,18 +344,6 @@ img {
   src: url(./../fonts/HankenGrotesk-VariableFont_wght.ttf);
   font-style: normal;
 }
-/* border-box */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
 html ::-moz-selection {
   background-color: #1683ff;
   color: #ffffff;
@@ -367,8 +355,11 @@ html ::selection {
 
 body {
   font-family: "HankenGrotesk";
-  background-color: #ECF2FF;
+  background-color: #303B59;
   text-align: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
   height: 100dvh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,6 +370,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
 }
 
 .container {
@@ -388,7 +380,6 @@ body {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.1490196078);
           box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.1490196078);
-  margin-inline: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,11 +396,11 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 0rem;
+  margin-inline: 1rem;
 }
 .container > * {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  height: 512px;
 }
 .container .left {
   display: -webkit-box;
@@ -569,17 +560,29 @@ body {
 }
 .container .right .bttn {
   display: inline-block;
-  background-color: #303B59;
   padding-block: 1rem;
+  background: #303B59;
   width: 100%;
   font-size: var(--bttn-fs);
   line-height: 1.2777777778em;
   border-radius: 8rem;
-  margin-bottom: 3.4375rem;
+  position: relative;
+  isolation: isolate;
 }
-.container .right .bttn:hover {
+.container .right .bttn::after {
+  position: absolute;
+  content: "";
+  border-radius: 8rem;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#7755FF), color-stop(0.01%, #6943FF), to(#2F2CE9));
   background: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+  -webkit-transition: linear opacity 0.2s;
+  transition: linear opacity 0.2s;
+}
+.container .right .bttn:hover::after {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 600px) {
@@ -596,21 +599,47 @@ body {
   }
 }
 @media only screen and (max-width: 500px) {
+  body {
+    background-color: #ffffff;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-inline: 0;
     border-radius: 0;
+    margin-inline: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .container .left {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
+  .container .left h3 {
+    margin: 1rem 0;
+  }
+  .container .left p {
+    margin-bottom: 2rem;
+  }
   .container .right {
     width: 90%;
     margin: 0 auto;
+  }
+  .container .right h3 {
+    margin: 0.5rem 0;
+  }
+  .container .right .right-list {
+    padding-block: 0.5rem;
+  }
+  .container .right .right-list .right-list-item {
+    padding: 0.5rem;
+  }
+  .container .right .bttn {
+    margin: 1rem 0;
   }
 }
 @media only screen and (max-width: 300px) {

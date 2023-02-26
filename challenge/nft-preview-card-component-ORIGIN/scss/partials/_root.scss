@@ -1,0 +1,7 @@
+@use 'var' as *;
+
+:root {
+    --h2-fs:#{$h2Max};
+    --h3-fs:#{$h3Max};
+    --par-fs:#{$parMax};
+}

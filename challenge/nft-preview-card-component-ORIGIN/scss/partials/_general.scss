@@ -1,0 +1,189 @@
+@use 'var' as *;
+@use 'mix' as *;
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(./../font/Outfit-VariableFont_wght.woff2);
+    font-style: normal;
+}
+
+/* border-box */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// --- HTML settings: box sizing, selection
+html {
+    @include box-sizing (border-box);
+    @include selection;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: $bckBodyClr;
+    height: 100dvh;
+    @include flexCenter;
+}
+
+.container {
+    max-width: 21.875rem;
+    min-width: 15.625rem;
+    min-height: 37.25rem;
+    @extend %autoMargin;
+    background-color: $bckCardClr;
+    border-radius: 15px;
+
+    .card {
+        margin: 1.5rem;
+
+        &--imgContainer {
+            font-size: 0;
+            position: relative;
+            isolation: isolate;
+
+            &::after {
+                position: absolute;
+                content: "";
+                inset: 0;
+                background-color: $clr15;
+                opacity: 0;
+                border-radius: .5rem;
+                transition: opacity ease-in-out .2s;
+                z-index: 10;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                inset: 0;
+                background-image: url(./../img/icon-view.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: opacity ease-in-out .2s;
+                opacity: 0;
+                z-index: 100;
+            }
+
+            &:hover::after {
+                opacity: .5;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+
+            &--img {
+                border-radius: .5rem;
+            }
+        }
+
+        &--header {
+            @extend %weight-600;
+            color: $h2Clr;
+            font-size: var(--h2-fs);
+            line-height: em(28, 22);
+            margin: 1.5rem 0 1rem 0;
+            cursor: pointer;
+
+            &:hover {
+                color: $h3PriceClr;
+            }
+        }
+
+        &--content {
+            @extend %weight-300;
+            color: $parClr;
+            font-size: var(--par-fs);
+            line-height: em(26, 18);
+        }
+
+        &--eth {
+            padding-block: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $clr11;
+
+            &--price {
+                @extend %weight-600;
+                color: $h3PriceClr;
+                text-indent: 1.1rem;
+                font-size: var(--h3-fs);
+                line-height: em(20, 16);
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 11px;
+                    height: 18px;
+                    background-image: url(./../img/icon-ethereum.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            &--store {
+                @extend %weight-400;
+                color: $h3StoreClr;
+                font-size: var(--h3-fs);
+                line-height: em(20, 16);
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 14px;
+                    height: 14px;
+                    top: 3px;
+                    left: -20px;
+                    background-image: url(./../img/icon-clock.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+
+        &--footer {
+            display: flex;
+            justify-content: start;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            &--avatar {
+                width: 33px;
+                height: 33px;
+                border: 1px solid $clr10;
+                border-radius: 50%;
+            }
+
+            &--info {
+                @extend %weight-400;
+                color: $parClr;
+                line-height: em(20, 16);
+                font-size: var(--h3-fs);
+                padding-top: .3rem;
+
+                span {
+                    color: $clr10;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $h3PriceClr;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width < 500px) {
+    :root {
+        --h2-fs:#{$h2Min};
+        --h3-fs:#{$h3Min};
+        --par-fs:#{$parMin};
+    }
+}

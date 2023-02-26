@@ -49,8 +49,6 @@ main .content-list-container {
         overflow: hidden;
         bottom: 0;
         left: 0;
-        
-
     }
 
     .dexpand {
@@ -113,7 +111,6 @@ main .content-list-container {
                 color: $clr16;
                 background-color: $clr14;
                 outline: 1px solid #2793f200;
-
             }
 
             to {
@@ -152,7 +149,6 @@ main .content-list-container {
         transform: scale(.99);
     }
 }
-
 
 main {
     padding: 0em 2em 2em 2em;
@@ -200,7 +196,6 @@ main {
         }
     }
 
-
     .aboutMe {
         max-width: 70ch;
         @extend %autoMargin;
@@ -225,5 +220,3 @@ main {
         }
     }
 }
-
-// icons

@@ -196,7 +196,9 @@
                 .inner-container {
                     overflow: auto;
                     min-height: 98vh;
+                    min-height: 98dvh;
                     height: 98vh;
+                    height: 98dvh;
                     border-radius: 25px;
                 }
             }
@@ -256,13 +258,10 @@
 
             }
 
-
             .down {
                 transform: translateY(57px);
             }
         }
-
-
 
         @content;
     }

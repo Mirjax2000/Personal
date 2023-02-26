@@ -1,0 +1,10 @@
+@use 'var' as *;
+
+:root {
+    --h1-fs:#{$h1Max};
+    --h2-fs:#{$h2Max};
+    --par-fs:#{$parMax};
+    --btn-fs:#{$btnMax};
+    --spec-fs:#{$specMax};
+    --foot-fs:#{$footMax};
+}

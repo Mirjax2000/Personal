@@ -507,6 +507,7 @@ body .central-wrapper .inner-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 100.1vh;
+  min-height: 100.1dvh;
   background: #272727;
   background-image: url(../img/bg01.png);
 }
@@ -796,7 +797,9 @@ main .hero .cv-section:active {
   body .central-wrapper .inner-container {
     overflow: auto;
     min-height: 98vh;
+    min-height: 98dvh;
     height: 98vh;
+    height: 98dvh;
     border-radius: 25px;
   }
   body header {
