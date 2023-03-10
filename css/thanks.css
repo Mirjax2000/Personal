@@ -696,6 +696,9 @@ h2 {
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
   }
+  body main .aboutMe {
+    max-width: 80%;
+  }
 }
 @media only screen and (max-width: 850px) {
   :root {
@@ -796,7 +799,7 @@ h2 {
     width: 50%;
   }
   body main .aboutMe {
-    max-width: 100%;
+    padding: 0;
   }
 }
 @media only screen and (max-width: 22rem) {

@@ -1,0 +1,716 @@
+:root {
+  --heading-XL-fs:4.5rem;
+  --heading-L-fs:3rem;
+  --heading-M-fs:1.125rem;
+  --heading-S-fs:1rem;
+  --social-fs:3rem;
+  --quote-fs:1.25rem;
+  --body-fs:1.125rem;
+  --footer-fs:0.9375rem;
+  --bttn-fs:1rem;
+}
+
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero--heading {
+  font-size: var(--heading-XL-fs);
+  line-height: 1.0833333333em;
+}
+
+.jeremy--content h2 {
+  font-size: var(--heading-L-fs);
+  line-height: 1.1666666667em;
+  letter-spacing: -0.0313rem;
+}
+
+.jeremy--content h3 {
+  font-size: var(--heading-M-fs);
+  line-height: 1.7777777778em;
+  letter-spacing: -0.0112rem;
+}
+
+.hero .right--list--items h3, .jeremy--content h4 {
+  font-size: var(--heading-S-fs);
+  line-height: 1.625em;
+  letter-spacing: 0.1563rem;
+  text-transform: uppercase;
+}
+
+.jeremy--content p {
+  font-size: var(--quote-fs);
+  line-height: 1.75em;
+  letter-spacing: 0.0069rem;
+}
+
+.hero--content {
+  font-size: var(--body-fs);
+  line-height: 1.7777777778em;
+  letter-spacing: 0.0063rem;
+}
+
+footer h5 {
+  font-size: var(--footer-fs);
+  line-height: 2.1333333333em;
+}
+
+.hero .right--list--items h2 {
+  font-size: var(--social-fs);
+  line-height: 1.1666666667em;
+  letter-spacing: -0.0313rem;
+}
+
+.hero--primaryBttn {
+  display: inline-block;
+  font-size: var(--heading-M-fs);
+  line-height: 2em;
+  letter-spacing: -0.0112rem;
+  border-radius: 0.375rem;
+  padding: 0.9375rem 1.9375rem;
+}
+
+header .secondaryBttn {
+  display: inline-block;
+  background-color: #FAF8F6;
+  font-size: var(--bttb-fs);
+  line-height: 2em;
+  letter-spacing: -0.01rem;
+  border: 1px solid #172339;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.4375rem;
+}
+
+.hero--heading, .jeremy--content h2, .hero .right--list--items h3, .jeremy--content h4, .jeremy--content p, .hero--content, footer h5 {
+  font-weight: 400;
+}
+
+.hero--heading strong, .jeremy--content h3, .hero .right--list--items h2, .hero--primaryBttn, header .secondaryBttn {
+  font-weight: 700;
+}
+
+.jeremy--content h4, .jeremy--content h2, .jeremy--content h3, .jeremy--content p {
+  color: #F3EDE7;
+}
+
+header .secondaryBttn:hover, .hero--primaryBttn {
+  color: #FAF8F6;
+}
+
+.hero--heading, .hero .right--list--items h2, header .secondaryBttn {
+  color: #172339;
+}
+
+header .secondaryBttn:hover, .jeremy, .hero--primaryBttn {
+  background-color: #172339;
+}
+
+.hero .right--list--items h3, .hero--content, footer h5 {
+  color: #49566D;
+}
+
+@font-face {
+  font-family: Epilogue;
+  src: url(./../fonts/Epilogue-VariableFont_wght.ttf);
+  src: url(./../fonts/Epilogue-VariableFont_wght.woff2);
+  font-style: normal;
+}
+/* border-box */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html ::-moz-selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+html ::selection {
+  background-color: #1683ff;
+  color: #ffffff;
+}
+
+body {
+  font-family: Epilogue, sans-serif;
+  background-color: #FAF8F6;
+}
+
+.container {
+  max-width: 90rem;
+  margin-inline: auto;
+  min-width: 21.25rem;
+  padding-inline: clamp(40px, 20% - 10rem, 10.375rem);
+}
+
+header {
+  margin-top: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header img {
+  width: 81px;
+  height: 29px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+header .secondaryBttn {
+  -webkit-transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
+}
+.hero {
+  margin-top: 11.75rem;
+  position: relative;
+  isolation: isolate;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.hero--heading {
+  max-width: 41rem;
+  letter-spacing: -1px;
+  position: relative;
+  isolation: isolate;
+}
+.hero--heading::after {
+  position: absolute;
+  content: "";
+  width: 17.9375rem;
+  height: 2.25rem;
+  background-image: url(./../img/pattern-curved-line-1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -50px;
+  right: 80px;
+}
+.hero--content {
+  max-width: 21.875rem;
+  margin: 2.5rem 0 4.1875rem 0;
+}
+.hero--primaryBttn {
+  position: relative;
+  isolation: isolate;
+}
+.hero--primaryBttn::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-radius: 0.375rem;
+  background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.3s;
+}
+.hero--primaryBttn:hover::after {
+  opacity: 1;
+}
+.hero--picture {
+  position: absolute;
+  width: 350px;
+  height: 600px;
+  top: -103px;
+  left: 475px;
+  left: clamp(300px, 58% - 10rem, 475px);
+  z-index: -1;
+}
+.hero .right--list {
+  margin-right: 70px;
+}
+.hero .right--list--items {
+  margin-bottom: 60px;
+}
+.jeremy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 545px;
+  border-radius: 15px;
+  position: relative;
+  isolation: isolate;
+  top: 272.5px;
+  right: 0;
+  left: 0;
+}
+.jeremy::after {
+  position: absolute;
+  content: "";
+  width: 64px;
+  height: 52px;
+  top: clamp(50px, 10vw, 155px);
+  right: 47%;
+  background-image: url(./../img/pattern-curved-line-2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.jeremy--picture {
+  position: absolute;
+  width: 375px;
+  height: 600px;
+  bottom: 0;
+  left: clamp(1rem, 25% - 10rem, 112px);
+}
+.jeremy--content {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  padding-right: 5rem;
+}
+.jeremy--content p {
+  margin-block: 40px;
+}
+footer {
+  background-color: #F3EDE7;
+  padding-top: 22.5rem;
+  padding-bottom: 4.5rem;
+}
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer--social {
+  color: #172339;
+  -webkit-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+  margin-right: 1.75rem;
+}
+footer .footer--social:last-child {
+  margin: 0;
+}
+footer .footer--social:hover {
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    --heading-XL-fs:3.5rem;
+    --heading-L-fs:2.5rem;
+    --heading-M-fs:1.125rem;
+    --heading-S-fs:1rem;
+    --social-fs:3rem;
+    --quote-fs:1.125rem;
+    --body-fs:1rem;
+    --footer-fs:0.9375rem;
+    --bttn-fs:1rem;
+  }
+  .container {
+    padding-inline: clamp(40px, 30% - 11rem, 10.375rem);
+  }
+  .hero {
+    display: block;
+    margin-top: 10.5rem;
+  }
+  .hero--heading {
+    max-width: 32rem;
+    letter-spacing: -0.777778px;
+  }
+  .hero--heading::after {
+    width: 14.4375rem;
+    height: 1.8125rem;
+  }
+  .hero--content {
+    margin-block: 2.5rem;
+  }
+  .hero--picture {
+    width: 281px;
+    height: 482px;
+    top: -88px;
+    left: 100%;
+    -webkit-transform: translateX(-281px);
+            transform: translateX(-281px);
+  }
+  .hero .right--list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-right: 0;
+    margin-top: 5rem;
+  }
+  .hero .right--list--items {
+    margin: 0;
+  }
+  .jeremy {
+    display: block;
+    width: 100%;
+    height: 684px;
+  }
+  .jeremy::after {
+    width: 50px;
+    height: 40px;
+    top: 250px;
+    right: calc(50% - 25px);
+  }
+  .jeremy--picture {
+    width: 252px;
+    height: 402px;
+    left: 50%;
+    -webkit-transform: translateX(-126px);
+            transform: translateX(-126px);
+    top: -180px;
+  }
+  .jeremy--content {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    padding: 0;
+    text-align: center;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+@media only screen and (max-width: 740px) {
+  :root {
+    --heading-XL-fs:2.375rem;
+    --heading-L-fs:2.5rem;
+    --heading-M-fs:1.125rem;
+    --heading-S-fs:1rem;
+    --social-fs:3rem;
+    --quote-fs:1.125rem;
+    --body-fs:1rem;
+    --footer-fs:0.9375rem;
+    --bttn-fs:14px;
+  }
+  .container {
+    padding-inline: clamp(1rem, 40% - 11rem, 10.375rem);
+  }
+  header {
+    margin-top: 1.5rem;
+  }
+  .hero {
+    margin-top: 5.625rem;
+  }
+  .hero--picture {
+    position: static;
+    display: block;
+    width: 343px;
+    height: auto;
+    -webkit-transform: none;
+            transform: none;
+    margin: 3rem auto;
+  }
+  .hero--heading {
+    max-width: 80%;
+    letter-spacing: -0.0331rem;
+  }
+  .hero--heading::after {
+    top: -2rem;
+    right: 10%;
+    width: 9.4375rem;
+    height: 1.1875rem;
+  }
+  .hero .right .right--list {
+    margin-top: 0;
+  }
+  .jeremy {
+    height: 748px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .hero {
+    margin-top: 80px;
+  }
+  .hero--heading {
+    max-width: 100%;
+  }
+  .hero--content {
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+  header {
+    padding-inline: 1rem;
+  }
+  .hero {
+    padding-inline: 1rem;
+  }
+  .hero .right--list {
+    display: block;
+    text-align: center;
+  }
+  .hero .right--list--items {
+    margin-bottom: 2rem;
+  }
+  .jeremy {
+    top: 200px;
+  }
+  footer {
+    padding-top: 16rem;
+  }
+  footer .container {
+    display: block;
+    text-align: center;
+  }
+  footer h5 {
+    margin-block: 2rem;
+  }
+}
+/*# sourceMappingURL=home.css.map */

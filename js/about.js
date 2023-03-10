@@ -49,4 +49,8 @@ expandBttns.forEach(function (btn) {
     });
 });
 
-
+$(function () {
+    $('.aboutMe-heading').click(function () {
+        $('.aboutMe--list').slideToggle(500);
+    });
+});

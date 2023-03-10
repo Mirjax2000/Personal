@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/about.css">
+    <script src="./js/jquery-3.6.2.min.js"></script>
 </head>
 
 <body>
@@ -151,7 +152,23 @@
                             <p class="paragraph-container">Jen zběžné seznámení. Většinu funkcí teď nahradí
                                 <strong>CSS</strong> animace, nebo nové funkce v <strong>CSS</strong>. Třeba se to na
                                 něco menšího může hodit. Toto byla vstupní brána pro <strong>Javascript</strong> a díky
-                                tomu jsem mohl <strong>Js</strong> rychleji pochopit
+                                tomu jsem mohl <strong>Js</strong> rychleji pochopit.
+                            </p>
+                            <!-- fiktivni element na zmereni vysky -->
+                            <p class="paragraph"></p>
+                            <div class="gradient"></div>
+                        </div>
+                        <button class="expand-bttn">expand</button>
+                    </li>
+                    <li class="content-list">
+                        <div class="content-list-container">
+                            <h2>Bootsrap</h2>
+                            <p class="paragraph-container">
+                                Začínám implementovat tento framework do svých projektů. Zejména <strong>Grid
+                                    systém</strong> a další předpřipravené složité prvky, jako třeba
+                                <strong>Carousel</strong>. Dříve jsem byl spíše odpůrcem, protože jsem si myslel, že si
+                                všechno můžu napsat sám, ale zde můžu jednoduchým způsobem přidávat již hotové věci,
+                                které drobným zásahem v <strong>CSS</strong> můžu přetvořit k požadovanému stavu.
                             </p>
                             <!-- fiktivni element na zmereni vysky -->
                             <p class="paragraph"></p>
@@ -223,25 +240,39 @@
                 </ul>
 
                 <section class="aboutMe">
-                    <div class="content-list-container">
-                        <h3 class="aboutMe-heading">O mně</h3>
-                        <p id="down" class="paragraph-container">It technologií se zabývám již přes 20 let. Společně s
-                            kamarády jsme
-                            si pořídily první
-                            počítače. Od Didaktika přes Commodora a Amigu do dnešního stavu. Svoje první IT dovednosti
-                            jsem využil v IT firmě Libra electronics, kde jsem pracoval jako příjmový skladník, který
-                            měl za úkol přesnou identifikaci a klasifikaci hardware. Později jsem zkoušel proniknout i
-                            do vyšších míst v IT průmyslu, ale pro zaměstnavatele jsem neměl dostatečné vzdělání. Nyní
-                            jsem se rozhodl to zkusit znova, protože na trhu IT je nedostatek pracovní síly. Mám celkový
-                            přehled o IT, ale nemám konkrétní specializaci. Takže svůj okruh znalostí stále rozšiřuji a
-                            specializace pak závisí na konkrétní potřebě zaměstnavatele. Angličtinu ovládám středně
-                            dobře. Mám středoškolské vzdělání.
-                        </p>
-                        <!-- fiktivni element na zmereni vysky -->
-                        <p class="paragraph"></p>
-                        <div class="gradient"></div>
-                    </div>
-                    <button class="expand-bttn">expand</button>
+                    <h3 class="aboutMe-heading">Další Techniky</h3>
+                    <ul class="aboutMe--list">
+                        <li class="aboutMe--list--item">
+                            <p>Používání variables fontů<sup>*</sup> a self hosting přes <strong>@font-face</strong>
+                                atribut.
+                                Převedení fontů na
+                                kompresní formát <strong>woff2</strong> a vytvoření fallbacku <strong>ttf</strong>
+                                pro případ nekompatibility.</p><sup>*(Je potřeba si vypočítat co má větší efektivitu.
+                                Jestli budu používat jen dvě váhy fontu nebo celou sadu.) </sup>
+                        </li>
+
+                        <li class="aboutMe--list--item">
+                            <p> Technika <strong>srcset</strong> pro používání retina displejů a funkci
+                                <strong>source
+                                    media</strong> pro nahravání obrázků při různých rozlišení. tzv. <strong>"art
+                                    direction"</strong>.
+                            </p>
+                        </li>
+
+                        <li class="aboutMe--list--item">
+                            <p>Program <strong>Figma</strong> pro práci s navrženým wireframem.</p>
+                        </li>
+
+                        <li class="aboutMe--list--item">
+                            <p>Program <strong>Gimp</strong> pro práci s obrázky.</p>
+                        </li>
+                        <li class="aboutMe--list--item">
+                            <p><strong>Lazy loading</strong> pro níže položené obrázky a přidám do <strong>HTML</strong>
+                                informaci o velikosti obrázku aby si ihned rezervoval místo v toku dokumentu a později
+                                tam nedoskakoval a ničil nastavený layout stránky. Zároveň přidávám barevný fallback pro
+                                obrázky, které se nenačtou.</p>
+                        </li>
+                    </ul>
                 </section>
 
             </main>

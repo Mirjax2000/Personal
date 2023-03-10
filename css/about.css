@@ -404,11 +404,11 @@ main .content-list-container .gradient, header .horni-lista a::after, header .ha
   position: absolute;
 }
 
-main .content-list-container .paragraph-container, main .content-list-container .paragraph, main h3, main h2, header .horni-lista h2, header .horni-lista a, header .mobile ul li a {
+main .content-list-container .paragraph-container, main .content-list-container .paragraph, main h3, main h2, main .aboutMe--list--item p, header .horni-lista h2, header .horni-lista a, header .mobile ul li a {
   font-weight: 300;
 }
 
-main .content-list-container .paragraph-container strong, header .horni-lista h1 {
+main .content-list-container .paragraph-container strong, main .aboutMe .aboutMe-heading, main .aboutMe--list--item p strong, header .horni-lista h1 {
   font-weight: 600;
 }
 
@@ -428,7 +428,7 @@ main h2, header .horni-lista h1, header .horni-lista a {
   color: #ffffff;
 }
 
-header .horni-lista h2, header .horni-lista .selected {
+main .aboutMe--list--item, header .horni-lista h2, header .horni-lista .selected {
   color: #6ed7fe;
 }
 
@@ -436,7 +436,7 @@ header .horni-lista h2, header .horni-lista .selected {
   background-color: #6ed7fe;
 }
 
-.expand-bttn {
+.expand-bttn, main .aboutMe .aboutMe-heading {
   color: #2f2f2f;
 }
 
@@ -448,7 +448,7 @@ header .mobile {
   background-color: #272727;
 }
 
-main .content-list-container .paragraph-container, main h3 {
+main .content-list-container .paragraph-container, main h3, main .aboutMe--list--item p {
   color: #aeaeae;
 }
 
@@ -830,7 +830,7 @@ main .content-list-container .expand code {
 }
 
 main {
-  padding: 0em 2em 2em 2em;
+  padding: 0em 2em 4em 2em;
   margin: auto;
   margin-top: 6rem;
 }
@@ -873,23 +873,47 @@ main .content .content-list::after {
   background-color: rgba(81, 81, 81, 0.7803921569);
 }
 main .aboutMe {
-  max-width: 70ch;
-  text-align: right;
-  position: relative;
-}
-main .aboutMe::after {
-  position: absolute;
-  content: "";
-  bottom: 10px;
-  left: 1em;
-  height: 1px;
-  width: 60%;
-  background-color: rgba(81, 81, 81, 0.7803921569);
+  max-width: 100%;
+  padding: 0em 1em 4em 2em;
 }
 main .aboutMe .aboutMe-heading {
+  display: inline-block;
   text-align: left;
-  margin: 1em 0 0 0;
-  padding-left: 1rem;
+  font-size: var(--h2-fs);
+  background-color: #7fc3ff;
+  margin: 4rem 0 1rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url(../img/bg04.png);
+  -webkit-transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
+}
+main .aboutMe .aboutMe-heading:hover {
+  background-color: orange;
+}
+main .aboutMe--list {
+  display: none;
+  margin-top: 1rem;
+  max-width: 80ch;
+}
+main .aboutMe--list--item {
+  list-style-type: circle;
+  margin-bottom: 0.5rem;
+}
+main .aboutMe--list--item p {
+  font-size: var(--a-fs);
+  line-height: 1.2;
+}
+main .aboutMe--list--item p strong {
+  color: #7fc3ff;
+}
+main .aboutMe sup {
+  display: inline-block;
+  line-height: 2;
+  font-size: 0.8rem;
+  color: #dadada;
+  padding-top: 0.5rem;
 }
 
 @media only screen and (max-width: 81.25rem) {
@@ -910,6 +934,9 @@ main .aboutMe .aboutMe-heading {
   body main .content .content-list {
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
+  }
+  body main .aboutMe {
+    max-width: 80%;
   }
 }
 @media only screen and (max-width: 850px) {
@@ -1011,7 +1038,7 @@ main .aboutMe .aboutMe-heading {
     width: 50%;
   }
   body main .aboutMe {
-    max-width: 100%;
+    padding: 0;
   }
 }
 @media only screen and (max-width: 22rem) {

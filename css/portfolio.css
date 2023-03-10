@@ -816,6 +816,15 @@ h4:hover {
 .content .card .card-container .nft {
   background-image: url(./../img/nft-small.webp);
 }
+.content .card .card-container .equalizer {
+  background-image: url(./../img/equalizer.webp);
+}
+.content .card .card-container .suit {
+  background-image: url(./../img/suits.webp);
+}
+.content .card .card-container .pod {
+  background-image: url(./../img/pod.webp);
+}
 .content .card .card-under {
   padding: 0.2rem;
   text-align: center;
@@ -845,9 +854,7 @@ h4:hover {
   margin-bottom: 5px;
 }
 
-#websitesSection,
-#otherSection,
-#frontEndSection {
+#parrent section {
   display: none;
 }
 

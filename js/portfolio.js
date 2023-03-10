@@ -1,39 +1,20 @@
 /** @format */
 // hamburger menu
-
 let classDown = document.querySelector('.mobile');
 let hamburgerIcon = document.querySelector('.hamburger');
 
 hamburgerIcon.addEventListener('click', function (event) {
     classDown.classList.toggle('down');
 });
+
+// jquery --- akordeon
 $(document).ready(function () {
     let time = 500;
 
-    $('#frontEnd').click(function () {
-        if ($('#frontEndSection').is(':hidden')) {
-            $('.section').slideUp(time);
-            $('#frontEndSection').slideDown(time);
-        } else {
-            $('#frontEndSection').slideUp(time);
-        }
-    });
+    let parrent = $('#parrent'),
+        akord = $('.akord');
 
-    $('#websites').click(function () {
-        if ($('#websitesSection').is(':hidden')) {
-            $('.section').slideUp(time);
-            $('#websitesSection').slideDown(time);
-        } else {
-            $('#websitesSection').slideUp(time);
-        }
-    });
-
-    $('#other').click(function () {
-        if ($('#otherSection').is(':hidden')) {
-            $('.section').slideUp(time);
-            $('#otherSection').slideDown(time);
-        } else {
-            $('#otherSection').slideUp(time);
-        }
+    parrent.find(akord).on('click', function () {
+        $(this).next().slideToggle(time).siblings('.section').slideUp(time);
     });
 });

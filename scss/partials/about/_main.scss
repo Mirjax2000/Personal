@@ -5,6 +5,7 @@
 //     outline: 1px solid red;
 // }
 
+
 main .content-list-container {
     @extend %positionRelative;
     text-align: left;
@@ -151,7 +152,7 @@ main .content-list-container {
 }
 
 main {
-    padding: 0em 2em 2em 2em;
+    padding: 0em 2em 4em 2em;
     margin: auto;
     margin-top: 6rem;
 
@@ -197,26 +198,60 @@ main {
     }
 
     .aboutMe {
-        max-width: 70ch;
+        max-width: 100%;
+        padding: 0em 1em 4em 2em;
         @extend %autoMargin;
-        text-align: right;
-        position: relative;
-
-        &::after {
-            position: absolute;
-            content: "";
-            bottom: 10px;
-            left: 1em;
-            height: 1px;
-            width: 60%;
-            background-color: $clr17;
-        }
 
         .aboutMe-heading {
-            text-align: left;
-            margin: 1em 0 0 0;
-            padding-left: 1rem;
+            display: inline-block;
             @extend %userSelection;
+            @extend %weight-600;
+            @extend %clr12;
+            text-align: left;
+            font-size: var(--h2-fs);
+            background-color: #7fc3ff;
+            margin: 4rem 0 1rem 0;
+            padding: .5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            background-image: url(../img/bg04.png);
+            transition: background-color ease-in-out .2s;
+
+            &:hover {
+                background-color: orange;
+            }
+
+        }
+
+        &--list {
+            display: none;
+            margin-top: 1rem;
+            max-width: 80ch;
+
+            &--item {
+                @extend %clr11;
+                list-style-type: circle;
+                margin-bottom: .5rem;
+
+                p {
+                    @include links;
+                    @extend %clr16;
+                    line-height: 1.2;
+
+                    strong {
+                        color: #7fc3ff;
+                        @extend %weight-600;
+                    }
+                }
+            }
+        }
+
+        sup {
+            display: inline-block;
+            line-height: 2;
+            font-size: .8rem;
+            color: #dadada;
+            padding-top: .5rem;
         }
     }
 }

@@ -1,8 +1,6 @@
 @use '../var' as *;
 @use '../mix' as *;
 
-
-
 main {
     width: 100%;
     margin: 0 auto;
@@ -146,6 +144,18 @@ h4 {
             .nft {
                 background-image: url(./../img/nft-small.webp);
             }
+
+            .equalizer {
+                background-image: url(./../img/equalizer.webp);
+            }
+
+            .suit {
+                background-image: url(./../img/suits.webp);
+            }
+
+            .pod {
+                background-image: url(./../img/pod.webp);
+            }
         }
 
         .card-under {
@@ -181,8 +191,6 @@ h4 {
     }
 }
 
-#websitesSection,
-#otherSection,
-#frontEndSection {
+#parrent section {
     display: none;
 }

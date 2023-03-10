@@ -14,7 +14,6 @@
     }
 }
 
-
 // max-width 1000px
 @include mQdefault(62.5rem) {
 
@@ -26,8 +25,11 @@
             flex-basis: 80%;
         }
     }
-}
 
+    body main .aboutMe {
+        max-width: 80%;
+    }
+}
 
 // max-width: 850px
 @include mQmid {}
@@ -35,7 +37,6 @@
 // max-width: 750px
 @include mQmin {
 
-    
     body main .aboutMe {
         max-width: 80%;
     }
@@ -57,7 +58,7 @@
         }
 
         .aboutMe {
-            max-width: 100%;
+            padding: 0;
         }
     }
 }
@@ -70,5 +71,4 @@
     body main .content .content-list::after {
         width: 35%;
     }
-
 }

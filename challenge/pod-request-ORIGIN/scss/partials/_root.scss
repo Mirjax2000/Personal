@@ -1,0 +1,8 @@
+@use 'var' as *;
+
+:root {
+    --h1-fs:#{$h1Min};
+    --par-fs:#{$parMin};
+    --btn-fs:#{$btnMin};
+    --spec-fs:#{$specMin};
+}
