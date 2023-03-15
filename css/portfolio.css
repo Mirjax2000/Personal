@@ -825,6 +825,9 @@ h4:hover {
 .content .card .card-container .pod {
   background-image: url(./../img/pod.webp);
 }
+.content .card .card-container .adam {
+  background-image: url(./../img/adam.webp);
+}
 .content .card .card-under {
   padding: 0.2rem;
   text-align: center;

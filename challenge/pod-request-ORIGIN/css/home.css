@@ -29,12 +29,16 @@ body {
   background-color: #121725;
 }
 
-.main {
-  height: 100dvh;
+.container.pt-5.main {
+  padding: 0;
+}
+
+.top {
   position: relative;
   isolation: isolate;
+  height: 100dvh;
 }
-.main::after {
+.top::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -90,6 +94,15 @@ img:not(img[src="./img/logo.svg"]):last-child {
 
 form {
   margin-top: 2rem;
+  position: relative;
+  isolation: isolate;
+}
+form .error {
+  opacity: 1;
+}
+form .succes {
+  opacity: 1;
+  color: greenyellow;
 }
 form #email,
 form #submit {
@@ -105,10 +118,10 @@ form #submit {
   border: none;
 }
 form #email {
-  background-color: #5A668A;
   color: #ffffff;
   text-indent: 2rem;
   margin-bottom: 1rem;
+  background-color: #5A668A;
 }
 form #email::-webkit-input-placeholder {
   color: #ffffff;
@@ -135,6 +148,8 @@ form #submit {
 }
 
 .oops {
+  position: absolute;
+  top: 41px;
   color: #FB3E3E;
   font-size: var(--spec-fs);
   font-weight: 400;
@@ -157,18 +172,27 @@ form #submit {
     --btn-fs:0.875rem;
     --spec-fs:0.75rem;
   }
-  .main::after {
+  .top::after {
+    display: none;
+  }
+  .top .main {
+    position: relative;
+    isolation: isolate;
+  }
+  .top .main::after {
+    content: "";
+    position: absolute;
     background-image: url(./../img/image-table.webp);
     left: 12px;
     right: 12px;
-    bottom: 0;
     top: 0;
-    opacity: 1;
-    height: 767px;
+    height: 737px;
     background-position: top right;
-    background-size: 70%;
+    background-size: 68%;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
-  .main .content-wrapper {
+  .top .content-wrapper {
     margin: 0;
     max-width: none;
     width: 100%;
@@ -182,91 +206,92 @@ form #submit {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .main .content-wrapper h1 {
+  .top .content-wrapper h1 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     line-height: 1.1666666667em;
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
-  .main .content-wrapper p {
+  .top .content-wrapper p {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin-block: 1rem;
   }
-  .main .content-wrapper img:not(img[src="./img/logo.svg"]) {
+  .top .content-wrapper img:not(img[src="./img/logo.svg"]) {
     margin-bottom: 0;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
   }
-  .main .content-wrapper form {
+  .top .content-wrapper form {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     background-color: #5A668A;
     border-radius: 28px;
     padding: 0.2rem;
     margin-top: 1rem;
   }
-  .main .content-wrapper form #email {
+  .top .content-wrapper form #email {
     width: 60%;
     margin-bottom: 0;
   }
-  .main .content-wrapper form #submit {
+  .top .content-wrapper form #submit {
     width: 40%;
   }
-  .main .content-wrapper .oops {
+  .top .content-wrapper .oops {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
+    top: 50px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .main::before {
+  .top {
+    z-index: 100;
+  }
+  .top::before {
     content: "";
     position: absolute;
-    left: 12px;
-    bottom: 50px;
+    left: 24px;
+    bottom: 10%;
     width: 232px;
     height: 104px;
     background-image: url(./../img/bg-pattern-dots.svg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    z-index: 1;
+    z-index: -1;
   }
-  .main .content-wrapper {
+  .top .main .content-wrapper {
     width: 87%;
-    margin-top: 9.8rem;
+    margin-top: 8.8rem;
     position: relative;
-    z-index: 100;
   }
-  .main .content-wrapper p {
+  .top .main .content-wrapper p {
     margin-block: 1.2rem;
   }
-  .main .content-wrapper img:not(img[src="./img/logo.svg"]) {
+  .top .main .content-wrapper img:not(img[src="./img/logo.svg"]) {
     margin-top: 2.2rem;
     background-color: #121725;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
-  .main .content-wrapper img:not(img[src="./img/logo.svg"]):nth-child(1) {
+  .top .main .content-wrapper img:not(img[src="./img/logo.svg"]):nth-child(1) {
     width: 96px;
     height: 29px;
   }
-  .main .content-wrapper img:not(img[src="./img/logo.svg"]):nth-child(2) {
+  .top .main .content-wrapper img:not(img[src="./img/logo.svg"]):nth-child(2) {
     width: 78px;
     height: 29px;
   }
-  .main .content-wrapper img:not(img[src="./img/logo.svg"]):nth-child(3) {
+  .top .main .content-wrapper img:not(img[src="./img/logo.svg"]):nth-child(3) {
     width: 125px;
     height: 18px;
   }
-  .main .content-wrapper img:not(img[src="./img/logo.svg"]):last-child {
+  .top .main .content-wrapper img:not(img[src="./img/logo.svg"]):last-child {
     width: 129px;
     height: 26px;
     margin-right: 0;
@@ -276,7 +301,7 @@ form #submit {
   .main .content-wrapper {
     width: 75%;
     max-width: 600px;
-    margin-top: 9rem;
+    margin-top: 10rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -286,19 +311,31 @@ form #submit {
     --btn-fs:0.875rem;
     --spec-fs:0.75rem;
   }
-  .main::after {
+  .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top::before {
+    display: none;
+  }
+  .top .main::after {
     background-image: url(./../img/image-pc.webp);
     left: auto;
     right: 12px;
-    bottom: 0;
     top: 80px;
-    opacity: 1;
     height: 640px;
     width: 888px;
     background-position: top right;
     background-size: contain;
   }
-  .main::before {
+  .top .main::before {
     content: "";
     position: absolute;
     left: auto;
@@ -311,29 +348,28 @@ form #submit {
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
-    z-index: 1;
   }
-  .main .content-wrapper {
+  .top .main .content-wrapper {
     margin-top: 8rem;
     width: 58%;
     max-width: 650px;
   }
-  .main .content-wrapper h1 {
+  .top .main .content-wrapper h1 {
     margin-top: 5rem;
   }
-  .main .content-wrapper p {
+  .top .main .content-wrapper p {
     margin-block: 1.5rem;
   }
-  .main .content-wrapper img:not(img[src="./img/logo.svg"]) {
+  .top .main .content-wrapper img:not(img[src="./img/logo.svg"]) {
     margin-right: 3rem;
     margin-top: 1.8rem;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .main .content-wrapper {
+  .top .main .content-wrapper {
     margin-top: 8rem;
     width: 80%;
-    max-width: 753px;
+    max-width: 723px;
   }
 }
 /*# sourceMappingURL=home.css.map */
